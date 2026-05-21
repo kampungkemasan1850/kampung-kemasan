@@ -2,15 +2,13 @@
 
 import { motion, easeOut } from "framer-motion";
 import Image from "next/image";
-import aboutImg from "../../../public/assets/about-img.png";
-import headImg from "../../../public/assets/rumah-img.jpg";
+// about image not used in this layout
+import headImg from "../../../public/assets/images/rumah-img.jpg";
 import { FaChevronRight } from "react-icons/fa";
 import Link from "next/link";
-import "../../i18n";
-import { useTranslation } from "react-i18next";
+// Content uses static Indonesian text; i18n translations removed for this page
 
 export default function AboutPage() {
-  const { t } = useTranslation();
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -39,11 +37,15 @@ export default function AboutPage() {
           className="mb-8 border-l-8 border-black pl-6"
         >
           <h1 className="text-3xl md:text-4xl font-bold tracking-tighter uppercase leading-tight">
-            {t("about.story_title")}
+            TENTANG
           </h1>
-          <p className="text-gray-500 mt-4 text-sm font-light tracking-[0.3em] uppercase">
-            {t("about.story_subtitle")}
+          <p className="text-zinc-900 text-2xl md:text-3xl font-semibold mt-4">
+            Kampung Kemasan
           </p>
+          <p className="text-gray-500 mt-2 text-sm font-light tracking-[0.15em] uppercase">
+            Di mana sejarah hidup di setiap sudutnya
+          </p>
+          <p className="text-zinc-500 mt-2 text-sm">Jawa Timur, Indonesia</p>
         </motion.div>
 
         {/* Hero Image */}
@@ -72,7 +74,9 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
             <motion.div variants={fadeInUp} className="md:col-span-3">
               <h2 className="text-3xl md:text-4xl font-medium leading-tight text-zinc-900">
-                {t("about.intro_text")}
+                Di jantung kota pelabuhan bersejarah Gresik, tersimpan harta
+                kebudayaan yang mencerminkan peradaban perdagangan, tradisi, dan
+                keindahan arsitektur pada masanya.
               </h2>
             </motion.div>
             <motion.div
@@ -80,10 +84,18 @@ export default function AboutPage() {
               className="md:col-span-2 flex flex-col justify-end"
             >
               <p className="text-gray-600 leading-relaxed text-lg italic border-b border-zinc-200 pb-6">
-                {t("about.quote")}
+                Menelusuri Kampung Kemasan berarti menjelajahi lorong-lorong
+                waktu — di mana bangunan kolonial yang masih terawat dengan baik
+                berdiri tegak, kuliner lokal otentik menyambut setiap
+                pengunjung, dan nuansa kejayaan masa silam hadir nyata di setiap
+                sudut.
               </p>
               <p className="text-zinc-500 mt-6 leading-relaxed">
-                {t("about.history_detail")}
+                Kampung Kemasan Gresik adalah salah satu destinasi wisata paling
+                ikonik di Jawa Timur. Dikenal dengan gaya arsitekturnya yang
+                unik, kawasan ini menawarkan perpaduan harmonis antara pengaruh
+                budaya Tionghoa, Arab, dan Jawa — sebuah cermin peradaban yang
+                lahir dari jalur perdagangan berabad-abad lamanya.
               </p>
             </motion.div>
           </div>
@@ -97,104 +109,115 @@ export default function AboutPage() {
           viewport={{ once: true, margin: "-50px" }}
           className="mb-8"
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6">
-            {/* 1. Architecture */}
-            <motion.div
-              variants={fadeInUp}
-              className="rounded-lg p-8 row-span-2 bg-zinc-50 border border-zinc-100"
-            >
-              <h3 className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-6">
-                01. Architecture
-              </h3>
-              <h1 className="text-2xl font-bold mb-6">
-                Architectural Highlights
-              </h1>
-              <ul className="space-y-6 text-gray-700">
-                {[
-                  "Ornamental Façades",
-                  "High Ceilings & Windows",
-                  "Imported Materials",
-                  "Symmetry & Color",
-                ].map((item, i) => (
-                  <li key={i}>
-                    <strong className="block text-zinc-900">{item}</strong>
-                    <span className="text-sm">
-                        Historical details that define the unique Kemasan
-                        aesthetic.
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-            {/* 2. Goals */}
-            <motion.div
-              variants={fadeInUp}
-              className="rounded-lg p-8 bg-zinc-900 text-white"
-            >
-              <h3 className="text-xs font-bold uppercase tracking-widest text-zinc-200 mb-4">
-                02. Goals
-              </h3>
-              <h4 className="text-xl font-bold mb-2 text-white">{t("about.vision_title")}</h4>
-              <p className="text-zinc-200 text-sm leading-relaxed mb-6">
-                {t("about.vision_desc")}
-              </p>
-              <h4 className="text-xl font-bold mb-2 text-white">{t("about.mission_title")}</h4>
-              <ul className="space-y-1 text-zinc-200 text-sm italic">
-                <li>— Protect historical architecture</li>
-                <li>— Educate future generations</li>
-              </ul>
-            </motion.div>
-
-            {/* 3. Detail Image */}
-            <motion.div
-              variants={fadeInUp}
-              className="relative aspect-square overflow-hidden rounded-lg grayscale"
-            >
-              <Image
-                src={aboutImg}
-                alt="Detail"
-                fill
-                loading="eager"
-                sizes="100"
-                className="object-cover -scale-x-100"
-              />
-            </motion.div>
-
-            {/* 4. Harmony */}
-            <motion.div
-              variants={fadeInUp}
-              className="rounded-lg p-8 bg-zinc-50 border border-zinc-100"
-            >
-              <h3 className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-4">
-                03. Harmony
-              </h3>
-              <h1 className="text-2xl font-bold mb-3">Cultural Harmony</h1>
-              <div className="flex gap-2 flex-wrap">
-                {["Javanese", "Peranakan", "Dutch"].map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1 bg-white border border-zinc-200 text-[10px] uppercase font-bold tracking-tighter"
-                  >
-                    {tag}
-                  </span>
-                ))}
+          <div className="grid grid-cols-1 gap-6">
+            {/* Stats */}
+            <div className="flex flex-col md:flex-row gap-4 items-center justify-between w-full">
+              <div className="text-center p-6 bg-white border rounded-lg w-full md:w-1/3">
+                <div className="text-4xl font-extrabold">1855</div>
+                <div className="text-xs uppercase tracking-widest mt-2">
+                  Tahun Berdiri
+                </div>
               </div>
-            </motion.div>
+              <div className="text-center p-6 bg-white border rounded-lg w-full md:w-1/3">
+                <div className="text-4xl font-extrabold">3</div>
+                <div className="text-xs uppercase tracking-widest mt-2">
+                  Pengaruh Budaya Arsitektur
+                </div>
+              </div>
+              <div className="text-center p-6 bg-white border rounded-lg w-full md:w-1/3">
+                <div className="text-4xl font-extrabold">170+</div>
+                <div className="text-xs uppercase tracking-widest mt-2">
+                  Tahun Warisan Terjaga
+                </div>
+              </div>
+            </div>
 
-            {/* 5. Action */}
-            <motion.div
-              variants={fadeInUp}
-              className="rounded-lg p-8 bg-zinc-50 border border-zinc-100"
-            >
-              <h3 className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-4">
-                04. Action
-              </h3>
-              <h1 className="text-2xl font-bold mb-3">Preservation Efforts</h1>
-              <p className="text-xs font-bold text-zinc-900 border-t border-zinc-200 pt-4">
-                Community participation is key.
-              </p>
-            </motion.div>
+            {/* Perjalanan Sejarah */}
+            <div className="rounded-lg p-8 bg-zinc-50 border border-zinc-100">
+              <h3 className="text-lg font-bold mb-4">Perjalanan Sejarah</h3>
+              <div className="space-y-6 text-zinc-700">
+                <div>
+                  <h4 className="font-bold">
+                    Tahun 1855 — Asal-Usul Nama &quot;Kemasan&quot;
+                  </h4>
+                  <p className="text-sm mt-2">
+                    Nama &quot;Kemasan&quot; diyakini berasal dari kata emas, merujuk pada
+                    para pedagang emas yang dahulu menetap dan berkembang di
+                    kawasan ini. Komunitas saudagar kaya ini menjadi fondasi
+                    awal bagi identitas budaya dan ekonomi kawasan.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-bold">
+                    Tahun 1896 — Industri Penyamakan Kulit H. Oemar
+                  </h4>
+                  <p className="text-sm mt-2">
+                    H. Oemar mendirikan usaha penyamakan kulit di Kampung
+                    Kemasan — sebuah tonggak industri yang menggerakkan roda
+                    perekonomian kota Gresik. Dibantu para pengrajin Tionghoa
+                    yang bermukim di kawasan ini, usaha tersebut kemudian
+                    dikembangkan oleh kelima putra beliau.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-bold">
+                    Akhir Abad ke-19 — Era Bangunan Megah Para Saudagar
+                  </h4>
+                  <p className="text-sm mt-2">
+                    Para pedagang kaya seperti H. Oemar membangun rumah-rumah
+                    megah sebagai lambang kemakmuran dan status sosial.
+                    Bangunan-bangunan ini memadukan struktur kolonial Belanda,
+                    ornamen Tionghoa Peranakan, serta sentuhan kerajinan
+                    tradisional Jawa — menciptakan harmoni arsitektur yang tak
+                    tertandingi.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-bold">
+                    Hingga Kini — Kawasan Cagar Budaya yang Dilindungi
+                  </h4>
+                  <p className="text-sm mt-2">
+                    Berkat kesadaran dan dedikasi masyarakat setempat, Kampung
+                    Kemasan berhasil bertahan di tengah arus modernisasi. Kini
+                    kawasan ini berdiri kokoh sebagai cagar budaya resmi kota
+                    Gresik, menghadirkan kembali keagungan masa lalu yang masih
+                    bisa dinikmati oleh setiap pengunjung.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Warisan Arsitektur */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="rounded-lg p-6 bg-white border">
+                <h4 className="font-bold uppercase text-sm mb-2">Tionghoa</h4>
+                <p className="text-sm">
+                  Ornamen Peranakan — ukiran halus, warna merah-emas, dan
+                  dekorasi khas Cina Peranakan yang menjadi penanda identitas
+                  komunitas pedagang Tionghoa yang pernah menetap di sini.
+                </p>
+              </div>
+              <div className="rounded-lg p-6 bg-white border">
+                <h4 className="font-bold uppercase text-sm mb-2">
+                  Kolonial Belanda
+                </h4>
+                <p className="text-sm">
+                  Struktur Eropa — pilar-pilar kokoh, jendela tinggi berpanel
+                  kaca, dan tata ruang bergaya Eropa abad ke-19 yang
+                  mencerminkan pengaruh kuat era kolonial dalam lanskap urban
+                  Gresik.
+                </p>
+              </div>
+              <div className="rounded-lg p-6 bg-white border">
+                <h4 className="font-bold uppercase text-sm mb-2">Jawa</h4>
+                <p className="text-sm">
+                  Kerajinan Tradisional — sentuhan motif batik, ukiran kayu
+                  bergaya Jawa, dan filosofi ruang yang berakar pada kearifan
+                  lokal — menjadikan setiap bangunan sebagai ekspresi identitas
+                  budaya Nusantara.
+                </p>
+              </div>
+            </div>
           </div>
         </motion.section>
 

@@ -1,7 +1,7 @@
-import type { NextConfig } from "next";
+// next.config.mjs
+import { withNextVideo } from "next-video/process";
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+/** @type {import('next').NextConfig} */
+const nextConfig = {};
 
-export default nextConfig;
+export default withNextVideo(nextConfig);

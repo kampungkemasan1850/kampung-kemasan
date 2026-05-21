@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
+import Logo from "../../../public/assets/images/logo-text.png";
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
@@ -53,7 +55,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="flex items-center justify-between px-4 sm:px-8 py-5 sticky top-0 z-9999 bg-black border-b border-white/10">
+    <nav className="flex items-center justify-between px-4 sm:px-8 py-1 md:py-5 sticky top-0 z-9999 bg-[#8B2615] border-b border-white/10">
       {/* Left Navigation - Desktop */}
       <motion.div
         initial="hidden"
@@ -65,26 +67,48 @@ export default function Navbar() {
           <motion.div key={item.key} variants={navItemVariants}>
             <Link
               href={item.path}
-              className="font-medium text-sm uppercase tracking-widest text-white hover:text-[#C9A051] transition-colors duration-300 relative group"
+              className="font-medium text-sm uppercase tracking-widest text-white hover:text-[#C9A051] focus:bg-[#C9A051] transition-colors duration-300 relative group"
             >
               {t(`navbar.${item.key}`)}
-              <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#C9A051] transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#C9A051] focus:bg-[#C9A051] transition-all duration-300 group-hover:w-full" />
             </Link>
           </motion.div>
         ))}
       </motion.div>
 
-      {/* Center Logo */}
+      {/* Center Logo - full text on desktop, compact logo on mobile */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="shrink-0"
+        className="hidden md:flex shrink-0"
       >
         <Link
           href="/"
-          className="font-bold text-xl tracking-tighter hover:text-[#C9A051] transition-colors text-white uppercase"
+          className="font-bold font-bebas-neue text-2xl hover:text-[#C9A051] focus:bg-[#C9A051] transition-colors text-white"
         >
-          {t("hero.subtitle")}
+          Jelajahi Warisan{" "}
+          <span className="font-sloop text-3xl">Kampung Kemasan</span>
+        </Link>
+      </motion.div>
+
+      {/* Mobile compact logo */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="md:hidden shrink-0"
+      >
+        <Link
+          href="/"
+          className="flex items-center gap-2 hover:text-[#C9A051] transition-colors text-white"
+        >
+          <Image
+            src={Logo}
+            alt="Kampung Kemasan"
+            width={40}
+            height={24}
+            className="object-contain"
+          />
+          <span className="font-sloop text-xl">Kampung Kemasan</span>
         </Link>
       </motion.div>
 
@@ -94,17 +118,17 @@ export default function Navbar() {
           <Link
             key={item.key}
             href={item.path}
-            className="font-medium text-sm uppercase tracking-widest text-white hover:text-[#C9A051] transition-colors relative group"
+            className="font-medium text-sm uppercase tracking-widest text-white hover:text-[#C9A051] focus:bg-[#C9A051] transition-colors relative group"
           >
             {t(`navbar.${item.key}`)}
-            <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#C9A051] transition-all duration-300 group-hover:w-full" />
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#C9A051] focus:bg-[#C9A051] transition-all duration-300 group-hover:w-full" />
           </Link>
         ))}
 
         <select
           value={currentLanguage}
           onChange={(e) => handleLanguageChange(e.target.value)}
-          className="border border-zinc-700 rounded-none px-3 py-1 text-[10px] uppercase tracking-wider bg-black text-white focus:border-[#C9A051] outline-none transition-colors cursor-pointer"
+          className="border hover:border-[#C9A051] rounded-none px-3 py-1 text-[10px] uppercase tracking-wider bg-[#8B2615] text-white focus:border-[#C9A051] focus:bg-[#C9A051] outline-none transition-colors cursor-pointer"
         >
           <option value="en">EN</option>
           <option value="id">ID</option>
@@ -149,7 +173,7 @@ export default function Navbar() {
               initial="closed"
               animate="open"
               exit="closed"
-              className="fixed top-0 right-0 lg:hidden bg-zinc-950 w-[70vw] h-screen p-10 flex flex-col gap-8 shadow-2xl z-9999"
+              className="fixed top-0 right-0 lg:hidden bg-[#8B2615] w-[70vw] h-screen p-10 flex flex-col gap-8 shadow-2xl z-9999"
             >
               <div className="mt-10 flex flex-col gap-6">
                 {[...navLinks, ...secondaryLinks].map((item, i) => (
@@ -157,7 +181,7 @@ export default function Navbar() {
                     <Link
                       href={item.path}
                       onClick={() => setMenuOpen(false)}
-                      className="text-2xl font-bold text-white hover:text-[#C9A051] transition-colors uppercase tracking-tighter"
+                      className="text-2xl font-bold text-white hover:text-[#C9A051] focus:bg-[#C9A051] transition-colors uppercase tracking-tighter"
                     >
                       {t(`navbar.${item.key}`)}
                     </Link>
@@ -168,19 +192,41 @@ export default function Navbar() {
               <motion.div
                 variants={linkVariants}
                 custom={5}
-                className="mt-auto"
+                className="mt-auto pt-8"
               >
-                <p className="text-zinc-500 text-xs uppercase tracking-[0.3em] mb-4">
+                <p className="text-white/70 text-xs uppercase tracking-[0.3em] mb-4">
                   {t("navbar.language")}
                 </p>
-                <select
-                  value={currentLanguage}
-                  onChange={(e) => handleLanguageChange(e.target.value)}
-                  className="w-full bg-transparent border border-zinc-800 text-white p-3 rounded-none outline-none focus:border-[#C9A051]"
-                >
-                  <option value="en">English</option>
-                  <option value="id">Bahasa Indonesia</option>
-                </select>
+
+                <div className="flex items-center gap-6">
+                  <button
+                    onClick={() => {
+                      handleLanguageChange("en");
+                      setMenuOpen(false); 
+                    }}
+                    className={`pb-1 text-sm font-bold uppercase tracking-widest transition-all ${
+                      currentLanguage === "en"
+                        ? "border-b-2 border-[#C9A051] text-[#C9A051]"
+                        : "border-b-2 border-transparent text-white/50 hover:text-white"
+                    }`}
+                  >
+                    EN
+                  </button>
+                  <div className="h-4 w-px bg-white/20"></div>{" "}
+                  <button
+                    onClick={() => {
+                      handleLanguageChange("id");
+                      setMenuOpen(false); 
+                    }}
+                    className={`pb-1 text-sm font-bold uppercase tracking-widest transition-all ${
+                      currentLanguage === "id"
+                        ? "border-b-2 border-[#C9A051] text-[#C9A051]"
+                        : "border-b-2 border-transparent text-white/50 hover:text-white"
+                    }`}
+                  >
+                    ID
+                  </button>
+                </div>
               </motion.div>
             </motion.div>
           </>
