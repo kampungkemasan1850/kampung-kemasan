@@ -16,7 +16,7 @@ export default function EventHighlight({ t }: EventHighlightProps) {
           viewport={{ once: true }}
           className="flex flex-col md:flex-row justify-between items-center mb-16 gap-6"
         >
-          <div className="border-l-4 border-[#C9A051] pl-6">
+          <div className="border-l-4 border-[#8B2615] pl-6">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase leading-none">
               {t("events.title")} highlight.
             </h2>
@@ -26,7 +26,7 @@ export default function EventHighlight({ t }: EventHighlightProps) {
           </div>
           <Link
             href="/event"
-            className="group flex items-center gap-3 text-sm font-bold uppercase tracking-widest border-b-2 border-black pb-1 hover:text-[#C9A051] hover:border-[#C9A051] transition-all"
+            className="group flex items-center gap-3 text-sm font-bold uppercase tracking-widest border-b-2 border-black pb-1 hover:text-[#8B2615] hover:border-[#8B2615] transition-all"
           >
             {t("navbar.event")}
             <span className="group-hover:translate-x-2 transition-transform">
@@ -46,10 +46,10 @@ export default function EventHighlight({ t }: EventHighlightProps) {
               transition={{ delay: idx * 0.1 }}
               className="group relative border-b border-zinc-300 py-10 flex flex-col md:flex-row md:items-center justify-between gap-6 overflow-hidden"
             >
-              <div className="absolute inset-0 bg-[#C9A051]/5 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
+              <div className="absolute inset-0 bg-[#8B2615]/5 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
               <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-8 grow">
                 <div className="min-w-30">
-                  <p className="text-[#C9A051] text-xs font-bold tracking-widest mb-1 uppercase">
+                  <p className="text-[#8B2615] text-xs font-bold tracking-widest mb-1 uppercase">
                     ARCHIVE
                   </p>
                   <p className="text-zinc-400 text-sm font-medium uppercase">

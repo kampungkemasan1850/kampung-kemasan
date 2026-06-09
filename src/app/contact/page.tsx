@@ -31,7 +31,6 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-[#F6F6EC] py-20 px-4 sm:px-8">
       <div className="max-w-6xl mx-auto">
-        {/* Header Section */}
         <div className="mb-20 border-l-8 border-black pl-6">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter uppercase leading-none">
             {t("contact.title")}
@@ -42,7 +41,6 @@ export default function ContactPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-          {/* Left Side: Contact Info */}
           <div className="space-y-12">
             <div>
               <h3 className="text-xs font-bold uppercase tracking-[0.3em] text-[#C9A051] mb-6">
@@ -60,8 +58,12 @@ export default function ContactPage() {
                 02. {t("contact.contact_label")}
               </h3>
               <div className="space-y-2">
-                <p className="text-xl font-medium">hello@kampungkemasan.id</p>
-                <p className="text-xl font-medium">+62 812 3456 7890</p>
+                <p className="text-xl font-medium">
+                  Nino Hartono +62 822 3113 5937
+                </p>
+                <p className="text-xl font-medium">
+                  Mualim (pokdarwis) +62 812-3245-430
+                </p>
               </div>
             </div>
 
@@ -70,20 +72,29 @@ export default function ContactPage() {
                 03. {t("contact.social_label")}
               </h3>
               <div className="flex gap-6">
-                {["Instagram", "YouTube", "Twitter"].map((social) => (
+                {[
+                  {
+                    name: "Instagram",
+                    url: "https://www.instagram.com/kampungkemasanheritage/",
+                  },
+                  {
+                    name: "Facebook",
+                    url: "https://www.facebook.com/profile.php?id=61590609142929&ref=ig_profile_ac&target=61590609142929&funlid=R7tf7HGT3q67DzDQ",
+                  },
+                  // { name: "Twitter", url: "#" },
+                ].map((social) => (
                   <a
-                    key={social}
-                    href="#"
+                    key={social.name}
+                    href={social.url}
                     className="text-sm font-bold uppercase border-b border-black pb-1 hover:text-[#C9A051] hover:border-[#C9A051] transition-all"
                   >
-                    {social}
+                    {social.name}
                   </a>
                 ))}
               </div>
             </div>
           </div>
 
-          {/* Right Side: Form */}
           <div className="bg-white border border-zinc-200 p-8 md:p-12 shadow-[20px_20px_0px_0px_rgba(0,0,0,0.05)]">
             <AnimatePresence>
               {submitted ? (

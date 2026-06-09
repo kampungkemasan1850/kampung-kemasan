@@ -15,6 +15,7 @@ import {
   FaCoffee,
   FaCheckCircle,
   FaMapMarkerAlt,
+  FaArrowRight,
 } from "react-icons/fa";
 
 const exploreTabs = [
@@ -53,7 +54,7 @@ export default function Explore() {
         return (
           <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div>
-              <h3 className="text-2xl font-bold text-[#C9A051] mb-3">
+              <h3 className="text-2xl font-bold text-[#8B2615] mb-3">
                 Akses & Peta Lokasi
               </h3>
               <p className="text-zinc-600 leading-relaxed">
@@ -68,26 +69,26 @@ export default function Explore() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="bg-zinc-50 p-5 rounded-2xl border border-zinc-100">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="bg-[#C9A051] p-2 rounded-lg text-white">
+                  <div className="bg-[#8B2615] p-2 rounded-lg text-white">
                     <FaCar />
                   </div>
                   <h4 className="font-bold text-zinc-800">Dengan Mobil</h4>
                 </div>
                 <ul className="text-sm text-zinc-600 space-y-2">
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#C9A051] mt-1 shrink-0" />{" "}
-                    Dari Surabaya: Ambil jalur tol Surabaya–Gresik
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
+                    Dari Surabaya: Ambil jalur tol Surabaya-Gresik
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#C9A051] mt-1 shrink-0" />{" "}
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
                     Ikuti petunjuk arah menuju pusat Kota Gresik
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#C9A051] mt-1 shrink-0" />{" "}
-                    Tiba dalam waktu sekitar 40–50 menit
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
+                    Tiba dalam waktu sekitar 40-50 menit
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#C9A051] mt-1 shrink-0" />{" "}
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
                     Area parkir tersedia di sekitar lokasi
                   </li>
                 </ul>
@@ -95,41 +96,41 @@ export default function Explore() {
 
               <div className="bg-zinc-50 p-5 rounded-2xl border border-zinc-100">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="bg-[#C9A051] p-2 rounded-lg text-white">
+                  <div className="bg-[#8B2615] p-2 rounded-lg text-white">
                     <FaBus />
                   </div>
                   <h4 className="font-bold text-zinc-800">Dengan Bus</h4>
                 </div>
                 <ul className="text-sm text-zinc-600 space-y-2">
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#C9A051] mt-1 shrink-0" />{" "}
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
                     Dari terminal Bungurasih ke Gresik
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#C9A051] mt-1 shrink-0" />{" "}
-                    Gunakan Bus Transjatim (Rp 5.000 – Rp 15.000)
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
+                    Gunakan Bus Transjatim (Rp 5.000 - Rp 15.000)
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#C9A051] mt-1 shrink-0" />{" "}
-                    Tiba dalam 40–50 menit (turun halte Transjatim)
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
+                    Tiba dalam 40-50 menit (turun halte Transjatim)
                   </li>
                 </ul>
               </div>
 
               <div className="bg-zinc-50 p-5 rounded-2xl border border-zinc-100">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="bg-[#C9A051] p-2 rounded-lg text-white">
+                  <div className="bg-[#8B2615] p-2 rounded-lg text-white">
                     <FaTrain />
                   </div>
                   <h4 className="font-bold text-zinc-800">Dengan Kereta</h4>
                 </div>
                 <ul className="text-sm text-zinc-600 space-y-2">
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#C9A051] mt-1 shrink-0" />{" "}
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
                     Perjalanan menuju stasiun di Surabaya
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#C9A051] mt-1 shrink-0" />{" "}
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
                     Lanjutkan ke Gresik dengan mobil / transportasi online
                   </li>
                 </ul>
@@ -137,7 +138,7 @@ export default function Explore() {
 
               <div className="bg-zinc-50 p-5 rounded-2xl border border-zinc-100">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="bg-[#C9A051] p-2 rounded-lg text-white">
+                  <div className="bg-[#8B2615] p-2 rounded-lg text-white">
                     <FaPlane />
                   </div>
                   <h4 className="font-bold text-zinc-800">
@@ -146,11 +147,11 @@ export default function Explore() {
                 </div>
                 <ul className="text-sm text-zinc-600 space-y-2">
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#C9A051] mt-1 shrink-0" />{" "}
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
                     Taksi / transportasi online (sekitar 1 jam)
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#C9A051] mt-1 shrink-0" />{" "}
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
                     Atau shuttle bandara ke Surabaya, lanjut ke Gresik
                   </li>
                 </ul>
@@ -158,7 +159,7 @@ export default function Explore() {
             </div>
 
             <div>
-              <h4 className="font-bold text-lg text-[#C9A051] mb-4 flex items-center gap-2">
+              <h4 className="font-bold text-lg text-[#8B2615] mb-4 flex items-center gap-2">
                 <FaBicycle /> Transportasi Wisata Lokal
               </h4>
               <p className="text-sm text-zinc-600 mb-3">
@@ -186,7 +187,7 @@ export default function Explore() {
         return (
           <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div>
-              <h3 className="text-2xl font-bold text-[#C9A051] mb-3">
+              <h3 className="text-2xl font-bold text-[#8B2615] mb-3">
                 Aktivitas di Kampung Kemasan
               </h3>
               <p className="text-zinc-600 leading-relaxed">
@@ -196,6 +197,7 @@ export default function Explore() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* Kategori 1: Kegiatan Eksplorasi */}
               <div className="bg-white p-6 rounded-3xl border border-zinc-100 shadow-sm">
                 <h4 className="font-bold text-lg text-zinc-800 mb-4 border-b pb-2">
                   Kegiatan Eksplorasi
@@ -228,6 +230,7 @@ export default function Explore() {
                 </ul>
               </div>
 
+              {/* Kategori 2: Dokumentasi Estetik */}
               <div className="bg-white p-6 rounded-3xl border border-zinc-100 shadow-sm">
                 <h4 className="font-bold text-lg text-zinc-800 mb-4 border-b pb-2">
                   Dokumentasi Estetik
@@ -248,13 +251,24 @@ export default function Explore() {
                     <span className="font-medium">Video Blogging (Vlog)</span>
                   </li>
                   <li className="flex items-center gap-3 text-zinc-600">
-                    <div className="p-2 bg-rose-100 text-rose-600 rounded-lg">
+                    <div className="p-2 bg-rose-100 text-rose-500 rounded-lg">
                       <FaCamera />
                     </div>
                     <span className="font-medium">Sesi Foto Pre-wedding</span>
                   </li>
                 </ul>
               </div>
+            </div>
+
+            {/* TOMBOL ROUTE KE HALAMAN EVENT */}
+            <div className="flex justify-end pt-2">
+              <a
+                href="/event" // Silakan sesuaikan path/rute halaman event Anda di sini
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#8B2615] text-white font-semibold rounded-full shadow-sm hover:bg-[#731f11] transition-all duration-300 group"
+              >
+                Lihat Event Mendatang
+                <FaArrowRight className="transform group-hover:translate-x-1 transition-transform duration-300" />
+              </a>
             </div>
           </div>
         );
@@ -263,7 +277,7 @@ export default function Explore() {
         return (
           <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div>
-              <h3 className="text-2xl font-bold text-[#C9A051] mb-3">
+              <h3 className="text-2xl font-bold text-[#8B2615] mb-3">
                 Eksplorasi Rasa & Budaya
               </h3>
               <p className="text-zinc-600 leading-relaxed">
@@ -275,7 +289,7 @@ export default function Explore() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
               <div className="bg-zinc-50 p-5 rounded-2xl border border-zinc-100">
-                <div className="text-[#C9A051] mb-3">
+                <div className="text-[#8B2615] mb-3">
                   <FaUtensils size={24} />
                 </div>
                 <h4 className="font-bold text-zinc-800 mb-3">
@@ -298,7 +312,7 @@ export default function Explore() {
               </div>
 
               <div className="bg-zinc-50 p-5 rounded-2xl border border-zinc-100">
-                <div className="text-[#C9A051] mb-3">
+                <div className="text-[#8B2615] mb-3">
                   <FaShoppingBag size={24} />
                 </div>
                 <h4 className="font-bold text-zinc-800 mb-3">
@@ -316,7 +330,7 @@ export default function Explore() {
               </div>
 
               <div className="bg-zinc-50 p-5 rounded-2xl border border-zinc-100 md:col-span-2 xl:col-span-1">
-                <div className="text-[#C9A051] mb-3">
+                <div className="text-[#8B2615] mb-3">
                   <FaCoffee size={24} />
                 </div>
                 <h4 className="font-bold text-zinc-800 mb-3">
@@ -342,7 +356,7 @@ export default function Explore() {
         return (
           <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div>
-              <h3 className="text-2xl font-bold text-[#C9A051] mb-3">
+              <h3 className="text-2xl font-bold text-[#8B2615] mb-3">
                 Tempat Menginap
               </h3>
               <p className="text-zinc-600 leading-relaxed">
@@ -359,7 +373,7 @@ export default function Explore() {
                 <h4 className="text-3xl font-extrabold text-zinc-800">
                   The Bahagia Hotel
                 </h4>
-                <p className="text-2xl font-semibold text-[#C9A051]">
+                <p className="text-2xl font-semibold text-[#8B2615]">
                   IDR 150.000{" "}
                   <span className="text-sm text-zinc-400 font-normal">
                     / malam
@@ -393,7 +407,7 @@ export default function Explore() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 md:gap-10">
         <div className="w-full lg:w-1/3 xl:w-[30%] flex flex-col gap-4 lg:gap-6 shrink-0">
           <div className="text-center lg:text-left mb-2 lg:mb-0">
-            <h2 className="text-3xl font-extrabold text-[#C9A051] leading-tight capitalize">
+            <h2 className="text-3xl font-extrabold text-[#8B2615] leading-tight capitalize">
               Jelajahi <br className="hidden lg:block" />
               <span className="text-zinc-800 text-2xl font-bold">
                 Kampung Kemasan
@@ -415,15 +429,15 @@ export default function Explore() {
                   className={`relative p-2 lg:p-4 rounded-2xl border transition-all duration-300 flex items-center justify-center lg:justify-start lg:gap-4 text-left group overflow-hidden
                     ${
                       isActive
-                        ? "bg-[#C9A051] border-[#C9A051] shadow-lg shadow-[#C9A051]/20 lg:scale-[1.02]"
-                        : "bg-white border-zinc-200 shadow-sm hover:border-[#C9A051]/30 hover:bg-zinc-50"
+                        ? "bg-[#8B2615] border-[#8B2615] shadow-lg shadow-[#8B2615]/20 lg:scale-[1.02]"
+                        : "bg-white border-zinc-200 shadow-sm hover:border-[#8B2615]/30 hover:bg-zinc-50"
                     }`}
                 >
                   <div
                     className={`p-3 lg:p-4 rounded-xl transition-colors duration-300 shrink-0 ${
                       isActive
                         ? "bg-white/20 text-white"
-                        : "bg-zinc-100 text-[#C9A051] group-hover:bg-[#C9A051]/10"
+                        : "bg-zinc-100 text-[#8B2615] group-hover:bg-[#8B2615]/10"
                     }`}
                   >
                     <tab.icon className="text-2xl" />

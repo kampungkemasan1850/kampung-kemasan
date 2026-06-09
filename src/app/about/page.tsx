@@ -29,7 +29,6 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen w-[90vw] mx-auto flex flex-col items-center justify-between">
       <div className="mx-auto px-4 pt-8 pb-12">
-        {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -48,7 +47,6 @@ export default function AboutPage() {
           <p className="text-zinc-500 mt-2 text-sm">Jawa Timur, Indonesia</p>
         </motion.div>
 
-        {/* Hero Image */}
         <motion.section
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -63,7 +61,6 @@ export default function AboutPage() {
           />
         </motion.section>
 
-        {/* Introduction Section */}
         <motion.section
           variants={staggerContainer}
           initial="hidden"
@@ -101,7 +98,6 @@ export default function AboutPage() {
           </div>
         </motion.section>
 
-        {/* Bento Grid Content */}
         <motion.section
           variants={staggerContainer}
           initial="hidden"
@@ -110,7 +106,6 @@ export default function AboutPage() {
           className="mb-8"
         >
           <div className="grid grid-cols-1 gap-6">
-            {/* Stats */}
             <div className="flex flex-col md:flex-row gap-4 items-center justify-between w-full">
               <div className="text-center p-6 bg-white border rounded-lg w-full md:w-1/3">
                 <div className="text-4xl font-extrabold">1855</div>
@@ -132,7 +127,6 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Perjalanan Sejarah */}
             <div className="rounded-lg p-8 bg-zinc-50 border border-zinc-100">
               <h3 className="text-lg font-bold mb-4">Perjalanan Sejarah</h3>
               <div className="space-y-6 text-zinc-700">
@@ -141,22 +135,23 @@ export default function AboutPage() {
                     Tahun 1855 — Asal-Usul Nama &quot;Kemasan&quot;
                   </h4>
                   <p className="text-sm mt-2">
-                    Nama &quot;Kemasan&quot; diyakini berasal dari kata emas, merujuk pada
-                    para pedagang emas yang dahulu menetap dan berkembang di
-                    kawasan ini. Komunitas saudagar kaya ini menjadi fondasi
-                    awal bagi identitas budaya dan ekonomi kawasan.
+                    Nama &quot;Kemasan&quot; diyakini berasal dari kata emas,
+                    merujuk pada para pedagang emas yang dahulu menetap dan
+                    berkembang di kawasan ini. Komunitas saudagar kaya ini
+                    menjadi fondasi awal bagi identitas budaya dan ekonomi
+                    kawasan.
                   </p>
                 </div>
                 <div>
                   <h4 className="font-bold">
-                    Tahun 1896 — Industri Penyamakan Kulit H. Oemar
+                    Tahun 1896 — Industri Penyamakan Kulit H. Oemar Bin Achmad
                   </h4>
                   <p className="text-sm mt-2">
-                    H. Oemar mendirikan usaha penyamakan kulit di Kampung
-                    Kemasan — sebuah tonggak industri yang menggerakkan roda
-                    perekonomian kota Gresik. Dibantu para pengrajin Tionghoa
-                    yang bermukim di kawasan ini, usaha tersebut kemudian
-                    dikembangkan oleh kelima putra beliau.
+                    H. Oemar Bin Achmad mendirikan usaha penyamakan kulit di
+                    Kampung Kemasan — sebuah tonggak industri yang menggerakkan
+                    roda perekonomian kota Gresik. Dibantu para pengrajin
+                    Tionghoa yang bermukim di kawasan ini, usaha tersebut
+                    kemudian dikembangkan oleh kelima putra beliau.
                   </p>
                 </div>
                 <div>
@@ -164,12 +159,12 @@ export default function AboutPage() {
                     Akhir Abad ke-19 — Era Bangunan Megah Para Saudagar
                   </h4>
                   <p className="text-sm mt-2">
-                    Para pedagang kaya seperti H. Oemar membangun rumah-rumah
-                    megah sebagai lambang kemakmuran dan status sosial.
-                    Bangunan-bangunan ini memadukan struktur kolonial Belanda,
-                    ornamen Tionghoa Peranakan, serta sentuhan kerajinan
-                    tradisional Jawa — menciptakan harmoni arsitektur yang tak
-                    tertandingi.
+                    Para pedagang kaya seperti H. Oemar Bin Achmad membangun
+                    rumah-rumah megah sebagai lambang kemakmuran dan status
+                    sosial. Bangunan-bangunan ini memadukan struktur kolonial
+                    Belanda, ornamen Tionghoa Peranakan, serta sentuhan
+                    kerajinan tradisional Jawa — menciptakan harmoni arsitektur
+                    yang tak tertandingi.
                   </p>
                 </div>
                 <div>
@@ -187,7 +182,6 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Warisan Arsitektur */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="rounded-lg p-6 bg-white border">
                 <h4 className="font-bold uppercase text-sm mb-2">Tionghoa</h4>
@@ -221,7 +215,99 @@ export default function AboutPage() {
           </div>
         </motion.section>
 
-        {/* Footer CTA */}
+        {/* vision and mission */}
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mb-24 w-full relative overflow-hidden rounded-3xl shadow-xl flex flex-col md:flex-row"
+        >
+          {/* Left Side: Vision */}
+          <div className="md:w-1/2 bg-[#8B2615] p-8 md:p-16 text-white relative">
+            <div className="relative z-10">
+              <h2 className="text-4xl md:text-5xl font-serif italic mb-6">
+                OUR{" "}
+                <span className="font-sans not-italic font-bold">Vision</span>
+              </h2>
+              <p className="text-xl md:text-2xl leading-relaxed font-light mb-12">
+                Melestarikan Kampung Kemasan sebagai simbol kerukunan
+                multikultural dan kebanggaan sejarah di Gresik.
+              </p>
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src={headImg}
+                  alt="Vision"
+                  className="w-full h-64 object-cover opacity-80 hover:opacity-100 transition-opacity"
+                />
+              </div>
+            </div>
+
+            {/* Decorative Ampersand for Desktop */}
+            <div className="hidden md:block absolute top-1/6 -right-8 transform -translate-y-1/2 z-20">
+              <span className="text-[10rem] font-imperial-script font-semibold text-[#E9C46A] opacity-90">
+                &
+              </span>
+            </div>
+            <div className="hidden md:block absolute top-1/6 -right-10 transform -translate-y-1/2 z-20">
+              <span className="text-[10rem] font-imperial-script font-semibold text-[#8B2615] opacity-90">
+                &
+              </span>
+            </div>
+          </div>
+
+          {/* Right Side: Mission */}
+          <div className="md:w-1/2 bg-[#E9C46A] p-8 md:p-16 text-zinc-900">
+            <h2 className="text-4xl md:text-5xl font-serif italic mb-12 ml-4">
+              Our{" "}
+              <span className="font-sans not-italic font-bold uppercase">
+                Mission
+              </span>
+            </h2>
+
+            <div className="space-y-12">
+              <div className="flex items-start gap-6 group">
+                <div className="w-24 h-16 md:w-32 md:h-20 shrink-0 rounded-lg overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+                  <Image
+                    src={headImg}
+                    alt="Mission 1"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-lg font-medium leading-tight pt-2">
+                  Melestarikan arsitektur bersejarah
+                </p>
+              </div>
+
+              <div className="flex items-start gap-6 group">
+                <div className="w-24 h-16 md:w-32 md:h-20 shrink-0 rounded-lg overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+                  <Image
+                    src={headImg}
+                    alt="Mission 2"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-lg font-medium leading-tight pt-2">
+                  Mengembangkan edukasi dan pemahaman bagi generasi mendatang
+                </p>
+              </div>
+
+              <div className="flex items-start gap-6 group">
+                <div className="w-24 h-16 md:w-32 md:h-20 shrink-0 rounded-lg overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+                  <Image
+                    src={headImg}
+                    alt="Mission 3"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-lg font-medium leading-tight pt-2">
+                  Mendorong pengembangan pariwisata berbasis warisan budaya yang
+                  berkelanjutan
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.section>
+
         <motion.section
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

@@ -56,7 +56,6 @@ export default function EventPage() {
 
   return (
     <div className="min-h-screen text-zinc-900 pb-24">
-      {/* Header Section */}
       <section className="pt-20 px-4 md:px-8 max-w-7xl mx-auto mb-20">
         <div className="border-l-8 border-black pl-6">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter uppercase leading-none">
@@ -68,7 +67,6 @@ export default function EventPage() {
         </div>
       </section>
 
-      {/* Main Events - Section 1: Festival */}
       <section className="px-4 md:px-8 max-w-7xl mx-auto mb-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4">
@@ -148,7 +146,6 @@ export default function EventPage() {
         </div>
       </section>
 
-      {/* Section 2: Art & Culture Exhibition (MTN Lab Focus) */}
       <section className="bg-zinc-900 text-white py-24">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -215,7 +212,6 @@ export default function EventPage() {
         </div>
       </section>
 
-      {/* Section 3: Kelanjutan Program MTN Lab */}
       <section className="bg-zinc-900 text-white px-4 md:px-8 ">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -263,7 +259,6 @@ export default function EventPage() {
         </div>
       </section>
 
-      {/* Call to Action Footer */}
       <section className="mt-16 text-center py-24 border-t border-zinc-200">
         <p className="text-zinc-400 uppercase tracking-[0.5em] text-xs mb-8">
           Makna Kebudayaan

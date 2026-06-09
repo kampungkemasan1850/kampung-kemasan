@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import heroImg from "../../../public/assets/images/hero-img.jpg";
+import heroImg from "../../../public/assets/images/guide-map.webp";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -53,52 +53,28 @@ const MapsSection: React.FC = () => {
             viewport={{ once: true }}
             className="md:col-span-3 text-zinc-900"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tighter uppercase leading-none text-white">
-              Find the <br /> Heart of Gresik
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 tracking-tighter uppercase leading-none text-white">
+              {t("contact.address_label")}
             </h2>
-            <p className="font-light leading-relaxed mb-6 opacity-80 text-white">
-              {t("contact.address_label")}: Located in the historic center.
-            </p>
-            <Link
-              href="https://maps.app.goo.gl/Wq5PmYcvCCX5i5Y2A"
-              target="_blank"
-              className="inline-block border bg-[#C9A051] border-white md:border-black px-8 py-4 uppercase font-bold tracking-widest text-xs hover:bg-[#C9A051] hover:border-[#C9A051] text-white transition-all mb-6"
-            >
-              View on Map
-            </Link>
-
             {/* Guide map image */}
-            <div className="mt-8 grid grid-cols-3 gap-2 md:gap-4">
-              <div className="bg-white shadow-lg overflow-hidden rounded">
+            <div className="my-6">
+              <div className=" shadow-lg overflow-hidden rounded">
                 <Image
                   width={250}
                   height={200}
-                  src={heroImg} 
+                  src={heroImg}
                   alt="Guide Map Kampung Kemasan 1"
-                  className="w-full h-[12vh] md:h-[20vh] object-cover transition-transform hover:scale-105"
-                />
-              </div>
-
-              <div className="bg-white shadow-lg overflow-hidden rounded">
-                <Image
-                  width={250}
-                  height={200}
-                  src={heroImg} 
-                  alt="Guide Map Kampung Kemasan 2"
-                  className="w-full h-[12vh] md:h-[20vh] object-cover transition-transform hover:scale-105"
-                />
-              </div>
-
-              <div className="bg-white shadow-lg overflow-hidden rounded">
-                <Image
-                  width={250}
-                  height={200}
-                  src={heroImg} 
-                  alt="Guide Map Kampung Kemasan 3"
-                  className="w-full h-[12vh] md:h-[20vh] object-cover transition-transform hover:scale-105"
+                  className="h-[50vh] w-auto object-cover transition-transform hover:scale-105"
                 />
               </div>
             </div>
+            <Link
+              href="https://maps.app.goo.gl/Wq5PmYcvCCX5i5Y2A"
+              target="_blank"
+              className="inline-block border bg-[#8B2615] border-white md:border-black px-8 py-4 uppercase font-bold tracking-widest text-xs hover:bg-[#C9A051] hover:border-[#C9A051] text-white transition-all mb-6"
+            >
+              View on Map
+            </Link>
           </motion.div>
         </div>
       </div>

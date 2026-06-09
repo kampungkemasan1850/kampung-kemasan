@@ -10,6 +10,10 @@
   --font-mono: var(--font-geist-mono);
   --font-bebas-neue: var(--font-bebas-neue);
   --font-sloop: var(--font-sloop);
+  --font-luxurious-script: var(--font-luxurious-script);
+  --font-be-vietnam-pro: var(--font-be-vietnam-pro);
+  --font-dancing-script: var(--font-dancing-script);
+  --font-imperial-script: var(--font-imperial-script);
 }
 
 @media (prefers-color-scheme: dark) {

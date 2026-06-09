@@ -1,18 +1,35 @@
 {
   "navbar": {
     "home": "Beranda",
-    "gallery": "Arsip",
+    "gallery": "Galeri",
     "event": "Acara",
     "about": "Tentang",
     "contact": "Kontak",
     "language": "Bahasa"
   },
+  "home": {
+    "about": {
+      "title": "Menyusuri sejarah Kampung Kemasan",
+      "description1": "Berlokasi di Kabupaten Gresik, Jawa Timur Kampung Kemasan Gresik merupakan salah satu destinasi wisata yang paling ikonik di daerah tersebut. Kampung ini dikenal dengan gaya arsitekturnya yang unik dan cukup berbeda dari beberapa bangunan era kolonial pada umumnya. Bagian arsitektur yang ada di Kampung Kemasan terpengaruh dari budaya Tionghoa atau Cina, Belanda, dan Jawa.",
+      "description2": "Berlokasi di Kabupaten Gresik, Jawa Timur Kampung Kemasan Gresik merupakan salah satu destinasi wisata yang paling ikonik di daerah tersebut. Kampung ini dikenal dengan gaya arsitekturnya yang unik dan cukup berbeda dari beberapa bangunan era kolonial pada umumnya. Bagian arsitektur yang ada di Kampung Kemasan terpengaruh dari budaya Tionghoa atau Cina, Belanda, dan Jawa."
+
+    },
+    "events": {
+      "title": "Acara Tahunan",
+      "subtitle": "Merayakan Warisan, Perdagangan, dan Seni",
+      "pasar_bandeng": "Pasar Bandeng Festive",
+      "badoghan": "Festival Badoghan",
+      "mtn_lab": "MTN Lab: Ruang Talenta",
+      "mtn_desc": "Diinisiasi oleh Kementerian Kebudayaan, program ini menjadikan Kampung Kemasan laboratorium kreatif bagi seniman muda.",
+      "cta_register": "Daftar Acara"
+    }
+  },
   "hero": {
-    "est": "EST. 1855",
-    "title": "Jelajahi Warisan",
-    "subtitle": "Kampung Kemasan",
+    "est": "1855",
+    "title": "Kampung Kemasan",
     "tagline": "Di Mana Sejarah Hidup di Setiap Sudut"
   },
+
   "gallery": {
     "title": "Galeri",
     "subtitle": "Menangkap Esensi Kampung Kemasan",

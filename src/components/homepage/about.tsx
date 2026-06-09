@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 
 type AboutSectionProps = {
   t: (key: string) => string;
-  heroImg: string | StaticImageData;
+  image: string | StaticImageData;
 };
 
-export default function AboutSection({ t, heroImg }: AboutSectionProps) {
+export default function AboutSection({ t, image }: AboutSectionProps) {
   return (
     <section className="bg-[#FAFAFA] overflow-hidden">
       <div className="grid grid-cols-1 md:grid-cols-2 items-center">
@@ -47,7 +47,7 @@ export default function AboutSection({ t, heroImg }: AboutSectionProps) {
           className="relative h-[60vh] w-full min-h-125 md:h-full"
         >
           <Image
-            src={heroImg}
+            src={image}
             alt="Architecture Detail"
             fill
             sizes="60vh"

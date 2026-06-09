@@ -16,7 +16,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-5 space-y-6">
             <h3 className="text-[#C9A051] text-3xl font-bold uppercase tracking-tighter leading-none">
-              {t("hero.subtitle")} <br /> Heritage
+              Kampoeng Kemasan <br /> Heritage
             </h3>
             <p className="text-zinc-500 text-sm font-light leading-relaxed max-w-sm">
               {t("footer.description")}
@@ -121,7 +121,7 @@ export default function Footer() {
         {/* Copyright Section */}
         <div className="pt-10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[10px] uppercase tracking-[0.2em] text-zinc-600">
-            &copy; {currentYear} {t("hero.subtitle")}. {t("footer.copyright")}
+            &copy; {currentYear} Kampoeng Kemasan. {t("footer.copyright")}
           </p>
           <div className="flex items-center gap-2">
             <div className="h-px w-8 bg-zinc-800"></div>

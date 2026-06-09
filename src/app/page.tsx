@@ -7,9 +7,13 @@ import Events from "../components/homepage/event";
 import VideoSection from "../components/homepage/video";
 import Location from "../components/homepage/maps";
 import Explore from "@/components/homepage/explore";
+import Spotlight from "@/components/homepage/spotlight";
 import Testimonials from "../components/homepage/testimonial";
 
-import heroImg from "../../public/assets/images/rumah-img.jpg";
+import heroImg from "../../public/assets/images/hero.webp";
+import houseImg from "../../public/assets/images/rumah-img.jpg";
+// import historyImg from "../../public/assets/images/history.webp";
+// import historyImg2 from "../../public/assets/images/history2.png";
 import { useTranslation } from "react-i18next";
 
 export default function Home() {
@@ -17,13 +21,14 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#F6F6EC] overflow-x-hidden selection:bg-[#C9A051] selection:text-white">
-      <Hero heroImg={heroImg} t={t} />
+      <Hero image={heroImg} t={t} />
       <Feature t={t} />
-      <Narrative t={t} heroImg={heroImg} />
+      <Narrative t={t} image={houseImg} />
       <Events t={t} />
       <VideoSection />
       <Location />
       <Explore />
+      <Spotlight />
       <Testimonials />
     </main>
   );

@@ -56,7 +56,6 @@ export default function Navbar() {
 
   return (
     <nav className="flex items-center justify-between px-4 sm:px-8 py-1 md:py-5 sticky top-0 z-9999 bg-[#8B2615] border-b border-white/10">
-      {/* Left Navigation - Desktop */}
       <motion.div
         initial="hidden"
         animate="visible"
@@ -76,7 +75,6 @@ export default function Navbar() {
         ))}
       </motion.div>
 
-      {/* Center Logo - full text on desktop, compact logo on mobile */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -86,12 +84,11 @@ export default function Navbar() {
           href="/"
           className="font-bold font-bebas-neue text-2xl hover:text-[#C9A051] focus:bg-[#C9A051] transition-colors text-white"
         >
-          Jelajahi Warisan{" "}
+          
           <span className="font-sloop text-3xl">Kampung Kemasan</span>
         </Link>
       </motion.div>
 
-      {/* Mobile compact logo */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -112,7 +109,6 @@ export default function Navbar() {
         </Link>
       </motion.div>
 
-      {/* Right Navigation - Desktop */}
       <div className="hidden lg:flex gap-8 items-center">
         {secondaryLinks.map((item) => (
           <Link
@@ -135,7 +131,6 @@ export default function Navbar() {
         </select>
       </div>
 
-      {/* Mobile Menu Button */}
       <button
         onClick={() => setMenuOpen(!menuOpen)}
         className="lg:hidden text-white z-10000 p-2"
@@ -156,7 +151,6 @@ export default function Navbar() {
         </div>
       </button>
 
-      {/* Sidebar - Mobile */}
       <AnimatePresence>
         {menuOpen && (
           <>
