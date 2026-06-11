@@ -78,6 +78,7 @@ export default function Hero({ image, t }: HeroProps) {
           >
             <button
               className={`${textColor} bg-[#8B2615] mt-6 uppercase font-bold px-8 py-3 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all flex items-center gap-3`}
+              onClick={() => window.open("/about")}
             >
               <span>{t("hero.cta")}</span>
             </button>
