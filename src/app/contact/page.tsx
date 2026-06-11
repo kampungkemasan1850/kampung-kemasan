@@ -1,32 +1,16 @@
 "use client";
 
-import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function ContactPage() {
   const { t } = useTranslation();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setFormData({ name: "", email: "", message: "" });
-    setTimeout(() => setSubmitted(false), 5000);
-  };
+  const [state, handleSubmit] = useForm(
+    process.env.NEXT_PUBLIC_FORMSFREE_PROJECT_ID || "contactForm",
+  );
 
   return (
     <div className="min-h-screen bg-[#F6F6EC] py-20 px-4 sm:px-8">
@@ -81,7 +65,7 @@ export default function ContactPage() {
                     name: "Facebook",
                     url: "https://www.facebook.com/profile.php?id=61590609142929&ref=ig_profile_ac&target=61590609142929&funlid=R7tf7HGT3q67DzDQ",
                   },
-                  // { name: "Twitter", url: "#" },
+                  { name: "Email", url: "mailto:kampungkemasan1850@gmail.com" },
                 ].map((social) => (
                   <a
                     key={social.name}
@@ -96,8 +80,8 @@ export default function ContactPage() {
           </div>
 
           <div className="bg-white border border-zinc-200 p-8 md:p-12 shadow-[20px_20px_0px_0px_rgba(0,0,0,0.05)]">
-            <AnimatePresence>
-              {submitted ? (
+            <AnimatePresence mode="wait">
+              {state.succeeded ? (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -117,55 +101,80 @@ export default function ContactPage() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-8">
                   <div className="group">
-                    <label className="block text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-2 group-focus-within:text-[#C9A051] transition-colors">
+                    <label
+                      htmlFor="name"
+                      className="block text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-2 group-focus-within:text-[#C9A051] transition-colors"
+                    >
                       {t("contact.form_name")}
                     </label>
                     <input
+                      id="name"
                       type="text"
                       name="name"
-                      value={formData.name}
-                      onChange={handleChange}
                       required
                       placeholder="John Doe"
                       className="w-full bg-transparent border-b border-zinc-200 py-3 outline-none focus:border-black transition-colors text-zinc-900 placeholder:text-zinc-200"
                     />
-                  </div>
-
-                  <div className="group">
-                    <label className="block text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-2 group-focus-within:text-[#C9A051] transition-colors">
-                      {t("contact.form_email")}
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      placeholder="email@example.com"
-                      className="w-full bg-transparent border-b border-zinc-200 py-3 outline-none focus:border-black transition-colors text-zinc-900 placeholder:text-zinc-200"
+                    <ValidationError
+                      prefix="Name"
+                      field="name"
+                      errors={state.errors}
+                      className="text-xs text-red-600 mt-1 block"
                     />
                   </div>
 
                   <div className="group">
-                    <label className="block text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-2 group-focus-within:text-[#C9A051] transition-colors">
+                    <label
+                      htmlFor="email"
+                      className="block text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-2 group-focus-within:text-[#C9A051] transition-colors"
+                    >
+                      {t("contact.form_email")}
+                    </label>
+                    <input
+                      id="email"
+                      type="email"
+                      name="email"
+                      required
+                      placeholder="email@example.com"
+                      className="w-full bg-transparent border-b border-zinc-200 py-3 outline-none focus:border-black transition-colors text-zinc-900 placeholder:text-zinc-200"
+                    />
+                    <ValidationError
+                      prefix="Email"
+                      field="email"
+                      errors={state.errors}
+                      className="text-xs text-red-600 mt-1 block"
+                    />
+                  </div>
+
+                  <div className="group">
+                    <label
+                      htmlFor="message"
+                      className="block text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-2 group-focus-within:text-[#C9A051] transition-colors"
+                    >
                       {t("contact.form_message")}
                     </label>
                     <textarea
+                      id="message"
                       name="message"
-                      value={formData.message}
-                      onChange={handleChange}
                       required
                       rows={4}
                       placeholder="How can we help you?"
                       className="w-full bg-transparent border-b border-zinc-200 py-3 outline-none focus:border-black transition-colors text-zinc-900 placeholder:text-zinc-200 resize-none"
                     />
+                    <ValidationError
+                      prefix="Message"
+                      field="message"
+                      errors={state.errors}
+                      className="text-xs text-red-600 mt-1 block"
+                    />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full bg-black text-white py-5 font-bold uppercase tracking-[0.3em] text-xs hover:bg-[#C9A051] transition-all duration-500 transform active:scale-[0.98]"
+                    disabled={state.submitting}
+                    className="w-full bg-black text-white py-5 font-bold uppercase tracking-[0.3em] text-xs hover:bg-[#C9A051] transition-all duration-500 transform active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {t("contact.form_submit")}
+                    {state.submitting ? "Sending..." : t("contact.form_submit")}
                   </button>
                 </form>
               )}

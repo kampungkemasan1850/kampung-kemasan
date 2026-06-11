@@ -9,8 +9,10 @@
   },
   "hero": {
     "est": "1855",
-    "title": "Kampung Kemasan",
-    "tagline": "Where History Lives in Every Corner"
+    "title": "Unravel History",
+    "subtitle": "with Us",
+    "tagline": "Where History Lives in Every Corner",
+    "cta": "Find More"
   },
   "home": {
     "about": {
@@ -27,6 +29,11 @@
       "mtn_desc": "Initiated by the Ministry of Culture, this program turns Kampung Kemasan into a creative laboratory for young artists to explore coastal narratives.",
       "cta_register": "Register for Event"
     }
+  },
+  "maps": {
+    "title": "Explore Kampung Kemasan",
+    "description": "Discover the rich history and vibrant culture of Kampung Kemasan through our interactive map. From iconic landmarks to hidden gems, navigate through the heart of Gresik's heritage village and uncover its stories.",
+    "cta": "Guide Map"
   },
   "gallery": {
     "title": "Gallery",

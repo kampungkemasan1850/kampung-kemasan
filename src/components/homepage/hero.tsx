@@ -37,7 +37,7 @@ export default function Hero({ image, t }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="ml-8 md:ml-10 z-20 mb-4"
+            className="z-20 mb-4"
           >
             <span
               className={`inline-block border-2 border-[#ffe88b] ${textColor} rounded-[50%] px-6 py-2 text-sm md:text-xl font-bold tracking-widest shadow-sm `}
@@ -50,28 +50,39 @@ export default function Hero({ image, t }: HeroProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 1 }}
-            className={`font-luxurious-script ${textColor} text-6xl md:text-[13rem] font-semibold tracking-wide leading-[0.8] drop-shadow-2xl text-left`}
+            className={`font-extrabold  ${textColor} max-w-[70vw] text-6xl md:text-[10rem] tracking-wide leading-[0.8] shadow-2xl drop-shadow-2xl text-left`}
           >
-            Kampoeng
+            {t("hero.title")}
           </motion.h1>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 1 }}
-            className={`ml-24 font-luxurious-script ${textColor} text-6xl md:text-[13rem] font-semibold tracking-wide leading-[0.8] drop-shadow-2xl text-left`}
+            className={`font-luxurious-script ${textColor} text-6xl md:text-[8rem] tracking-wide leading-[0.8] drop-shadow-2xl text-left`}
           >
-            Kemasan
+            {t("hero.subtitle")}
           </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.2, duration: 1 }}
+            className={`w-full text-start ${textColor} text-base md:text-xl font-sans tracking-wide drop-shadow-lg pointer-events-auto`}
+          >
+            &quot;{t("hero.tagline")} &quot;
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.5, duration: 0.8 }}
+            className=""
+          >
+            <button
+              className={`${textColor} bg-[#8B2615] mt-6 uppercase font-bold px-8 py-3 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all flex items-center gap-3`}
+            >
+              <span>{t("hero.cta")}</span>
+            </button>
+          </motion.div>
         </div>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 1 }}
-          className={`absolute bottom-[10%] md:bottom-[15%] w-full text-center px-4 ${textColor} text-base md:text-xl font-sans tracking-wide drop-shadow-lg pointer-events-auto`}
-        >
-         &quot;{t("hero.tagline")} &quot;
-        </motion.p>
       </div>
     </div>
   );

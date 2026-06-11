@@ -4,60 +4,74 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Tiktok1 from "../../../public/assets/images/tiktok1.webp";
+import Tiktok2 from "../../../public/assets/images/tiktok2.webp";
+import Tiktok3 from "../../../public/assets/images/tiktok3.webp";
+import Tiktok4 from "../../../public/assets/images/tiktok4.webp";
+import Tiktok5 from "../../../public/assets/images/tiktok5.webp";
+import Tiktok6 from "../../../public/assets/images/tiktok6.webp";
+import Tiktok7 from "../../../public/assets/images/tiktok7.webp";
+import Tiktok8 from "../../../public/assets/images/tiktok8.webp";
 
-// --- Data Structure for TikTok Links ---
 const tiktokVideos = [
   {
     id: 1,
     category: "Explore",
     title: "Keindahan Kampung Kemasan",
     url: "https://vt.tiktok.com/ZSxDLxWt7/",
+    image: Tiktok1, 
   },
   {
     id: 2,
     category: "Explore",
     title: "Menyusuri Jalan Heritage",
     url: "https://vt.tiktok.com/ZSxDLvemS/",
+    image: Tiktok2,
   },
   {
     id: 3,
     category: "Explore",
     title: "Vlog Seru di Kemasan",
     url: "https://vt.tiktok.com/ZSxDN8wRu/",
+    image: Tiktok3,
   },
   {
     id: 4,
     category: "Bus Tumpuk",
     title: "Keliling Naik Bus Wisata",
     url: "https://vt.tiktok.com/ZSxDNDTU3/",
+    image: Tiktok4,
   },
   {
     id: 5,
     category: "Bus Tumpuk",
     title: "Keseruan Bus Bandar Grissee",
     url: "https://vt.tiktok.com/ZSxDNN77R/",
+    image: Tiktok5,
   },
   {
     id: 6,
     category: "Walking Tour",
     title: "Jelajah Sejarah Jalan Kaki",
     url: "https://vt.tiktok.com/ZSxDNr6AM/",
+    image: Tiktok6,
   },
   {
     id: 7,
     category: "Walking Tour",
     title: "Cerita di Balik Bangunan",
     url: "https://vt.tiktok.com/ZSxDN87yy/",
+    image: Tiktok7,
   },
   {
     id: 8,
     category: "Art Space Event",
     title: "Pameran & Ruang Seni",
     url: "https://vt.tiktok.com/ZSxDNNbhn/",
+    image: Tiktok8,
   },
 ];
 
-// --- Reusable SVG Icons ---
 const PlayIcon = () => (
   <svg
     viewBox="0 0 24 24"
@@ -90,14 +104,12 @@ const Spotlight = () => {
 
   return (
     <section className="relative w-full py-20 bg-[#1A1A1A] overflow-hidden font-sans">
-      {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
         <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#9C2810] rounded-full blur-[120px] opacity-20"></div>
         <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-[#E0A96D] rounded-full blur-[120px] opacity-10"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8">
-        {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="flex flex-col">
             <h2 className="font-luxurious-script italic text-5xl md:text-7xl text-[#E0A96D] mb-2 drop-shadow-md">
@@ -109,7 +121,6 @@ const Spotlight = () => {
             </p>
           </div>
 
-          {/* Desktop Navigation Arrows */}
           <div className="hidden md:flex gap-4">
             <button
               onClick={() => scroll("left")}
@@ -150,8 +161,6 @@ const Spotlight = () => {
           </div>
         </div>
 
-        {/* Carousel Container */}
-        {/* Using inline styles to strictly hide the scrollbar across all browsers without external plugins */}
         <div
           ref={scrollRef}
           className="flex overflow-x-auto gap-6 snap-x snap-mandatory pb-8 pt-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
@@ -172,29 +181,24 @@ const Spotlight = () => {
                 className="group block h-full"
               >
                 <div className="relative w-full aspect-9/16 rounded-4xl overflow-hidden shadow-2xl bg-[#2A2A2A] border-4 border-transparent group-hover:border-[#9C2810] transition-all duration-300">
-                  {/* Simulated Thumbnail Image (Replace with actual Next/Image if available) */}
                   <Image
-                    src={`/dummy-tiktok-${(index % 3) + 1}.jpg`} // Replace with your actual thumbnail paths
+                    src={video.image}
                     alt={video.title}
                     fill
                     className="object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-300"
                   />
 
-                  {/* Gradient Overlay for Text Readability */}
                   <div className="absolute inset-0 bg-linear-to-b from-black/20 via-transparent to-black/90"></div>
 
-                  {/* Top Badge */}
                   <div className="absolute top-5 left-5 bg-black/50 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider py-1.5 px-3 rounded-full flex items-center gap-2">
                     <TikTokIcon />
                     {video.category}
                   </div>
 
-                  {/* Center Play Button */}
                   <div className="absolute inset-0 flex justify-center items-center">
                     <PlayIcon />
                   </div>
 
-                  {/* Bottom Text Area */}
                   <div className="absolute bottom-0 left-0 w-full p-6 text-left">
                     <h3 className="text-[#FAF3E0] font-serif text-lg leading-tight font-bold group-hover:-translate-y-2 transition-transform duration-300">
                       {video.title}

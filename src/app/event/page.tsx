@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import heroImg from "../../../public/assets/images/hero-img.jpg";
+import ArtEvent from "../../../public/assets/images/art-event.webp";
+import YearEvent from "../../../public/assets/images/year-event.webp";
 import { FaArrowRight } from "react-icons/fa";
 import "../../i18n";
 import { useTranslation } from "react-i18next";
@@ -55,7 +56,7 @@ export default function EventPage() {
   ];
 
   return (
-    <div className="min-h-screen text-zinc-900 pb-24">
+    <div className="min-h-screen text-zinc-900">
       <section className="pt-20 px-4 md:px-8 max-w-7xl mx-auto mb-20">
         <div className="border-l-8 border-black pl-6">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter uppercase leading-none">
@@ -68,16 +69,29 @@ export default function EventPage() {
       </section>
 
       <section className="px-4 md:px-8 max-w-7xl mx-auto mb-32">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          <div className="lg:col-span-4">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-[#C9A051] mb-6">
-              01. Acara Tahunan
-            </h2>
-            <p className="text-zinc-500 font-light leading-relaxed">
-              Perayaan tahunan yang menjadi denyut nadi kehidupan sosial di
-              Kampung Kemasan, menggabungkan potensi maritim, tradisi, dan
-              kekayaan kuliner Gresik.
-            </p>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="lg:col-span-4 lg:sticky lg:top-28 space-y-8">
+            <div>
+              <h2 className="text-sm font-bold uppercase tracking-widest text-[#C9A051] mb-6">
+                01. Acara Tahunan
+              </h2>
+              <p className="text-zinc-500 font-light leading-relaxed">
+                Perayaan tahunan yang menjadi denyut nadi kehidupan sosial di
+                Kampung Kemasan, menggabungkan potensi maritim, tradisi, dan
+                kekayaan kuliner Gresik.
+              </p>
+            </div>
+
+            <div className="relative w-full h-[45vh] md:h-[70vh] overflow-hidden group/img">
+              <Image
+                src={YearEvent}
+                alt="Annual Events Kampung Kemasan Heritage"
+                fill
+                sizes="(max-w-7xl) 33vw, 100vw"
+                className="object-contain transition-transform duration-700 group-hover/img:scale-105"
+                placeholder="blur"
+              />
+            </div>
           </div>
 
           <div className="lg:col-span-8 space-y-24">
@@ -149,16 +163,16 @@ export default function EventPage() {
       <section className="bg-zinc-900 text-white py-24">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative h-[70vh] grayscale hover:grayscale-0 transition-all duration-700">
+            <div className="relative h-[70vh] transition-all duration-700">
               <Image
-                src={heroImg}
+                src={ArtEvent}
                 alt="MTN Lab Exhibition"
                 fill
                 className="object-cover rounded-sm shadow-2xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-[#C9A051] p-8 hidden md:block">
                 <p className="text-black font-bold text-4xl tracking-tighter">
-                  1–14 Sept &apos;25
+                  1-14 Sept &apos;25
                 </p>
                 <p className="text-black/70 text-xs font-bold uppercase tracking-widest">
                   MTN Lab Residency
@@ -184,7 +198,7 @@ export default function EventPage() {
                 </p>
                 <p>
                   Dalam semangat tersebut, Kampung Kemasan menjadi tuan rumah
-                  MTN Lab (Manajemen Talenta Nasional Lab) pada 1–14 September
+                  MTN Lab (Manajemen Talenta Nasional Lab) pada 1-14 September
                   2025, sebuah program inisiatif Kementerian Kebudayaan Republik
                   Indonesia. Puluhan seniman dari berbagai daerah berkumpul,
                   tinggal bersama, dan berkolaborasi dalam ruang kreatif yang
@@ -196,7 +210,7 @@ export default function EventPage() {
                   <h4 className="font-bold text-[#C9A051] uppercase text-xs tracking-widest mb-2">
                     Jadwal
                   </h4>
-                  <p className="text-sm text-zinc-300">1–14 September 2025</p>
+                  <p className="text-sm text-zinc-300">1-14 September 2025</p>
                 </div>
                 <div>
                   <h4 className="font-bold text-[#C9A051] uppercase text-xs tracking-widest mb-2">
@@ -212,54 +226,58 @@ export default function EventPage() {
         </div>
       </section>
 
-      <section className="bg-zinc-900 text-white px-4 md:px-8 ">
+      <section className="bg-zinc-900 text-white px-4 md:px-8 py-24 ">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div className="border-t border-zinc-700 pt-8">
               <h3 className="text-2xl font-bold uppercase tracking-tighter mb-6 text-white">
                 Rangkaian Kegiatan
               </h3>
-              <p className="text-zinc-400 font-light mb-6 leading-relaxed">
-                Selama dua minggu, para peserta mengikuti berbagai kegiatan
-                seperti residensi, inkubasi karya, lokakarya, hingga
-                masterclass. Proses ini tidak hanya berfokus pada pengembangan
-                keterampilan seni, tetapi juga bagaimana seni berinteraksi
-                dengan kehidupan masyarakat serta sejarah ruang di sekitarnya.
-              </p>
-              <p className="text-zinc-400 font-light leading-relaxed">
-                MTN Lab juga menghadirkan workshop film bersama komunitas lokal,
-                diskusi kuratorial, hingga persiapan pameran yang memperkaya
-                pengalaman para seniman muda dalam membangun perjalanan karier
-                mereka ke depan.
-              </p>
+              <div className="text-zinc-400 font-light space-y-6 leading-relaxed">
+                <p>
+                  Selama dua minggu, para peserta mengikuti berbagai kegiatan
+                  seperti residensi, inkubasi karya, lokakarya, hingga
+                  masterclass. Proses ini tidak hanya berfokus pada pengembangan
+                  keterampilan seni, tetapi juga bagaimana seni berinteraksi
+                  dengan kehidupan masyarakat serta sejarah ruang di sekitarnya.
+                </p>
+                <p>
+                  MTN Lab juga menghadirkan workshop film bersama komunitas
+                  lokal, diskusi kuratorial, hingga persiapan pameran yang
+                  memperkaya pengalaman para seniman muda dalam membangun
+                  perjalanan karier mereka ke depan.
+                </p>
+              </div>
             </div>
 
             <div className="border-t border-zinc-700 pt-8">
               <h3 className="text-2xl font-bold uppercase tracking-tighter mb-6 text-white">
                 Ruang Afirmasi & Inspirasi
               </h3>
-              <p className="text-zinc-400 font-light mb-6 leading-relaxed">
-                Program ini menjadi wadah penting bagi seniman muda untuk
-                berkembang dan mendapatkan pengalaman langsung dari para
-                praktisi. Selain itu, MTN Lab juga menjadi ruang afirmasi bagi
-                talenta lokal, termasuk seniman dari Gresik yang berpartisipasi
-                dalam berbagai medium seperti seni lukis, kriya, hingga seni
-                berbasis komunitas.
-              </p>
-              <p className="text-zinc-400 font-light leading-relaxed">
-                Lebih dari sekadar pameran, Art & Culture Exhibition di Kampung
-                Kemasan menghadirkan cara baru untuk melihat kota—bagaimana
-                arsitektur, kehidupan sehari-hari, hingga budaya lokal menjadi
-                sumber inspirasi karya seni. Dari Kampung Kemasan, semangat
-                kreatif ini kemudian menyebar ke berbagai kota lain di
-                Indonesia.
-              </p>
+              <div className="text-zinc-400 font-light space-y-6 leading-relaxed">
+                <p>
+                  Program ini menjadi wadah penting bagi seniman muda untuk
+                  berkembang dan mendapatkan pengalaman langsung dari para
+                  praktisi. Selain itu, MTN Lab juga menjadi ruang afirmasi bagi
+                  talenta lokal, termasuk seniman dari Gresik yang
+                  berpartisipasi dalam berbagai medium seperti seni lukis,
+                  kriya, hingga seni berbasis komunitas.
+                </p>
+                <p>
+                  Lebih dari sekadar pameran, Art & Culture Exhibition di
+                  Kampung Kemasan menghadirkan cara baru untuk melihat
+                  kota—bagaimana arsitektur, kehidupan sehari-hari, hingga
+                  budaya lokal menjadi sumber inspirasi karya seni. Dari Kampung
+                  Kemasan, semangat kreatif ini kemudian menyebar ke berbagai
+                  kota lain di Indonesia.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="mt-16 text-center py-24 border-t border-zinc-200">
+      <section className="mt-16 text-center py-24 border-t mx-[5vw] border-zinc-200">
         <p className="text-zinc-400 uppercase tracking-[0.5em] text-xs mb-8">
           Makna Kebudayaan
         </p>

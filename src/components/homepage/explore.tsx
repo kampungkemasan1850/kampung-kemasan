@@ -260,10 +260,9 @@ export default function Explore() {
               </div>
             </div>
 
-            {/* TOMBOL ROUTE KE HALAMAN EVENT */}
             <div className="flex justify-end pt-2">
               <a
-                href="/event" // Silakan sesuaikan path/rute halaman event Anda di sini
+                href="/event"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-[#8B2615] text-white font-semibold rounded-full shadow-sm hover:bg-[#731f11] transition-all duration-300 group"
               >
                 Lihat Event Mendatang
@@ -407,11 +406,9 @@ export default function Explore() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 md:gap-10">
         <div className="w-full lg:w-1/3 xl:w-[30%] flex flex-col gap-4 lg:gap-6 shrink-0">
           <div className="text-center lg:text-left mb-2 lg:mb-0">
-            <h2 className="text-3xl font-extrabold text-[#8B2615] leading-tight capitalize">
+            <h2 className="text-3xl font-black tracking-tighter uppercase leading-none text-[#8B2615]">
               Jelajahi <br className="hidden lg:block" />
-              <span className="text-zinc-800 text-2xl font-bold">
-                Kampung Kemasan
-              </span>
+              <span className="text-zinc-800 text-2xl">Kampung Kemasan</span>
             </h2>
             <p className="text-zinc-500 text-sm mt-2 lg:mt-3 leading-relaxed hidden lg:block">
               Pilih menu di bawah untuk melihat panduan lengkap perjalanan,

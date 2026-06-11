@@ -24,10 +24,17 @@
       "cta_register": "Daftar Acara"
     }
   },
+  "maps": {
+    "title": "Jelajahi Kampung Kemasan",
+    "description": "Temukan sejarah yang kaya dan budaya yang hidup dari Kampung Kemasan melalui peta interaktif kami. Dari landmark ikonik hingga permata tersembunyi, navigasikan melalui jantung desa warisan Gresik dan ungkap ceritanya.",
+    "cta": "Peta Panduan"
+  },
   "hero": {
     "est": "1855",
-    "title": "Kampung Kemasan",
-    "tagline": "Di Mana Sejarah Hidup di Setiap Sudut"
+    "title": "Menyusuri Sejarah",
+    "subtitle": "bersama Kami",
+    "tagline": "Di Mana Sejarah Hidup di Setiap Sudut",
+    "cta": "Cari Tahu Lebih Lanjut"
   },
 
   "gallery": {

@@ -26,7 +26,7 @@ export default function Home() {
       <Narrative t={t} image={houseImg} />
       <Events t={t} />
       <VideoSection />
-      <Location />
+      <Location t={t} />
       <Explore />
       <Spotlight />
       <Testimonials />
