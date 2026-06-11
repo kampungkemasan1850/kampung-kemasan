@@ -41,7 +41,6 @@ export default function Explore() {
               <h3 className="text-2xl font-bold text-[#8B2615] mb-3">
                 {t("explore.transportation.heading")}
               </h3>
-              {/* Using dangerouslySetInnerHTML to render the <strong> tags from JSON */}
               <p
                 className="text-zinc-600 leading-relaxed"
                 dangerouslySetInnerHTML={{
@@ -156,7 +155,7 @@ export default function Explore() {
               <p className="text-sm text-zinc-600 mb-3">
                 {t("explore.transportation.local_transport.desc")}
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 mb-6">
                 <span className="px-4 py-2 bg-white border border-zinc-200 rounded-full text-sm font-medium text-zinc-700 shadow-sm">
                   {t("explore.transportation.local_transport.opt1")}
                 </span>
@@ -170,6 +169,12 @@ export default function Explore() {
                   {t("explore.transportation.local_transport.opt4")}
                 </span>
               </div>
+              <p
+                className="text-sm text-zinc-600 leading-relaxed bg-zinc-100 p-4 rounded-xl"
+                dangerouslySetInnerHTML={{
+                  __html: t("explore.transportation.local_transport.bus_info"),
+                }}
+              />
             </div>
           </div>
         );
@@ -192,27 +197,27 @@ export default function Explore() {
                   {t("explore.activities.exploration.title")}
                 </h4>
                 <ul className="space-y-4">
-                  <li className="flex items-center gap-3 text-zinc-600">
-                    <div className="p-2 bg-orange-100 text-orange-600 rounded-lg">
+                  <li className="flex items-start gap-3 text-zinc-600">
+                    <div className="p-2 bg-orange-100 text-orange-600 rounded-lg mt-1 shrink-0">
                       <FaUtensils />
                     </div>
                     <span className="font-medium">
                       {t("explore.activities.exploration.item1")}
                     </span>
                   </li>
-                  <li className="flex items-center gap-3 text-zinc-600">
-                    <div className="p-2 bg-blue-100 text-blue-600 rounded-lg">
+                  <li className="flex items-start gap-3 text-zinc-600">
+                    <div className="p-2 bg-blue-100 text-blue-600 rounded-lg mt-1 shrink-0">
                       <FaMapMarkedAlt />
                     </div>
                     <span className="font-medium">
                       {t("explore.activities.exploration.item2")}
                     </span>
                   </li>
-                  <li className="flex items-center gap-3 text-zinc-600">
-                    <div className="p-2 bg-emerald-100 text-emerald-600 rounded-lg">
+                  <li className="flex items-start gap-3 text-zinc-600">
+                    <div className="p-2 bg-emerald-100 text-emerald-600 rounded-lg mt-1 shrink-0">
                       <FaBus />
                     </div>
-                    <span className="font-medium">
+                    <span className="font-medium text-sm">
                       {t("explore.activities.exploration.item3")}
                     </span>
                   </li>
@@ -224,24 +229,24 @@ export default function Explore() {
                   {t("explore.activities.documentation.title")}
                 </h4>
                 <ul className="space-y-4">
-                  <li className="flex items-center gap-3 text-zinc-600">
-                    <div className="p-2 bg-pink-100 text-pink-600 rounded-lg">
+                  <li className="flex items-start gap-3 text-zinc-600">
+                    <div className="p-2 bg-pink-100 text-pink-600 rounded-lg mt-1 shrink-0">
                       <FaCamera />
                     </div>
                     <span className="font-medium">
                       {t("explore.activities.documentation.item1")}
                     </span>
                   </li>
-                  <li className="flex items-center gap-3 text-zinc-600">
-                    <div className="p-2 bg-purple-100 text-purple-600 rounded-lg">
+                  <li className="flex items-start gap-3 text-zinc-600">
+                    <div className="p-2 bg-purple-100 text-purple-600 rounded-lg mt-1 shrink-0">
                       <FaCamera />
                     </div>
                     <span className="font-medium">
                       {t("explore.activities.documentation.item2")}
                     </span>
                   </li>
-                  <li className="flex items-center gap-3 text-zinc-600">
-                    <div className="p-2 bg-rose-100 text-rose-500 rounded-lg">
+                  <li className="flex items-start gap-3 text-zinc-600">
+                    <div className="p-2 bg-rose-100 text-rose-500 rounded-lg mt-1 shrink-0">
                       <FaCamera />
                     </div>
                     <span className="font-medium">
@@ -284,23 +289,20 @@ export default function Explore() {
                 <h4 className="font-bold text-zinc-800 mb-3">
                   {t("explore.culinary.popular.title")}
                 </h4>
-                <ul className="text-sm text-zinc-600 space-y-3">
+                <ul className="text-sm text-zinc-600 space-y-4">
                   <li>
-                    <strong>
-                      {t("explore.culinary.popular.item1_title")}:
-                    </strong>{" "}
+                    <strong>{t("explore.culinary.popular.item1_title")}</strong>{" "}
+                    <br />
                     {t("explore.culinary.popular.item1_desc")}
                   </li>
                   <li>
-                    <strong>
-                      {t("explore.culinary.popular.item2_title")}:
-                    </strong>{" "}
+                    <strong>{t("explore.culinary.popular.item2_title")}</strong>{" "}
+                    <br />
                     {t("explore.culinary.popular.item2_desc")}
                   </li>
                   <li>
-                    <strong>
-                      {t("explore.culinary.popular.item3_title")}:
-                    </strong>{" "}
+                    <strong>{t("explore.culinary.popular.item3_title")}</strong>{" "}
+                    <br />
                     {t("explore.culinary.popular.item3_desc")}
                   </li>
                 </ul>
@@ -314,7 +316,7 @@ export default function Explore() {
                   {t("explore.culinary.souvenir.title")}
                 </h4>
                 <div className="text-sm text-zinc-600">
-                  <p className="font-bold text-zinc-800 mb-1">
+                  <p className="font-bold text-zinc-800 mb-2">
                     {t("explore.culinary.souvenir.item_title")}
                   </p>
                   <p>{t("explore.culinary.souvenir.item_desc")}</p>
@@ -328,17 +330,23 @@ export default function Explore() {
                 <h4 className="font-bold text-zinc-800 mb-3">
                   {t("explore.culinary.hangout.title")}
                 </h4>
-                <ul className="text-sm text-zinc-600 space-y-2">
-                  <li className="flex items-center gap-2">
-                    <FaMapMarkerAlt className="text-zinc-400" /> Sualoka Hub
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaMapMarkerAlt className="text-zinc-400" /> Kamari
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaMapMarkerAlt className="text-zinc-400" /> Gresiknesia
-                  </li>
-                </ul>
+                <div className="text-sm text-zinc-600 space-y-4">
+                  <p>{t("explore.culinary.hangout.desc")}</p>
+                  <ul className="space-y-2 mt-4 font-semibold">
+                    <li className="flex items-center gap-2">
+                      <FaMapMarkerAlt className="text-[#8B2615]" />{" "}
+                      {t("explore.culinary.hangout.p1")}
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaMapMarkerAlt className="text-[#8B2615]" />{" "}
+                      {t("explore.culinary.hangout.p2")}
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaMapMarkerAlt className="text-[#8B2615]" />{" "}
+                      {t("explore.culinary.hangout.p3")}
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

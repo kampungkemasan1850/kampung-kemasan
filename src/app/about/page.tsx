@@ -1,15 +1,18 @@
 "use client";
 
+import { useState } from "react";
 import { motion, easeOut } from "framer-motion";
 import Image from "next/image";
 import AboutImg from "../../../public/assets/images/about.webp";
 import VisionImg from "../../../public/assets/images/visi.webp";
-import { FaChevronRight } from "react-icons/fa";
+import { FaChevronRight, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
 export default function AboutPage() {
   const { t } = useTranslation();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -28,7 +31,30 @@ export default function AboutPage() {
   };
 
   return (
-    <div className="min-h-screen w-[90vw] mx-auto flex flex-col items-center justify-between">
+    <div className="min-h-screen w-[90vw] mx-auto flex flex-col items-center justify-between relative">
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+          <div className="bg-white rounded-3xl shadow-2xl w-full max-w-3xl max-h-[85vh] flex flex-col relative animate-in zoom-in-95 duration-200">
+            <div className="flex justify-between items-center p-6 border-b border-gray-100">
+              <h2 className="text-xl font-bold uppercase text-[#A63011] tracking-wider">
+                {t("about.title")}
+              </h2>
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="text-gray-400 hover:text-gray-800 transition-colors bg-gray-100 hover:bg-gray-200 rounded-full p-2 focus:outline-none"
+              >
+                <FaTimes size={20} />
+              </button>
+            </div>
+            <div className="p-6 md:p-8 overflow-y-auto space-y-4">
+              <p className="text-zinc-800 text-base leading-loose text-justify font-medium">
+                {t("about.intro.more")}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="mx-auto px-4 pt-8 pb-12">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -39,13 +65,13 @@ export default function AboutPage() {
           <h1 className="text-3xl md:text-4xl font-bold tracking-tighter uppercase leading-tight">
             {t("about.title")}
           </h1>
-          <p className="text-3xl md:text-4xl font-bold tracking-tighter uppercase leading-tight">
+          <p className="text-zinc-900 text-3xl md:text-4xl font-semibold uppercase">
             Kampung Kemasan
           </p>
           <p className="text-gray-500 mt-2 text-sm font-light tracking-[0.15em] uppercase">
             {t("about.description")}
           </p>
-          <p className="text-zinc-500 mt-2 text-sm">Jawa Timur, Indonesia</p>
+          <p className="text-zinc-500 mt-2 text-sm">{t("about.location")}</p>
         </motion.div>
 
         <motion.section
@@ -70,10 +96,19 @@ export default function AboutPage() {
           className="mb-24"
         >
           <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
-            <motion.div variants={fadeInUp} className="md:col-span-3">
+            <motion.div
+              variants={fadeInUp}
+              className="md:col-span-3 flex flex-col items-start"
+            >
               <h2 className="text-3xl md:text-4xl font-medium leading-tight text-zinc-900">
                 {t("about.intro.heading")}
               </h2>
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="mt-6 flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-[#8B2615] hover:text-black transition-colors"
+              >
+                Read More <FaChevronRight className="w-3 h-3" />
+              </button>
             </motion.div>
             <motion.div
               variants={fadeInUp}
@@ -202,7 +237,7 @@ export default function AboutPage() {
                 <Image
                   src={VisionImg}
                   alt="Vision"
-                  className="w-full h-64 object-cover"
+                  className="w-full h-64 object-cover opacity-80 hover:opacity-100 transition-opacity"
                 />
               </div>
             </div>

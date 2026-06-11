@@ -12,6 +12,8 @@ import GaleryImg2 from "../../../public/assets/images/gallery2.webp";
 import GaleryImg3 from "../../../public/assets/images/gallery3.webp";
 import GaleryImg4 from "../../../public/assets/images/gallery4.webp";
 import GajahMungkur from "../../../public/assets/images/history2.png";
+import LangitLangit from "../../../public/assets/images/langit-langit.webp";
+import Trailing from "../../../public/assets/images/trailing.webp";
 
 import { FaArrowCircleRight, FaTimes } from "react-icons/fa";
 
@@ -253,8 +255,8 @@ const Koleksi = () => {
 
                 <div className="relative w-full aspect-4/5 rounded-t-4xl overflow-hidden bg-blue-100">
                   <Image
-                    src={Jendela}
-                    alt="Jendela Tipuan"
+                    src={LangitLangit}
+                    alt="Langit-langit"
                     fill
                     sizes="w-full h-full"
                     className="object-cover"
@@ -263,7 +265,7 @@ const Koleksi = () => {
 
                 <div className="bg-[#A13312] text-white py-5 px-6 rounded-b-4xl w-full text-center z-10">
                   <span className="font-bold tracking-[0.25em] uppercase text-sm md:text-base">
-                    {t("collection.features.fake_window.badge")}
+                    {t("collection.features.architecture.title")}
                   </span>
                 </div>
               </div>
@@ -275,6 +277,66 @@ const Koleksi = () => {
               <p className="text-gray-700 text-sm md:text-base leading-loose text-justify font-medium">
                 {t("collection.features.architecture.description")}
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative w-full pt-16 pb-24 overflow-hidden bg-transparent">
+        <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
+          <div
+            className="absolute inset-0 bg-[radial-gradient(#888_1px,transparent_1px)] bg-size-[12px_12px] opacity-20"
+            style={{
+              maskImage:
+                "linear-gradient(to bottom, black 0%, transparent 90%)",
+              WebkitMaskImage:
+                "linear-gradient(to bottom, black 0%, transparent 90%)",
+            }}
+          ></div>
+        </div>
+
+        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-12 mt-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 items-center">
+            <div className="relative flex justify-center items-center h-full w-full max-w-md mx-auto lg:order-1 order-2">
+              <div className="relative w-full flex flex-col items-center">
+                <div className="absolute -top-10 -left-6 md:-left-12 z-30 transform -rotate-6">
+                  {renderBadge()}
+                </div>
+
+                <div className="relative w-full aspect-4/5 rounded-3xl overflow-hidden shadow-2xl border-4 border-white group">
+                  <Image
+                    src={Trailing}
+                    alt="Trailing Ornaments"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+
+                <div className="absolute -bottom-6 -right-4 md:-right-8 z-20">
+                  <div className="bg-[#A13312] py-4 px-8 rounded-2xl text-center shadow-[8px_8px_0px_0px_rgba(0,0,0,0.15)] border-2 border-white">
+                    <span className="font-bold tracking-[0.3em] uppercase text-sm md:text-base text-[#FCE195]">
+                      Trailing
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:order-2 order-1 relative">
+              <div className="bg-white/90 backdrop-blur-sm rounded-4xl p-8 md:p-10 shadow-[0_15px_40px_-10px_rgba(0,0,0,0.1)] border border-zinc-100 relative z-10">
+                <div className="w-12 h-1.5 bg-[#A13312] mb-6 rounded-full"></div>
+
+                <h1 className="text-3xl md:text-4xl font-black uppercase leading-tight tracking-tighter text-zinc-900 mb-6">
+                  Arsitektur & Fasad Ornamental Yang Memikat
+                </h1>
+
+                <p className="text-zinc-600 text-base md:text-lg leading-loose text-justify font-medium">
+                  Ukiran detail berupa bunga, makhluk mitologi, dan pola
+                  geometris menghiasi jendela serta balkon, menciptakan tampilan
+                  yang kaya akan seni dan cerita masa lalu.
+                </p>
+              </div>
             </div>
           </div>
         </div>

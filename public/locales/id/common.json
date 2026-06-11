@@ -82,6 +82,7 @@
     "location": "Jawa Timur, Indonesia",
     "intro": {
       "heading": "Di jantung kota pelabuhan bersejarah Gresik, tersimpan harta kebudayaan yang mencerminkan peradaban perdagangan, tradisi, dan keindahan arsitektur pada masanya.",
+      "more": "Terletak di kawasan bersejarah kota Gresik, disana berdirinya kekayaan budaya yang dilestarikan dengan indah. Tempat ini menyoroti keberadaan perdagangan kuno, kekayaan tradisi, dan keanggunan arsitektur pada masanya – Kampung Kemasan Gresik, desa warisan budaya khas Gresik Berlokasi di Kabupaten Gresik, Jawa TimurKampung Kemasan Gresik merupakan salah satu destinasi wisata yang paling ikonik di daerah tersebut. Kampung ini dikenal dengan gaya arsitekturnya yang unik dan cukup berbeda dari beberapa bangunan era kolonial pada umumnya. Bagian arsitektur yang ada di Kampung Kemasan terpengaruh dari budaya Tionghoa atau Cina, Belanda, dan Jawa.",
       "p1": "Menelusuri Kampung Kemasan berarti menjelajahi lorong-lorong waktu — di mana bangunan kolonial yang masih terawat dengan baik berdiri tegak, kuliner lokal otentik menyambut setiap pengunjung, dan nuansa kejayaan masa silam hadir nyata di setiap sudut.",
       "p2": "Kampung Kemasan Gresik adalah salah satu destinasi wisata paling ikonik di Jawa Timur. Dikenal dengan gaya arsitekturnya yang unik, kawasan ini menawarkan perpaduan harmonis antara pengaruh budaya Tionghoa, Arab, dan Jawa — sebuah cermin peradaban yang lahir dari jalur perdagangan berabad-abad lamanya."
     },
@@ -143,76 +144,81 @@
       }
     },
     "transportation": {
-      "heading": "Akses & Peta Lokasi",
-      "description": "Kampung Kemasan terletak strategis di pusat Kota Gresik, sehingga mudah dijangkau dari berbagai kota di sekitarnya. Lokasinya hanya sekitar <strong>20 kilometer dari Surabaya</strong> dan sekitar <strong>145 kilometer dari Malang</strong>.",
+      "heading": "Transportasi dan Map",
+      "description": "Kampung Kemasan terletak strategis di pusat Kota Gresik, sehingga mudah dijangkau dari berbagai kota di sekitarnya. Lokasinya hanya sekitar 20 kilometer dari Surabaya dan sekitar 145 kilometer dari Malang.<br/><br/><strong>Cara Berkunjung</strong><br/>Jika Anda merencanakan perjalanan ke Gresik untuk mengunjungi Kampung Kemasan, tersedia berbagai pilihan transportasi yang dapat Anda gunakan dengan mudah dan nyaman. Baik perjalanan santai bersama keluarga maupun eksplorasi budaya, akses menuju Kampung Kemasan dirancang untuk memberikan pengalaman yang praktis sekaligus menyenangkan sejak awal perjalanan Anda.",
       "by_car": {
-        "title": "Dengan Mobil",
-        "step1": "Dari Surabaya: Ambil jalur tol Surabaya-Gresik",
+        "title": "Dengan Mobil (Dari Surabaya)",
+        "step1": "Ambil jalur tol Surabaya–Gresik",
         "step2": "Ikuti petunjuk arah menuju pusat Kota Gresik",
-        "step3": "Tiba dalam waktu sekitar 40-50 menit",
-        "step4": "Area parkir tersedia di sekitar lokasi"
+        "step3": "Tiba dalam waktu sekitar 40–50 menit",
+        "step4": "Area parkir tersedia di sekitar lokasi. Opsi dengan aplikasi Grab & Gojek (Harga sekitar IDR 10.000 – 50.000/lebih). Jika anda tidak memiliki kendaraan pribadi bisa menggunakan transportasi umum atau memesan kendaraan melalui aplikasi Grab & Gojek."
       },
       "by_bus": {
         "title": "Dengan Bus",
-        "step1": "Dari terminal Bungurasih ke Gresik",
-        "step2": "Gunakan Bus Transjatim (Rp 5.000 - Rp 15.000)",
-        "step3": "Tiba dalam 40-50 menit (turun halte Transjatim)"
+        "step1": "Dari terminal Bungurasih – Gresik",
+        "step2": "Menggunakan Bus Transjatim (Fee sekitar 5k–15K) tergantung tipe penumpang",
+        "step3": "Tiba dalam waktu sekitar 40–50 menit (stop halte transjatim)"
       },
       "by_train": {
         "title": "Dengan Kereta",
-        "step1": "Perjalanan menuju stasiun di Surabaya",
-        "step2": "Lanjutkan ke Gresik dengan mobil / transportasi online"
+        "step1": "Lakukan perjalanan menuju stasiun di Surabaya",
+        "step2": "Lanjutkan perjalanan ke Gresik menggunakan mobil atau layanan transportasi online"
       },
       "by_plane": {
-        "title": "Dari Bandara Juanda",
-        "step1": "Taksi / transportasi online (sekitar 1 jam)",
-        "step2": "Atau shuttle bandara ke Surabaya, lanjut ke Gresik"
+        "title": "Dari Bandara Internasional Juanda",
+        "step1": "Gunakan taksi atau transportasi online (sekitar 1 jam perjalanan)",
+        "step2": "Atau naik shuttle bandara menuju Surabaya, lalu lanjutkan perjalanan ke Gresik"
       },
       "local_transport": {
-        "title": "Transportasi Wisata Lokal",
-        "desc": "Pilihan kendaraan untuk berkeliling area Kampung Kemasan:",
-        "opt1": "Dokar (Kereta Kuda)",
+        "title": "Opsi Transportasi",
+        "desc": "Alat transportasi tradisional:",
+        "opt1": "Dokar (kereta kuda)",
         "opt2": "Becak",
-        "opt3": "Bus Macito Gresik",
-        "opt4": "Bus Susun (Bandar Grisse)"
+        "opt3": "Bus wisata Bandar Grissee",
+        "opt4": "Bus susun (bus bandar grisse)",
+        "bus_info": "<strong>Informasi :</strong><br/>Bus wisata Bandar Grissee ini merupakan bus tumpuk yang melayani perjalan wisata ke area Gresik Kota Lama (Bandar Grissee). Kapasitas dari bus ini mencakup 35 orang dengan tiga kali batch/putaran dalam seharinya.<br/><br/><strong>Harga :</strong><br/>Umum (IDR 5.000/ orang)<br/>Pelajar (IDR 3.000/ orang)<br/><br/><strong>Jam operasional :</strong><br/>Hari biasa (senin-jumat) 07.30 - 11.00 WIB<br/>Hari libur (sabtu-minggu) 15.00 - 21.00 WIB"
       }
     },
     "activities": {
-      "heading": "Aktivitas di Kampung Kemasan",
-      "description": "Jangan sia-siakan waktu kalau belum mencoba berbagai kegiatan menarik dan mengabadikan momen di sekitar kawasan heritage ini!",
+      "heading": "Aktivitas dan Kuliner",
+      "description": "Ciptakan momen tak terlupakan dengan menjelajahi berbagai kegiatan seru dan kekayaan kuliner tradisional di sekitar Kampung Kemasan.",
       "exploration": {
-        "title": "Kegiatan Eksplorasi",
-        "item1": "Workshop Kerajinan Lokal",
-        "item2": "Walking Tour Kawasan Heritage",
-        "item3": "Keliling Kota Lama (Bus Macito)"
+        "title": "Aktivitas",
+        "item1": "Workshop Kreatif oleh Sualoka Hub, Kamari, Gresiknesia (Informasi lebih lanjut mengenai workshop ini dapat diakses melalui media sosial seperti Instagram, TikTok, atau Facebook)",
+        "item2": "Walking Tour or Outing Class",
+        "item3": "Kedua kegiatan ini diselenggarakan terutama untuk memperkenalkan arsitektur bersejarah kepada para wisatawan. Warga dari Jalan ke Gang Sebelah turut berpartisipasi dalam Tur Jalan Kaki ini bersama beberapa kafe di sekitar Kampung Kemasan. Kegiatan lapangan ini terbuka untuk semua siswa dan biasanya diselenggarakan oleh masing-masing sekolah atau bekerja sama dengan Jalan ke Gang Sebelah guna memperluas pengalaman para siswa."
       },
       "documentation": {
-        "title": "Dokumentasi Estetik",
-        "item1": "Swafoto di Arsitektur Klasik",
-        "item2": "Video Blogging (Vlog)",
-        "item3": "Sesi Foto Pre-wedding"
+        "title": "Dokumentasi",
+        "item1": "Dengan arsitektur yang memukau dan kekayaan warisan budaya yang dimilikinya, Kampung Kemasan menjadi destinasi yang ideal untuk fotografi dan pembuatan konten kreatif.",
+        "item2": "Pengunjung bebas mengabadikan setiap momen dan sudut menarik yang ada di kawasan ini. Tak heran, banyak influencer lokal serta mahasiswa kreatif yang menjadikan Kampung Kemasan sebagai latar untuk menghasilkan foto, video, hingga berbagai karya digital.",
+        "item3": "Konten yang mereka ciptakan turut memperkenalkan pesona abadi Kampung Kemasan sekaligus memperluas daya tariknya kepada masyarakat yang lebih luas."
       },
       "cta": "Lihat Event Mendatang"
     },
     "culinary": {
-      "heading": "Eksplorasi Rasa & Budaya",
-      "description": "Setelah menjelajahi keindahan jalan-jalan bersejarah, lanjutkan perjalanan dengan menikmati beragam kuliner khas. Mulai dari hidangan gurih hingga camilan manis tradisional.",
+      "heading": "Kuliner Lokal",
+      "description": "Setelah menjelajahi keindahan jalan-jalan bersejarah Kampung Kemasan, pengunjung dapat melanjutkan perjalanan dengan menikmati beragam kuliner khas di sekitar Gresik. Mulai dari hidangan gurih hingga camilan tradisional yang manis, Anda dapat menemukan berbagai cita rasa otentik sekitar.",
       "popular": {
-        "title": "Makanan Populer",
+        "title": "Opsi Kuliner Sekitar",
         "item1_title": "Nasi Krawu",
-        "item1_desc": "Suwiran daging sapi lezat dengan sambal pedas khas.",
+        "item1_desc": "Hidangan khas Gresik yang menyajikan suwiran daging sapi dan parutan daging kelapa di atas nasi, serta disajikan bersama sambal pedas. Rekomendasi resto (Nasi Krawu Bu Rika) Harga: IDR 24.000 – IDR 50.000",
         "item2_title": "Otak-otak Bandeng",
-        "item2_desc": "Olahan ikan unik dengan bumbu kaya rasa.",
+        "item2_desc": "Hidangan olahan ikan bandeng presto yang dilumuri telur dengan bumbu yang kaya rasa. Rekomendasi toko (Otak-otak Bu Muzanah) Harga: IDR 60.000 – IDR 70.000",
         "item3_title": "Pudak",
-        "item3_desc": "Camilan manis tradisional dari tepung beras & santan."
+        "item3_desc": "Makanan manis tradisional yang terbuat dari tepung beras dan santan, yang menghasilkan tekstur kenyal saat dimakan. Rekomendasi toko (Pudak Cap Kuda) Harga: IDR 50.000 – IDR 75.000"
       },
       "souvenir": {
-        "title": "Oleh-oleh Ikonik",
-        "item_title": "Batik Gajah Mungkur",
-        "item_desc": "Batik khas Gresik yang dibuat di rumah warisan budaya Gajah Mungkur peninggalan H. Oemar, dekat Kampung Kemasan."
+        "title": "Suvenir",
+        "item_title": "Batik Khas Gresik (Gajah Mungkur)",
+        "item_desc": "Batik ini dibuat di rumah Gajah mungkur yang dekat dengan Kampung Kemasan, rumah gajah mungkur ini juga salah satu warisan budaya dari keturunan H. Oemar Bin Achmad. Anda dapat membeli kain batik tradisional, khususnya batik Gajah Mungkur. Kain batik tradisional ikonik asal Gresik ini tersedia di House of Gajah Mungkur. Harga: Sekitar Rp 150.000 — 300.000"
       },
       "hangout": {
-        "title": "Tempat Nongkrong"
+        "title": "Rekomendasi Tempat Tongkrongan/Cafe Sekitar",
+        "desc": "Tempat nongkrong yang wajib dikunjungi saat berwisata ke Kampung Kemasan, Gresik. Mengusung nuansa tempo dulu yang kental, tempat ini menghadirkan suasana yang seolah membawa pengunjung kembali ke masa lampau. Setiap sudutnya memiliki sentuhan estetis yang menarik, menjadikannya lokasi yang sempurna untuk bersantai sekaligus mengabadikan momen melalui foto-foto yang Instagramable.",
+        "p1": "Sualoka Hub (Harga: IDR 10.000 – IDR 35.000)",
+        "p2": "Kammari (Harga: IDR 8.000 – IDR 45.000)",
+        "p3": "Gresiknesia (Harga: IDR 10.000 – IDR 35.000)"
       }
     },
     "accommodation": {
@@ -238,7 +244,13 @@
       },
       "architecture": {
         "title": "Langit-Langit Tinggi & Jendela Besar",
+        "badge": "Arsitektur",
         "description": "Dirancang khusus untuk iklim tropis, rumah-rumah ini tetap sejuk secara alami dengan sirkulasi udara yang optimal, dan nyaman tanpa perlu pendingin modern. Ubin Impor & Detail Besi Artistik Sentuhan elegan hadir melalui ubin keramik Eropa dan ornamen besi cor yang didatangkan langsung pada masa kolonial, memperkuat nilai sejarahnya. Simetri & Warna yang Menawan Perpaduan bentuk simetris dan warna-warna cerah menjadikan Kampung Kemasan tampil berbeda—anggun, hidup, dan penuh karakter."
+      },
+      "trailing": {
+        "title": "Arsitektur & Fasad Ornamental yang Memikat",
+        "badge": "Jejak Sejarah",
+        "description": "Ukiran detail berupa bunga, makhluk mitologi, dan pola geometris menghiasi jendela serta balkon, menciptakan tampilan yang kaya akan seni dan cerita masa lalu"
       }
     },
     "gajah_mungkur": {
@@ -248,6 +260,77 @@
       "p2": "Keterkaitan Rumah Gajah Mungkur dengan Kampung Kemasan dapat dilihat dari garis keturunan pemiliknya. Di Kampung Kemasan terdapat keturunan H. Oemar bin Achmad, seorang pengrajin kain dari sarang kulit walet yang terkenal pada masanya karena keahlian dan usahanya yang cukup dikenal masyarakat. Dari keluarga inilah kemudian lahir Rumah Gajah Mungkur yang didirikan oleh anak keempat beliau, yaitu Abdoel Rachmad atau yang juga dikenal dengan nama H. D. Jaelan.",
       "p3": "Rumah Gajah Mungkur didirikan pada tahun 1896 dan berlokasi di Jalan Nyai Ageng Arem-Arem No. 38, Kabupaten Gresik, Jawa Timur. Letaknya yang tidak jauh dari Kampung Kemasan menunjukkan adanya hubungan sejarah dan keluarga yang erat antara kedua tempat tersebut. Hingga saat ini, Rumah Gajah Mungkur masih menjadi salah satu bangunan bersejarah yang memiliki nilai budaya dan menjadi pengingat perkembangan masyarakat Gresik pada masa lalu.",
       "p4": "Selain dikenal sebagai bangunan bersejarah, Rumah Gajah Mungkur juga memiliki usaha keluarga yang terus dilestarikan hingga generasi ketiga. Salah satu produk yang paling terkenal adalah Batik Gajah Mungkur, yaitu batik khas yang menjadi identitas dan warisan budaya keluarga tersebut. Keberadaan batik ini tidak hanya menjadi bagian dari usaha keluarga, tetapi juga turut memperkenalkan kekayaan budaya lokal Gresik."
+    }
+  },
+  "event_page": {
+    "header": {
+      "title": "Halaman Acara",
+      "subtitle": "Acara Tahunan di Kampung Kemasan"
+    },
+    "section1": {
+      "badge": "01. Acara Tahunan",
+      "desc": "Perayaan tahunan yang menjadi denyut nadi kehidupan sosial di Kampung Kemasan, menggabungkan potensi maritim, tradisi, dan kekayaan kuliner Gresik."
+    },
+    "annual_events": [
+      {
+        "title": "Pasar Bandeng Festive",
+        "period": "Jelang Idul Fitri",
+        "description": "Pasar Bandeng Festive merupakan salah satu tradisi tahunan yang paling dinantikan di Gresik, khususnya menjelang Hari Raya Idul Fitri. Festival ini menjadi ajang unik di mana ikan bandeng hasil budidaya para petambak lokal dilelang, menciptakan suasana yang meriah dan penuh antusiasme.",
+        "listTitle": "Pengalaman Menarik Pengunjung:",
+        "listItems": [
+          "Bazar UMKM dengan beragam produk lokal",
+          "Festival kuliner khas berbahan dasar ikan bandeng",
+          "Jual beli ikan segar hasil tambak",
+          "Kompetisi memasak olahan bandeng"
+        ],
+        "extraDescription": "Beragam stan makanan juga tersedia, menjadikannya tempat yang sempurna untuk dinikmati bersama pasangan, teman, maupun keluarga. Lebih dari sekadar festival, Pasar Bandeng Gresik memiliki makna sosial yang mendalam. Masyarakat dari berbagai daerah, baik dari pusat kota maupun desa sekitar, berkumpul untuk berbelanja, bersilaturahmi, dan menghabiskan waktu bersama. Suasana hangat dan penuh kebersamaan ini mencerminkan nilai kekompakan serta tradisi yang terus hidup di tengah masyarakat Gresik. Pasar Bandeng bukan hanya tentang kuliner dan perdagangan, tetapi juga tentang kebersamaan dan identitas budaya yang menjadikannya pengalaman tak terlupakan bagi setiap pengunjung."
+      },
+      {
+        "title": "Festival Badoghan",
+        "period": "Akhir Tahun",
+        "description": "Festival Badoghan merupakan perayaan tahunan yang biasanya diselenggarakan pada akhir tahun, dengan tujuan mempererat kebersamaan antara warga desa dan para nelayan lokal. Dalam festival ini, hasil tangkapan ikan dari nelayan setempat diolah dan disajikan sebagai bagian dari tradisi berbagi dan kebersamaan. Acara ini diinisiasi oleh mahasiswa dari Universitas Muhammadiyah Malang bersama Pokdarwis (Kelompok Sadar Wisata), sebagai upaya membangun ikatan sosial serta menghidupkan potensi wisata berbasis komunitas.",
+        "listTitle": "Rangkaian Kegiatan Festival:",
+        "listItems": [
+          "Pentas budaya kolosal yang menampilkan kekayaan tradisi lokal",
+          "Lebih dari 60 tenant kuliner dan budaya",
+          "Partisipasi dari 5 kelurahan: Kroman, Sukodono, Pekelingan, Kemuteran, dan Kramatinggil",
+          "Kolaborasi dengan Badan Keswadayaan Masyarakat (BKM) 79 Kabupaten Gresik"
+        ],
+        "menusTitle": "Mengusung tagline “Gresik Ono Roso” (Gresik Ada Rasa), nikmati hidangan khas seperti:",
+        "menus": [
+          "Nasi Krawu",
+          "Ndok-ndokan (aneka olahan telur)",
+          "Ubus",
+          "Mie Kenyol",
+          "Es Sinom",
+          "Pudak"
+        ],
+        "extraDescription": "Di tengah maraknya makanan modern, Festival Badoghan tetap berkomitmen mengangkat kuliner tradisional khas Gresik. Antusiasme masyarakat yang tinggi menunjukkan bahwa cita rasa lokal tetap memiliki tempat istimewa di hati warga. Lebih dari sekadar festival, Festival Badoghan adalah simbol kebersamaan, budaya, dan kebanggaan lokal yang memberikan pengalaman hangat dan autentik bagi setiap pengunjung."
+      }
+    ],
+    "exhibition": {
+      "date_badge": "1-14 Sept '25",
+      "role_badge": "MTN Lab Residency",
+      "title1": "Pameran Seni & Budaya",
+      "title2": "(Art & Culture Exhibition)",
+      "p1": "Kota Gresik dikenal sebagai kota dagang, kota santri, sekaligus kota industri. Namun di balik dinamika tersebut, terdapat ruang-ruang bersejarah yang menyimpan kekayaan budaya yang luar biasa—salah satunya adalah Kampung Kemasan, kawasan lama yang dahulu menjadi titik pertemuan para saudagar, pengrajin, dan pendatang dari berbagai latar etnis.",
+      "p2": "Dalam semangat tersebut, Kampung Kemasan menjadi tuan rumah MTN Lab (Manajemen Talenta Nasional Lab) pada 1-14 September 2025, sebuah program inisiatif Kementerian Kebudayaan Republik Indonesia. Puluhan seniman dari berbagai daerah berkumpul, tinggal bersama, dan berkolaborasi dalam ruang kreatif yang kaya akan sejarah dan identitas budaya.",
+      "schedule_label": "Jadwal",
+      "schedule_val": "1-14 September 2025",
+      "initiator_label": "Inisiator",
+      "initiator_val": "Kementerian Kebudayaan RI",
+      "activities_title": "Rangkaian Kegiatan",
+      "activities_p1": "Selama dua minggu, para peserta mengikuti berbagai kegiatan seperti residensi, inkubasi karya, lokakarya, hingga masterclass. Proses ini tidak hanya berfokus pada pengembangan keterampilan seni, tetapi juga bagaimana seni berinteraksi dengan kehidupan masyarakat serta sejarah ruang di sekitarnya.",
+      "activities_p2": "MTN Lab juga menghadirkan workshop film bersama komunitas lokal, diskusi kuratorial, hingga persiapan pameran yang memperkaya pengalaman para seniman muda dalam membangun perjalanan karier mereka ke depan.",
+      "space_title": "Ruang Afirmasi & Inspirasi",
+      "space_p1": "Program ini menjadi wadah penting bagi seniman muda untuk berkembang dan mendapatkan pengalaman langsung dari para praktisi. Selain itu, MTN Lab juga menjadi ruang afirmasi bagi talenta lokal, termasuk seniman dari Gresik yang berpartisipasi dalam berbagai medium seperti seni lukis, kriya, hingga seni berbasis komunitas.",
+      "space_p2": "Lebih dari sekadar pameran, Art & Culture Exhibition di Kampung Kemasan menghadirkan cara baru untuk melihat kota—bagaimana arsitektur, kehidupan sehari-hari, hingga budaya lokal menjadi sumber inspirasi karya seni. Dari Kampung Kemasan, semangat kreatif ini kemudian menyebar ke berbagai kota lain di Indonesia."
+    },
+    "footer": {
+      "badge": "Makna Kebudayaan",
+      "quote_1": "\"Seni selalu tumbuh dari ruang hidup",
+      "quote_2": "yang dekat dengan masyarakat.\"",
+      "cta": "Kolaborasi Event"
     }
   },
   "footer": {

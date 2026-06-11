@@ -11,59 +11,18 @@ import { useTranslation } from "react-i18next";
 
 export default function EventPage() {
   const { t } = useTranslation();
-
-  const annualEvents = [
-    {
-      title: "Pasar Bandeng Festive",
-      period: "Jelang Idul Fitri",
-      description:
-        "Pasar Bandeng Festive merupakan salah satu tradisi tahunan yang paling dinantikan di Gresik, khususnya menjelang Hari Raya Idul Fitri. Festival ini menjadi ajang unik di mana ikan bandeng hasil budidaya para petambak lokal dilelang, menciptakan suasana yang meriah dan penuh antusiasme.",
-      listTitle: "Pengalaman Menarik Pengunjung:",
-      listItems: [
-        "Bazar UMKM dengan beragam produk lokal",
-        "Festival kuliner khas berbahan dasar ikan bandeng",
-        "Jual beli ikan segar hasil tambak",
-        "Kompetisi memasak olahan bandeng",
-      ],
-      extraDescription:
-        "Beragam stan makanan juga tersedia, menjadikannya tempat yang sempurna untuk dinikmati bersama pasangan, teman, maupun keluarga. Lebih dari sekadar festival, Pasar Bandeng Gresik memiliki makna sosial yang mendalam. Masyarakat dari berbagai daerah, baik dari pusat kota maupun desa sekitar, berkumpul untuk berbelanja, bersilaturahmi, dan menghabiskan waktu bersama. Suasana hangat dan penuh kebersamaan ini mencerminkan nilai kekompakan serta tradisi yang terus hidup di tengah masyarakat Gresik. Pasar Bandeng bukan hanya tentang kuliner dan perdagangan, tetapi juga tentang kebersamaan dan identitas budaya yang menjadikannya pengalaman tak terlupakan bagi setiap pengunjung.",
-    },
-    {
-      title: "Festival Badoghan",
-      period: "Akhir Tahun",
-      description:
-        "Festival Badoghan merupakan perayaan tahunan yang biasanya diselenggarakan pada akhir tahun, dengan tujuan mempererat kebersamaan antara warga desa dan para nelayan lokal. Dalam festival ini, hasil tangkapan ikan dari nelayan setempat diolah dan disajikan sebagai bagian dari tradisi berbagi dan kebersamaan. Acara ini diinisiasi oleh mahasiswa dari Universitas Muhammadiyah Malang bersama Pokdarwis (Kelompok Sadar Wisata), sebagai upaya membangun ikatan sosial serta menghidupkan potensi wisata berbasis komunitas.",
-      listTitle: "Rangkaian Kegiatan Festival:",
-      listItems: [
-        "Pentas budaya kolosal yang menampilkan kekayaan tradisi lokal",
-        "Lebih dari 60 tenant kuliner dan budaya",
-        "Partisipasi dari 5 kelurahan: Kroman, Sukodono, Pekelingan, Kemuteran, dan Kramatinggil",
-        "Kolaborasi dengan Badan Keswadayaan Masyarakat (BKM) 79 Kabupaten Gresik",
-      ],
-      menusTitle:
-        "Mengusung tagline “Gresik Ono Roso” (Gresik Ada Rasa), nikmati hidangan khas seperti:",
-      menus: [
-        "Nasi Krawu",
-        "Ndok-ndokan (aneka olahan telur)",
-        "Ubus",
-        "Mie Kenyol",
-        "Es Sinom",
-        "Pudak",
-      ],
-      extraDescription:
-        "Di tengah maraknya makanan modern, Festival Badoghan tetap berkomitmen mengangkat kuliner tradisional khas Gresik. Antusiasme masyarakat yang tinggi menunjukkan bahwa cita rasa lokal tetap memiliki tempat istimewa di hati warga. Lebih dari sekadar festival, Festival Badoghan adalah simbol kebersamaan, budaya, dan kebanggaan lokal yang memberikan pengalaman hangat dan autentik bagi setiap pengunjung.",
-    },
-  ];
+  const fetchedEvents = t("event_page.annual_events", { returnObjects: true });
+  const annualEvents = Array.isArray(fetchedEvents) ? fetchedEvents : [];
 
   return (
     <div className="min-h-screen text-zinc-900">
       <section className="pt-20 px-4 md:px-8 max-w-7xl mx-auto mb-20">
         <div className="border-l-8 border-black pl-6">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter uppercase leading-none">
-            {t("events.title", "Halaman Acara")}
+            {t("event_page.header.title")}
           </h1>
           <p className="text-zinc-500 mt-4 text-sm font-light tracking-[0.4em] uppercase">
-            {t("events.subtitle", "Acara Tahunan di Kampung Kemasan")}
+            {t("event_page.header.subtitle")}
           </p>
         </div>
       </section>
@@ -73,12 +32,10 @@ export default function EventPage() {
           <div className="lg:col-span-4 lg:sticky lg:top-28 space-y-8">
             <div>
               <h2 className="text-sm font-bold uppercase tracking-widest text-[#C9A051] mb-6">
-                01. Acara Tahunan
+                {t("event_page.section1.badge")}
               </h2>
               <p className="text-zinc-500 font-light leading-relaxed">
-                Perayaan tahunan yang menjadi denyut nadi kehidupan sosial di
-                Kampung Kemasan, menggabungkan potensi maritim, tradisi, dan
-                kekayaan kuliner Gresik.
+                {t("event_page.section1.desc")}
               </p>
             </div>
 
@@ -87,7 +44,7 @@ export default function EventPage() {
                 src={YearEvent}
                 alt="Annual Events Kampung Kemasan Heritage"
                 fill
-                sizes="(max-w-7xl) 33vw, 100vw"
+                sizes="(max-width: 1280px) 33vw, 100vw"
                 className="object-contain transition-transform duration-700 group-hover/img:scale-105"
                 placeholder="blur"
               />
@@ -121,7 +78,7 @@ export default function EventPage() {
                     {event.listTitle}
                   </p>
                   <ul className="space-y-3">
-                    {event.listItems.map((item, i) => (
+                    {event.listItems?.map((item: string, i: number) => (
                       <li
                         key={i}
                         className="flex items-start gap-3 text-zinc-600 text-sm md:text-base"
@@ -139,7 +96,7 @@ export default function EventPage() {
                       {event.menusTitle}
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      {event.menus.map((menu, i) => (
+                      {event.menus.map((menu: string, i: number) => (
                         <span
                           key={i}
                           className="border border-zinc-300 bg-white px-4 py-2 text-[11px] uppercase font-bold tracking-widest text-zinc-700 shadow-sm"
@@ -168,56 +125,45 @@ export default function EventPage() {
                 src={ArtEvent}
                 alt="MTN Lab Exhibition"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover rounded-sm shadow-2xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-[#C9A051] p-8 hidden md:block">
                 <p className="text-black font-bold text-4xl tracking-tighter">
-                  1-14 Sept &apos;25
+                  {t("event_page.exhibition.date_badge")}
                 </p>
                 <p className="text-black/70 text-xs font-bold uppercase tracking-widest">
-                  MTN Lab Residency
+                  {t("event_page.exhibition.role_badge")}
                 </p>
               </div>
             </div>
 
             <div className="space-y-6">
               <h2 className="text-4xl md:text-5xl font-bold tracking-tighter leading-tight mb-2">
-                Pameran Seni & Budaya <br />{" "}
+                {t("event_page.exhibition.title1")} <br />{" "}
                 <span className="text-[#C9A051] text-3xl md:text-4xl">
-                  (Art & Culture Exhibition)
+                  {t("event_page.exhibition.title2")}
                 </span>
               </h2>
               <div className="space-y-4 text-zinc-400 font-light leading-relaxed">
-                <p>
-                  Kota Gresik dikenal sebagai kota dagang, kota santri,
-                  sekaligus kota industri. Namun di balik dinamika tersebut,
-                  terdapat ruang-ruang bersejarah yang menyimpan kekayaan budaya
-                  yang luar biasa—salah satunya adalah Kampung Kemasan, kawasan
-                  lama yang dahulu menjadi titik pertemuan para saudagar,
-                  pengrajin, dan pendatang dari berbagai latar etnis.
-                </p>
-                <p>
-                  Dalam semangat tersebut, Kampung Kemasan menjadi tuan rumah
-                  MTN Lab (Manajemen Talenta Nasional Lab) pada 1-14 September
-                  2025, sebuah program inisiatif Kementerian Kebudayaan Republik
-                  Indonesia. Puluhan seniman dari berbagai daerah berkumpul,
-                  tinggal bersama, dan berkolaborasi dalam ruang kreatif yang
-                  kaya akan sejarah dan identitas budaya.
-                </p>
+                <p>{t("event_page.exhibition.p1")}</p>
+                <p>{t("event_page.exhibition.p2")}</p>
               </div>
               <div className="grid grid-cols-2 gap-8 pt-6 border-t border-zinc-800">
                 <div>
                   <h4 className="font-bold text-[#C9A051] uppercase text-xs tracking-widest mb-2">
-                    Jadwal
+                    {t("event_page.exhibition.schedule_label")}
                   </h4>
-                  <p className="text-sm text-zinc-300">1-14 September 2025</p>
+                  <p className="text-sm text-zinc-300">
+                    {t("event_page.exhibition.schedule_val")}
+                  </p>
                 </div>
                 <div>
                   <h4 className="font-bold text-[#C9A051] uppercase text-xs tracking-widest mb-2">
-                    Inisiator
+                    {t("event_page.exhibition.initiator_label")}
                   </h4>
                   <p className="text-sm text-zinc-300">
-                    Kementerian Kebudayaan RI
+                    {t("event_page.exhibition.initiator_val")}
                   </p>
                 </div>
               </div>
@@ -231,46 +177,21 @@ export default function EventPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div className="border-t border-zinc-700 pt-8">
               <h3 className="text-2xl font-bold uppercase tracking-tighter mb-6 text-white">
-                Rangkaian Kegiatan
+                {t("event_page.exhibition.activities_title")}
               </h3>
               <div className="text-zinc-400 font-light space-y-6 leading-relaxed">
-                <p>
-                  Selama dua minggu, para peserta mengikuti berbagai kegiatan
-                  seperti residensi, inkubasi karya, lokakarya, hingga
-                  masterclass. Proses ini tidak hanya berfokus pada pengembangan
-                  keterampilan seni, tetapi juga bagaimana seni berinteraksi
-                  dengan kehidupan masyarakat serta sejarah ruang di sekitarnya.
-                </p>
-                <p>
-                  MTN Lab juga menghadirkan workshop film bersama komunitas
-                  lokal, diskusi kuratorial, hingga persiapan pameran yang
-                  memperkaya pengalaman para seniman muda dalam membangun
-                  perjalanan karier mereka ke depan.
-                </p>
+                <p>{t("event_page.exhibition.activities_p1")}</p>
+                <p>{t("event_page.exhibition.activities_p2")}</p>
               </div>
             </div>
 
             <div className="border-t border-zinc-700 pt-8">
               <h3 className="text-2xl font-bold uppercase tracking-tighter mb-6 text-white">
-                Ruang Afirmasi & Inspirasi
+                {t("event_page.exhibition.space_title")}
               </h3>
               <div className="text-zinc-400 font-light space-y-6 leading-relaxed">
-                <p>
-                  Program ini menjadi wadah penting bagi seniman muda untuk
-                  berkembang dan mendapatkan pengalaman langsung dari para
-                  praktisi. Selain itu, MTN Lab juga menjadi ruang afirmasi bagi
-                  talenta lokal, termasuk seniman dari Gresik yang
-                  berpartisipasi dalam berbagai medium seperti seni lukis,
-                  kriya, hingga seni berbasis komunitas.
-                </p>
-                <p>
-                  Lebih dari sekadar pameran, Art & Culture Exhibition di
-                  Kampung Kemasan menghadirkan cara baru untuk melihat
-                  kota—bagaimana arsitektur, kehidupan sehari-hari, hingga
-                  budaya lokal menjadi sumber inspirasi karya seni. Dari Kampung
-                  Kemasan, semangat kreatif ini kemudian menyebar ke berbagai
-                  kota lain di Indonesia.
-                </p>
+                <p>{t("event_page.exhibition.space_p1")}</p>
+                <p>{t("event_page.exhibition.space_p2")}</p>
               </div>
             </div>
           </div>
@@ -279,18 +200,18 @@ export default function EventPage() {
 
       <section className="mt-16 text-center py-24 border-t mx-[5vw] border-zinc-200">
         <p className="text-zinc-400 uppercase tracking-[0.5em] text-xs mb-8">
-          Makna Kebudayaan
+          {t("event_page.footer.badge")}
         </p>
         <h2 className="text-3xl md:text-5xl font-light italic mb-12 text-zinc-800 px-4 leading-tight">
-          &quot;Seni selalu tumbuh dari ruang hidup{" "}
-          <br className="hidden md:block" /> yang dekat dengan masyarakat.&quot;
+          {t("event_page.footer.quote_1")} <br className="hidden md:block" />{" "}
+          {t("event_page.footer.quote_2")}
         </h2>
         <div className="flex flex-row justify-center">
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 bg-black text-white px-10 py-4 uppercase font-bold tracking-widest text-xs hover:bg-[#C9A051] transition-all duration-500"
           >
-            Kolaborasi Event
+            {t("event_page.footer.cta")}
             <FaArrowRight />
           </Link>
         </div>
