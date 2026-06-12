@@ -50,18 +50,22 @@ export default function Hero({ image, t }: HeroProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 1 }}
-            className={`font-extrabold  ${textColor} max-w-[70vw] text-6xl md:text-8xl xl:text-[10rem] tracking-wide leading-[0.8] shadow-2xl drop-shadow-2xl text-left`}
+            className="font-extrabold text-[#ffe88b] max-w-[70vw] text-6xl md:text-8xl xl:text-9xl"
           >
-            {t("hero.title")}
+            <span suppressHydrationWarning>
+              {t("hero.title")}
+            </span>
           </motion.h1>
-          <motion.h1
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 1 }}
             className={`font-luxurious-script ${textColor} text-6xl md:text-[8rem] tracking-wide leading-[0.8] drop-shadow-2xl text-left`}
           >
-            {t("hero.subtitle")}
-          </motion.h1>
+            <span suppressHydrationWarning>
+              {t("hero.subtitle")}
+            </span>
+          </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

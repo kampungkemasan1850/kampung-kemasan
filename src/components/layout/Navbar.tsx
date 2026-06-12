@@ -68,7 +68,7 @@ export default function Navbar() {
               href={item.path}
               className="font-medium text-sm uppercase tracking-widest text-white hover:text-[#C9A051] focus:bg-[#C9A051] transition-colors duration-300 relative group"
             >
-              {t(`navbar.${item.key}`)}
+              <span suppressHydrationWarning>{t(`navbar.${item.key}`)}</span>
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#C9A051] focus:bg-[#C9A051] transition-all duration-300 group-hover:w-full" />
             </Link>
           </motion.div>
@@ -84,7 +84,6 @@ export default function Navbar() {
           href="/"
           className="font-bold font-bebas-neue text-2xl hover:text-[#C9A051] focus:bg-[#C9A051] transition-colors text-white"
         >
-          
           <span className="font-sloop text-3xl">Kampung Kemasan</span>
         </Link>
       </motion.div>
@@ -116,7 +115,7 @@ export default function Navbar() {
             href={item.path}
             className="font-medium text-sm uppercase tracking-widest text-white hover:text-[#C9A051] focus:bg-[#C9A051] transition-colors relative group"
           >
-            {t(`navbar.${item.key}`)}
+            <span suppressHydrationWarning>{t(`navbar.${item.key}`)}</span>
             <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#C9A051] focus:bg-[#C9A051] transition-all duration-300 group-hover:w-full" />
           </Link>
         ))}
@@ -124,6 +123,7 @@ export default function Navbar() {
         <select
           value={currentLanguage}
           onChange={(e) => handleLanguageChange(e.target.value)}
+          suppressHydrationWarning // Suppresses mismatch on the select value
           className="border hover:border-[#C9A051] rounded-none px-3 py-1 text-[10px] uppercase tracking-wider bg-[#8B2615] text-white focus:border-[#C9A051] focus:bg-[#C9A051] outline-none transition-colors cursor-pointer"
         >
           <option value="en">EN</option>
@@ -177,7 +177,9 @@ export default function Navbar() {
                       onClick={() => setMenuOpen(false)}
                       className="text-2xl font-bold text-white hover:text-[#C9A051] focus:bg-[#C9A051] transition-colors uppercase tracking-tighter"
                     >
-                      {t(`navbar.${item.key}`)}
+                      <span suppressHydrationWarning>
+                        {t(`navbar.${item.key}`)}
+                      </span>
                     </Link>
                   </motion.div>
                 ))}
@@ -188,7 +190,10 @@ export default function Navbar() {
                 custom={5}
                 className="mt-auto pt-8"
               >
-                <p className="text-white/70 text-xs uppercase tracking-[0.3em] mb-4">
+                <p
+                  className="text-white/70 text-xs uppercase tracking-[0.3em] mb-4"
+                  suppressHydrationWarning
+                >
                   {t("navbar.language")}
                 </p>
 
@@ -196,7 +201,7 @@ export default function Navbar() {
                   <button
                     onClick={() => {
                       handleLanguageChange("en");
-                      setMenuOpen(false); 
+                      setMenuOpen(false);
                     }}
                     className={`pb-1 text-sm font-bold uppercase tracking-widest transition-all ${
                       currentLanguage === "en"
@@ -210,7 +215,7 @@ export default function Navbar() {
                   <button
                     onClick={() => {
                       handleLanguageChange("id");
-                      setMenuOpen(false); 
+                      setMenuOpen(false);
                     }}
                     className={`pb-1 text-sm font-bold uppercase tracking-widest transition-all ${
                       currentLanguage === "id"

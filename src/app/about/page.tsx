@@ -1,17 +1,37 @@
 "use client";
 
-import { useState } from "react";
-import { motion, easeOut } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, easeOut, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import AboutImg from "../../../public/assets/images/about.webp";
+import AboutImg2 from "../../../public/assets/images/about2.webp";
+import AboutImg3 from "../../../public/assets/images/about3.webp";
 import VisionImg from "../../../public/assets/images/visi.webp";
 import { FaChevronRight, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
+const carouselImages = [
+  { src: AboutImg, alt: "Kampung Kemasan Heritage 1" },
+  { src: AboutImg2, alt: "Kampung Kemasan Heritage 2" },
+  { src: AboutImg3, alt: "Kampung Kemasan Heritage 3" },
+];
+
 export default function AboutPage() {
   const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Auto-scroll logic for the carousel
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1,
+      );
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(timer);
+  }, []);
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -32,30 +52,46 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen w-[90vw] mx-auto flex flex-col items-center justify-between relative">
+      {/* Modal Popup */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
           <div className="bg-white rounded-3xl shadow-2xl w-full max-w-3xl max-h-[85vh] flex flex-col relative animate-in zoom-in-95 duration-200">
             <div className="flex justify-between items-center p-6 border-b border-gray-100">
-              <h2 className="text-xl font-bold uppercase text-[#A63011] tracking-wider">
-                {t("about.title")}
+              <h2 className="text-lg md:text-xl font-bold uppercase text-[#A63011] tracking-wider leading-tight pr-4">
+                {t("about.intro.more_title")}
               </h2>
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="text-gray-400 hover:text-gray-800 transition-colors bg-gray-100 hover:bg-gray-200 rounded-full p-2 focus:outline-none"
+                className="text-gray-400 hover:text-gray-800 transition-colors bg-gray-100 hover:bg-gray-200 rounded-full p-2 focus:outline-none shrink-0"
               >
                 <FaTimes size={20} />
               </button>
             </div>
             <div className="p-6 md:p-8 overflow-y-auto space-y-4">
               <p className="text-zinc-800 text-base leading-loose text-justify font-medium">
-                {t("about.intro.more")}
+                {t("about.intro.more_p1")}
+              </p>
+              <p className="text-zinc-800 text-base leading-loose text-justify font-medium">
+                {t("about.intro.more_p2")}
+              </p>
+              <p className="text-zinc-800 text-base leading-loose text-justify font-medium">
+                {t("about.intro.more_p3")}
+              </p>
+              <p className="text-zinc-800 text-base leading-loose text-justify font-medium">
+                {t("about.intro.more_p4")}
+              </p>
+              <p className="text-zinc-800 text-base leading-loose text-justify font-medium">
+                {t("about.intro.more_p5")}
+              </p>
+              <p className="text-zinc-800 text-base leading-loose text-justify font-medium">
+                {t("about.intro.more_p6")}
               </p>
             </div>
           </div>
         </div>
       )}
 
-      <div className="mx-auto px-4 pt-8 pb-12">
+      <div className="mx-auto px-4 pt-8 pb-12 w-full">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -65,7 +101,7 @@ export default function AboutPage() {
           <h1 className="text-3xl md:text-4xl font-bold tracking-tighter uppercase leading-tight">
             {t("about.title")}
           </h1>
-          <p className="text-zinc-900 text-3xl md:text-4xl font-semibold uppercase">
+          <p className="text-zinc-900 text-3xl md:text-4xl font-semibold uppercase mt-4">
             Kampung Kemasan
           </p>
           <p className="text-gray-500 mt-2 text-sm font-light tracking-[0.15em] uppercase">
@@ -74,18 +110,48 @@ export default function AboutPage() {
           <p className="text-zinc-500 mt-2 text-sm">{t("about.location")}</p>
         </motion.div>
 
+        {/* Updated Image Carousel Section */}
         <motion.section
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="mb-8 overflow-hidden rounded-lg"
+          className="mb-8 overflow-hidden rounded-xl relative w-full h-[60vh] shadow-sm bg-zinc-100 group"
         >
-          <Image
-            src={AboutImg}
-            alt="Kampung Kemasan Heritage"
-            loading="eager"
-            className="w-full h-[60vh] object-cover shadow-sm "
-          />
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentImageIndex}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+              className="absolute inset-0"
+            >
+              <Image
+                src={carouselImages[currentImageIndex].src}
+                alt={carouselImages[currentImageIndex].alt}
+                fill
+                priority={currentImageIndex === 0}
+                className="object-cover"
+                sizes="(max-width: 1200px) 90vw, 1200px"
+              />
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Carousel Indicators (Dots) */}
+          <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-3 z-10">
+            {carouselImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentImageIndex(index)}
+                className={`transition-all duration-300 rounded-full ${
+                  index === currentImageIndex
+                    ? "w-8 h-2.5 bg-white shadow-md"
+                    : "w-2.5 h-2.5 bg-white/50 hover:bg-white/80"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </motion.section>
 
         <motion.section
@@ -107,7 +173,7 @@ export default function AboutPage() {
                 onClick={() => setIsModalOpen(true)}
                 className="mt-6 flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-[#8B2615] hover:text-black transition-colors"
               >
-                Read More <FaChevronRight className="w-3 h-3" />
+                {t("about.read_more")} <FaChevronRight className="w-3 h-3" />
               </button>
             </motion.div>
             <motion.div
@@ -117,9 +183,10 @@ export default function AboutPage() {
               <p className="text-gray-600 leading-relaxed text-lg italic border-b border-zinc-200 pb-6">
                 {t("about.intro.p1")}
               </p>
-              <p className="text-zinc-500 mt-6 leading-relaxed">
-                {t("about.intro.p2")}
-              </p>
+              <p
+                className="text-zinc-500 mt-6 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: t("about.intro.p2") }}
+              />
             </motion.div>
           </div>
         </motion.section>

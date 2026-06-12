@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import Tiktok1 from "../../../public/assets/images/tiktok1.webp";
 import Tiktok2 from "../../../public/assets/images/tiktok2.webp";
 import Tiktok3 from "../../../public/assets/images/tiktok3.webp";
@@ -13,63 +14,15 @@ import Tiktok6 from "../../../public/assets/images/tiktok6.webp";
 import Tiktok7 from "../../../public/assets/images/tiktok7.webp";
 import Tiktok8 from "../../../public/assets/images/tiktok8.webp";
 
-const tiktokVideos = [
-  {
-    id: 1,
-    category: "Explore",
-    title: "Keindahan Kampung Kemasan",
-    url: "https://vt.tiktok.com/ZSxDLxWt7/",
-    image: Tiktok1, 
-  },
-  {
-    id: 2,
-    category: "Explore",
-    title: "Menyusuri Jalan Heritage",
-    url: "https://vt.tiktok.com/ZSxDLvemS/",
-    image: Tiktok2,
-  },
-  {
-    id: 3,
-    category: "Explore",
-    title: "Vlog Seru di Kemasan",
-    url: "https://vt.tiktok.com/ZSxDN8wRu/",
-    image: Tiktok3,
-  },
-  {
-    id: 4,
-    category: "Bus Tumpuk",
-    title: "Keliling Naik Bus Wisata",
-    url: "https://vt.tiktok.com/ZSxDNDTU3/",
-    image: Tiktok4,
-  },
-  {
-    id: 5,
-    category: "Bus Tumpuk",
-    title: "Keseruan Bus Bandar Grissee",
-    url: "https://vt.tiktok.com/ZSxDNN77R/",
-    image: Tiktok5,
-  },
-  {
-    id: 6,
-    category: "Walking Tour",
-    title: "Jelajah Sejarah Jalan Kaki",
-    url: "https://vt.tiktok.com/ZSxDNr6AM/",
-    image: Tiktok6,
-  },
-  {
-    id: 7,
-    category: "Walking Tour",
-    title: "Cerita di Balik Bangunan",
-    url: "https://vt.tiktok.com/ZSxDN87yy/",
-    image: Tiktok7,
-  },
-  {
-    id: 8,
-    category: "Art Space Event",
-    title: "Pameran & Ruang Seni",
-    url: "https://vt.tiktok.com/ZSxDNNbhn/",
-    image: Tiktok8,
-  },
+const tiktokMedia = [
+  { id: 1, url: "https://vt.tiktok.com/ZSxDLxWt7/", image: Tiktok1 },
+  { id: 2, url: "https://vt.tiktok.com/ZSxDLvemS/", image: Tiktok2 },
+  { id: 3, url: "https://vt.tiktok.com/ZSxDN8wRu/", image: Tiktok3 },
+  { id: 4, url: "https://vt.tiktok.com/ZSxDNDTU3/", image: Tiktok4 },
+  { id: 5, url: "https://vt.tiktok.com/ZSxDNN77R/", image: Tiktok5 },
+  { id: 6, url: "https://vt.tiktok.com/ZSxDNr6AM/", image: Tiktok6 },
+  { id: 7, url: "https://vt.tiktok.com/ZSxDN87yy/", image: Tiktok7 },
+  { id: 8, url: "https://vt.tiktok.com/ZSxDNNbhn/", image: Tiktok8 },
 ];
 
 const PlayIcon = () => (
@@ -93,7 +46,11 @@ const TikTokIcon = () => (
 );
 
 const Spotlight = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  const fetchedVideos = t("spotlight.videos", { returnObjects: true });
+  const localizedVideos = Array.isArray(fetchedVideos) ? fetchedVideos : [];
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
@@ -113,11 +70,10 @@ const Spotlight = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="flex flex-col">
             <h2 className="font-luxurious-script italic text-5xl md:text-7xl text-[#E0A96D] mb-2 drop-shadow-md">
-              Spotlight
+              {t("spotlight.title")}
             </h2>
             <p className="text-[#FAF3E0] font-serif text-lg md:text-xl opacity-80 max-w-lg">
-              Temukan pengalaman seru, keindahan budaya, dan momen tak
-              terlupakan melalui lensa para pengunjung.
+              {t("spotlight.subtitle")}
             </p>
           </div>
 
@@ -165,54 +121,58 @@ const Spotlight = () => {
           ref={scrollRef}
           className="flex overflow-x-auto gap-6 snap-x snap-mandatory pb-8 pt-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          {tiktokVideos.map((video, index) => (
-            <motion.div
-              key={video.id}
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="snap-center shrink-0 w-65 md:w-75"
-            >
-              <Link
-                href={video.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block h-full"
+          {tiktokMedia.map((media, index) => {
+            const videoText = localizedVideos[index] || {};
+
+            return (
+              <motion.div
+                key={media.id}
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="snap-center shrink-0 w-65 md:w-75"
               >
-                <div className="relative w-full aspect-9/16 rounded-4xl overflow-hidden shadow-2xl bg-[#2A2A2A] border-4 border-transparent group-hover:border-[#9C2810] transition-all duration-300">
-                  <Image
-                    src={video.image}
-                    alt={video.title}
-                    fill
-                    sizes="w-full h-full"
-                    loading="eager"
-                    className="object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-300"
-                  />
+                <Link
+                  href={media.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block h-full"
+                >
+                  <div className="relative w-full aspect-9/16 rounded-4xl overflow-hidden shadow-2xl bg-[#2A2A2A] border-4 border-transparent group-hover:border-[#9C2810] transition-all duration-300">
+                    <Image
+                      src={media.image}
+                      alt={videoText.title || "TikTok Video"}
+                      fill
+                      sizes="(max-width: 768px) 260px, 300px"
+                      loading="eager"
+                      className="object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-300"
+                    />
 
-                  <div className="absolute inset-0 bg-linear-to-b from-black/20 via-transparent to-black/90"></div>
+                    <div className="absolute inset-0 bg-linear-to-b from-black/20 via-transparent to-black/90"></div>
 
-                  <div className="absolute top-5 left-5 bg-black/50 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider py-1.5 px-3 rounded-full flex items-center gap-2">
-                    <TikTokIcon />
-                    {video.category}
+                    <div className="absolute top-5 left-5 bg-black/50 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider py-1.5 px-3 rounded-full flex items-center gap-2">
+                      <TikTokIcon />
+                      {videoText.category}
+                    </div>
+
+                    <div className="absolute inset-0 flex justify-center items-center">
+                      <PlayIcon />
+                    </div>
+
+                    <div className="absolute bottom-0 left-0 w-full p-6 text-left">
+                      <h3 className="text-[#FAF3E0] font-serif text-lg leading-tight font-bold group-hover:-translate-y-2 transition-transform duration-300">
+                        {videoText.title}
+                      </h3>
+                      <p className="text-white/70 text-xs font-sans mt-2 opacity-0 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-300">
+                        {t("spotlight.watch_on")} &rarr;
+                      </p>
+                    </div>
                   </div>
-
-                  <div className="absolute inset-0 flex justify-center items-center">
-                    <PlayIcon />
-                  </div>
-
-                  <div className="absolute bottom-0 left-0 w-full p-6 text-left">
-                    <h3 className="text-[#FAF3E0] font-serif text-lg leading-tight font-bold group-hover:-translate-y-2 transition-transform duration-300">
-                      {video.title}
-                    </h3>
-                    <p className="text-white/70 text-xs font-sans mt-2 opacity-0 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-300">
-                      Tonton di TikTok &rarr;
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
+                </Link>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

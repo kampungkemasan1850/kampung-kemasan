@@ -1,6 +1,15 @@
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
+
+import BandengImg from "../../../public/assets/images/bandeng-event.webp";
+import BadoghanImg from "../../../public/assets/images/badoghan-event.webp";
+
+const eventList = [
+  { key: "pasar_bandeng", image: BandengImg },
+  { key: "badoghan", image: BadoghanImg },
+];
 
 type EventHighlightProps = {
   t: (key: string) => string;
@@ -35,31 +44,44 @@ export default function EventHighlight({ t }: EventHighlightProps) {
           </Link>
         </motion.div>
 
-        {/* Event List */}
         <div className="flex flex-col">
-          {["pasar_bandeng", "badoghan"].map((key, idx) => (
+          {eventList.map((event, idx) => (
             <motion.div
-              key={key}
+              key={event.key}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="group relative border-b border-zinc-300 py-10 flex flex-col md:flex-row md:items-center justify-between gap-6 overflow-hidden"
+              className="group relative border-b border-zinc-300 py-8 md:py-10 flex flex-col md:flex-row md:items-center justify-between gap-6 overflow-hidden pr-4 md:pr-8"
             >
               <div className="absolute inset-0 bg-[#8B2615]/5 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
-              <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-8 grow">
-                <div className="min-w-30">
-                  <p className="text-[#8B2615] text-xs font-bold tracking-widest mb-1 uppercase">
-                    ARCHIVE
-                  </p>
-                  <p className="text-zinc-400 text-sm font-medium uppercase">
-                    ANNUAL
-                  </p>
+
+              <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-8 w-full">
+                <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
+                  <div className="min-w-30">
+                    <p className="text-[#8B2615] text-xs font-bold tracking-widest mb-1 uppercase">
+                      ARCHIVE
+                    </p>
+                    <p className="text-zinc-400 text-sm font-medium uppercase">
+                      ANNUAL
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-bold tracking-tight group-hover:pl-4 transition-all duration-300 uppercase">
+                      {t(`events.${event.key}`)}
+                    </h3>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-2xl md:text-3xl font-bold tracking-tight group-hover:pl-4 transition-all duration-300 uppercase">
-                    {t(`events.${key}`)}
-                  </h3>
+
+                <div className="relative w-full md:w-48 h-48 md:h-32 rounded-xl overflow-hidden shadow-sm group-hover:shadow-lg transition-all duration-500 shrink-0">
+                  <Image
+                    src={event.image}
+                    alt={t(`events.${event.key}`)}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 200px"
+                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500" />
                 </div>
               </div>
             </motion.div>

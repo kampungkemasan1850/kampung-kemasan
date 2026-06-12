@@ -80,11 +80,18 @@
     "title": "Tentang",
     "description": "Di mana sejarah hidup di setiap sudutnya",
     "location": "Jawa Timur, Indonesia",
+    "read_more": "Baca Selengkapnya",
     "intro": {
-      "heading": "Di jantung kota pelabuhan bersejarah Gresik, tersimpan harta kebudayaan yang mencerminkan peradaban perdagangan, tradisi, dan keindahan arsitektur pada masanya.",
-      "more": "Terletak di kawasan bersejarah kota Gresik, disana berdirinya kekayaan budaya yang dilestarikan dengan indah. Tempat ini menyoroti keberadaan perdagangan kuno, kekayaan tradisi, dan keanggunan arsitektur pada masanya – Kampung Kemasan Gresik, desa warisan budaya khas Gresik Berlokasi di Kabupaten Gresik, Jawa TimurKampung Kemasan Gresik merupakan salah satu destinasi wisata yang paling ikonik di daerah tersebut. Kampung ini dikenal dengan gaya arsitekturnya yang unik dan cukup berbeda dari beberapa bangunan era kolonial pada umumnya. Bagian arsitektur yang ada di Kampung Kemasan terpengaruh dari budaya Tionghoa atau Cina, Belanda, dan Jawa.",
-      "p1": "Menelusuri Kampung Kemasan berarti menjelajahi lorong-lorong waktu — di mana bangunan kolonial yang masih terawat dengan baik berdiri tegak, kuliner lokal otentik menyambut setiap pengunjung, dan nuansa kejayaan masa silam hadir nyata di setiap sudut.",
-      "p2": "Kampung Kemasan Gresik adalah salah satu destinasi wisata paling ikonik di Jawa Timur. Dikenal dengan gaya arsitekturnya yang unik, kawasan ini menawarkan perpaduan harmonis antara pengaruh budaya Tionghoa, Arab, dan Jawa — sebuah cermin peradaban yang lahir dari jalur perdagangan berabad-abad lamanya."
+      "heading": "Terletak di kawasan bersejarah kota Gresik, disana berdirinya kekayaan budaya yang dilestarikan dengan indah.",
+      "more_title": "Perjalanan Menelusuri Warisan Kampung Kemasan, Gresik",
+      "more_p1": "Kampung Kemasan merupakan salah satu kawasan bersejarah dan bernilai budaya tinggi di Gresik. Nama “Kemasan” diyakini berasal dari kata “emas”, yang merujuk pada para pedagang emas yang dahulu pernah menetap dan berkembang di kawasan ini pada tahun 1855.",
+      "more_p2": "Pada tahun 1896 berdirilah usaha penyamakan kulit di Gresik tepatnya di Kampung Kemasan. Pabrik penyamakan kulit ini berdiri dan mempengaruhi pertumbuhan ekonomi di kota Gresik dan khususnya Kampung Kemasan sendiri. Usaha ini di gagas oleh H. Oemar Bin Achmad.",
+      "more_p3": "Beliau memulai usahanya dibantu oleh pengrajin dari cina yang tinggal di Kampung Kemasan dan kembangkan oleh ketujuh anaknya.",
+      "more_p4": "Pada akhir abad ke-19, para pedagang kaya seperti H. Oemar Bin Achmad membangun rumah-rumah mewah di kawasan ini sebagai cerminan kekayaan dan status sosial mereka. Bangunan-bangunan bersejarah tersebut menampilkan perpaduan arsitektur yang unik—struktur kolonial Belanda, ornamen Tionghoa Peranakan, serta sentuhan kerajinan tradisional Jawa—yang menciptakan harmoni budaya yang masih dapat dinikmati hingga kini.",
+      "more_p5": "Berbeda dengan banyak kawasan bersejarah lain yang hilang akibat modernisasi, Kampung Kemasan berhasil bertahan berkat kesadaran dan upaya pelestarian masyarakat setempat.",
+      "more_p6": "Hingga saat ini, Kampung Kemasan berdiri sebagai kawasan cagar budaya yang dilindungi di Gresik, menghadirkan kembali sekilas kejayaan masa lalu kota ini.",
+      "p1": "Tempat ini menyoroti keberadaan perdagangan kuno, kekayaan tradisi, dan keanggunan arsitektur pada masanya – Kampung Kemasan Gresik, desa warisan budaya khas Gresik.",
+      "p2": "Berlokasi di Kabupaten Gresik, Jawa Timur Kampung Kemasan Gresik merupakan salah satu destinasi wisata yang paling ikonik di daerah tersebut. Kampung ini dikenal dengan gaya arsitekturnya yang unik dan cukup berbeda dari beberapa bangunan era kolonial pada umumnya. Bagian arsitektur yang ada di Kampung Kemasan terpengaruh dari budaya Tionghoa atau Cina, Belanda, dan Jawa.<br/><br/>Dengan menelusuri Kampung Kemasan, anda dapat menikmati nuansa era kolonialisme di desa ini. Dan beberapa bangunannya masih terawat dan selain itu anda juga bisa menikmati kuliner lokal dan berswafoto disana."
     },
     "stats": {
       "year_label": "Tahun Berdiri",
@@ -94,26 +101,24 @@
     "history": {
       "title": "Perjalanan Sejarah",
       "item1_title": "Tahun 1855 — Asal-Usul Nama \"Kemasan\"",
-      "item1_desc": "Nama \"Kemasan\" diyakini berasal dari kata emas, merujuk pada para pedagang emas yang dahulu menetap dan berkembang di kawasan ini. Komunitas saudagar kaya ini menjadi fondasi awal bagi identitas budaya dan ekonomi kawasan.",
+      "item1_desc": "Nama \"Kemasan\" diyakini berasal dari kata emas, merujuk pada para pedagang emas yang dahulu menetap dan berkembang di kawasan ini.",
       "item2_title": "Tahun 1896 — Industri Penyamakan Kulit H. Oemar Bin Achmad",
-      "item2_desc": "H. Oemar Bin Achmad mendirikan usaha penyamakan kulit di Kampung Kemasan — sebuah tonggak industri yang menggerakkan roda perekonomian kota Gresik. Dibantu para pengrajin Tionghoa yang bermukim di kawasan ini, usaha tersebut kemudian dikembangkan oleh kelima putra beliau.",
+      "item2_desc": "H. Oemar Bin Achmad mendirikan usaha penyamakan kulit di Kampung Kemasan — sebuah tonggak industri yang menggerakkan roda perekonomian kota Gresik.",
       "item3_title": "Akhir Abad ke-19 — Era Bangunan Megah Para Saudagar",
-      "item3_desc": "Para pedagang kaya seperti H. Oemar Bin Achmad membangun rumah-rumah megah sebagai lambang kemakmuran dan status sosial. Bangunan-bangunan ini memadukan struktur kolonial Belanda, ornamen Tionghoa Peranakan, serta sentuhan kerajinan tradisional Jawa — menciptakan harmoni arsitektur yang tak tertandingi.",
+      "item3_desc": "Para pedagang kaya membangun rumah-rumah megah sebagai lambang kemakmuran. Bangunan-bangunan ini memadukan struktur kolonial Belanda, ornamen Tionghoa Peranakan, serta sentuhan kerajinan tradisional Jawa.",
       "item4_title": "Hingga Kini — Kawasan Cagar Budaya yang Dilindungi",
-      "item4_desc": "Berkat kesadaran dan dedikasi masyarakat setempat, Kampung Kemasan berhasil bertahan di tengah arus modernisasi. Kini kawasan ini berdiri kokoh sebagai cagar budaya resmi kota Gresik, menghadirkan kembali keagungan masa lalu yang masih bisa dinikmati oleh setiap pengunjung."
+      "item4_desc": "Berkat dedikasi masyarakat setempat, kini kawasan ini berdiri kokoh sebagai cagar budaya resmi kota Gresik."
     },
     "cultures": {
       "chinese_title": "Tionghoa",
-      "chinese_desc": "Ornamen Peranakan — ukiran halus, warna merah-emas, dan dekorasi khas Cina Peranakan yang menjadi penanda identitas komunitas pedagang Tionghoa yang pernah menetap di sini.",
+      "chinese_desc": "Ornamen Peranakan — ukiran halus, warna merah-emas, dan dekorasi khas Cina Peranakan.",
       "dutch_title": "Kolonial Belanda",
-      "dutch_desc": "Struktur Eropa — pilar-pilar kokoh, jendela tinggi berpanel kaca, dan tata ruang bergaya Eropa abad ke-19 yang mencerminkan pengaruh kuat era kolonial dalam lanskap urban Gresik.",
+      "dutch_desc": "Struktur Eropa — pilar-pilar kokoh, jendela tinggi berpanel kaca, dan tata ruang bergaya Eropa abad ke-19.",
       "javanese_title": "Jawa",
-      "javanese_desc": "Kerajinan Tradisional — sentuhan motif batik, ukiran kayu bergaya Jawa, dan filosofi ruang yang berakar pada kearifan lokal — menjadikan setiap bangunan sebagai ekspresi identitas budaya Nusantara."
+      "javanese_desc": "Kerajinan Tradisional — sentuhan motif batik, ukiran kayu bergaya Jawa, dan filosofi ruang yang berakar pada kearifan lokal."
     },
     "vision_mission": {
-      "vision_title": "Visi Kami",
       "vision_desc": "Melestarikan Kampung Kemasan sebagai simbol kerukunan multikultural dan kebanggaan sejarah di Gresik.",
-      "mission_title": "Misi Kami",
       "mission1": "Melestarikan arsitektur bersejarah",
       "mission2": "Mengembangkan edukasi dan pemahaman bagi generasi mendatang",
       "mission3": "Mendorong pengembangan pariwisata berbasis warisan budaya yang berkelanjutan"
@@ -148,16 +153,16 @@
       "description": "Kampung Kemasan terletak strategis di pusat Kota Gresik, sehingga mudah dijangkau dari berbagai kota di sekitarnya. Lokasinya hanya sekitar 20 kilometer dari Surabaya dan sekitar 145 kilometer dari Malang.<br/><br/><strong>Cara Berkunjung</strong><br/>Jika Anda merencanakan perjalanan ke Gresik untuk mengunjungi Kampung Kemasan, tersedia berbagai pilihan transportasi yang dapat Anda gunakan dengan mudah dan nyaman. Baik perjalanan santai bersama keluarga maupun eksplorasi budaya, akses menuju Kampung Kemasan dirancang untuk memberikan pengalaman yang praktis sekaligus menyenangkan sejak awal perjalanan Anda.",
       "by_car": {
         "title": "Dengan Mobil (Dari Surabaya)",
-        "step1": "Ambil jalur tol Surabaya–Gresik",
+        "step1": "Ambil jalur tol Surabaya-Gresik",
         "step2": "Ikuti petunjuk arah menuju pusat Kota Gresik",
-        "step3": "Tiba dalam waktu sekitar 40–50 menit",
-        "step4": "Area parkir tersedia di sekitar lokasi. Opsi dengan aplikasi Grab & Gojek (Harga sekitar IDR 10.000 – 50.000/lebih). Jika anda tidak memiliki kendaraan pribadi bisa menggunakan transportasi umum atau memesan kendaraan melalui aplikasi Grab & Gojek."
+        "step3": "Tiba dalam waktu sekitar 40-50 menit",
+        "step4": "Area parkir tersedia di sekitar lokasi. Opsi dengan aplikasi Grab & Gojek (Harga sekitar IDR 10.000 - 50.000/lebih). Jika anda tidak memiliki kendaraan pribadi bisa menggunakan transportasi umum atau memesan kendaraan melalui aplikasi Grab & Gojek."
       },
       "by_bus": {
         "title": "Dengan Bus",
-        "step1": "Dari terminal Bungurasih – Gresik",
-        "step2": "Menggunakan Bus Transjatim (Fee sekitar 5k–15K) tergantung tipe penumpang",
-        "step3": "Tiba dalam waktu sekitar 40–50 menit (stop halte transjatim)"
+        "step1": "Dari terminal Bungurasih - Gresik",
+        "step2": "Menggunakan Bus Transjatim (Fee sekitar 5k untuk reguler dan 25-30k untuk Luxury) tergantung tipe penumpang",
+        "step3": "Tiba dalam waktu sekitar 40-50 menit (stop halte transjatim)"
       },
       "by_train": {
         "title": "Dengan Kereta",
@@ -180,54 +185,82 @@
       }
     },
     "activities": {
-      "heading": "Aktivitas dan Kuliner",
-      "description": "Ciptakan momen tak terlupakan dengan menjelajahi berbagai kegiatan seru dan kekayaan kuliner tradisional di sekitar Kampung Kemasan.",
-      "exploration": {
-        "title": "Aktivitas",
-        "item1": "Workshop Kreatif oleh Sualoka Hub, Kamari, Gresiknesia (Informasi lebih lanjut mengenai workshop ini dapat diakses melalui media sosial seperti Instagram, TikTok, atau Facebook)",
-        "item2": "Walking Tour or Outing Class",
-        "item3": "Kedua kegiatan ini diselenggarakan terutama untuk memperkenalkan arsitektur bersejarah kepada para wisatawan. Warga dari Jalan ke Gang Sebelah turut berpartisipasi dalam Tur Jalan Kaki ini bersama beberapa kafe di sekitar Kampung Kemasan. Kegiatan lapangan ini terbuka untuk semua siswa dan biasanya diselenggarakan oleh masing-masing sekolah atau bekerja sama dengan Jalan ke Gang Sebelah guna memperluas pengalaman para siswa."
-      },
-      "documentation": {
-        "title": "Dokumentasi",
-        "item1": "Dengan arsitektur yang memukau dan kekayaan warisan budaya yang dimilikinya, Kampung Kemasan menjadi destinasi yang ideal untuk fotografi dan pembuatan konten kreatif.",
-        "item2": "Pengunjung bebas mengabadikan setiap momen dan sudut menarik yang ada di kawasan ini. Tak heran, banyak influencer lokal serta mahasiswa kreatif yang menjadikan Kampung Kemasan sebagai latar untuk menghasilkan foto, video, hingga berbagai karya digital.",
-        "item3": "Konten yang mereka ciptakan turut memperkenalkan pesona abadi Kampung Kemasan sekaligus memperluas daya tariknya kepada masyarakat yang lebih luas."
-      },
-      "cta": "Lihat Event Mendatang"
+      "heading": "Aktivitas",
+      "description": "Ciptakan momen tak terlupakan dengan menjelajahi berbagai kegiatan seru di sekitar Kampung Kemasan.",
+      "read_more": "Baca Selengkapnya",
+      "items": [
+        {
+          "title": "Workshop Kreatif",
+          "short": "Workshop kreatif kolaborasi dari Sualoka Hub, Kamari, dan Gresiknesia.",
+          "full": "Workshop Kreatif oleh Sualoka Hub, Kamari, Gresiknesia (Informasi lebih lanjut mengenai workshop ini dapat diakses melalui media sosial seperti Instagram, TikTok, atau Facebook)."
+        },
+        {
+          "title": "Walking Tour or Outing Class",
+          "short": "Kegiatan untuk memperkenalkan arsitektur bersejarah kepada para wisatawan dan siswa.",
+          "full": "Kedua kegiatan ini diselenggarakan terutama untuk memperkenalkan arsitektur bersejarah kepada para wisatawan. Warga dari 'Jalan ke Gang Sebelah' turut berpartisipasi dalam Tur Jalan Kaki ini bersama beberapa kafe di sekitar Kampung Kemasan. Kegiatan lapangan ini terbuka untuk semua siswa dan biasanya diselenggarakan oleh masing-masing sekolah atau bekerja sama dengan 'Jalan ke Gang Sebelah' guna memperluas pengalaman para siswa."
+        },
+        {
+          "title": "Dokumentasi",
+          "short": "Destinasi ideal untuk fotografi dan pembuatan konten kreatif dengan arsitektur yang memukau.",
+          "full": "Dengan arsitektur yang memukau dan kekayaan warisan budaya yang dimilikinya, Kampung Kemasan menjadi destinasi yang ideal untuk fotografi dan pembuatan konten kreatif. Pengunjung bebas mengabadikan setiap momen dan sudut menarik yang ada di kawasan ini. Tak heran, banyak influencer lokal serta mahasiswa kreatif yang menjadikan Kampung Kemasan sebagai latar untuk menghasilkan foto, video, hingga berbagai karya digital. Konten yang mereka ciptakan turut memperkenalkan pesona abadi Kampung Kemasan sekaligus memperluas daya tariknya kepada masyarakat yang lebih luas."
+        }
+      ]
     },
     "culinary": {
       "heading": "Kuliner Lokal",
-      "description": "Setelah menjelajahi keindahan jalan-jalan bersejarah Kampung Kemasan, pengunjung dapat melanjutkan perjalanan dengan menikmati beragam kuliner khas di sekitar Gresik. Mulai dari hidangan gurih hingga camilan tradisional yang manis, Anda dapat menemukan berbagai cita rasa otentik sekitar.",
-      "popular": {
-        "title": "Opsi Kuliner Sekitar",
-        "item1_title": "Nasi Krawu",
-        "item1_desc": "Hidangan khas Gresik yang menyajikan suwiran daging sapi dan parutan daging kelapa di atas nasi, serta disajikan bersama sambal pedas. Rekomendasi resto (Nasi Krawu Bu Rika) Harga: IDR 24.000 – IDR 50.000",
-        "item2_title": "Otak-otak Bandeng",
-        "item2_desc": "Hidangan olahan ikan bandeng presto yang dilumuri telur dengan bumbu yang kaya rasa. Rekomendasi toko (Otak-otak Bu Muzanah) Harga: IDR 60.000 – IDR 70.000",
-        "item3_title": "Pudak",
-        "item3_desc": "Makanan manis tradisional yang terbuat dari tepung beras dan santan, yang menghasilkan tekstur kenyal saat dimakan. Rekomendasi toko (Pudak Cap Kuda) Harga: IDR 50.000 – IDR 75.000"
-      },
-      "souvenir": {
-        "title": "Suvenir",
-        "item_title": "Batik Khas Gresik (Gajah Mungkur)",
-        "item_desc": "Batik ini dibuat di rumah Gajah mungkur yang dekat dengan Kampung Kemasan, rumah gajah mungkur ini juga salah satu warisan budaya dari keturunan H. Oemar Bin Achmad. Anda dapat membeli kain batik tradisional, khususnya batik Gajah Mungkur. Kain batik tradisional ikonik asal Gresik ini tersedia di House of Gajah Mungkur. Harga: Sekitar Rp 150.000 — 300.000"
-      },
-      "hangout": {
-        "title": "Rekomendasi Tempat Tongkrongan/Cafe Sekitar",
-        "desc": "Tempat nongkrong yang wajib dikunjungi saat berwisata ke Kampung Kemasan, Gresik. Mengusung nuansa tempo dulu yang kental, tempat ini menghadirkan suasana yang seolah membawa pengunjung kembali ke masa lampau. Setiap sudutnya memiliki sentuhan estetis yang menarik, menjadikannya lokasi yang sempurna untuk bersantai sekaligus mengabadikan momen melalui foto-foto yang Instagramable.",
-        "p1": "Sualoka Hub (Harga: IDR 10.000 – IDR 35.000)",
-        "p2": "Kammari (Harga: IDR 8.000 – IDR 45.000)",
-        "p3": "Gresiknesia (Harga: IDR 10.000 – IDR 35.000)"
-      }
+      "description": "Setelah menjelajahi jalan-jalan bersejarah, nikmati beragam kuliner khas di sekitar Gresik.",
+      "read_more": "Baca Selengkapnya",
+      "cards": [
+        {
+          "title": "Opsi Kuliner Sekitar",
+          "items": [
+            {
+              "name": "Nasi Krawu",
+              "desc": "Hidangan khas Gresik yang menyajikan suwiran daging sapi dan parutan kelapa di atas nasi, disajikan bersama sambal pedas. Rekomendasi: Nasi Krawu Bu Rika (IDR 24.000 – 50.000)"
+            },
+            {
+              "name": "Otak-otak Bandeng",
+              "desc": "Olahan ikan bandeng presto yang dilumuri telur dengan bumbu kaya rasa. Rekomendasi: Otak-otak Bu Muzanah (IDR 60.000 – 70.000)"
+            },
+            {
+              "name": "Pudak",
+              "desc": "Makanan manis tradisional dari tepung beras dan santan dengan tekstur kenyal. Rekomendasi: Pudak Cap Kuda (IDR 50.000 – 75.000)"
+            }
+          ]
+        },
+        {
+          "title": "Suvenir Batik Khas Gresik",
+          "short": "Batik Gajah Mungkur, warisan budaya keturunan H. Oemar Bin Achmad.",
+          "full": "Batik ini dibuat di rumah Gajah Mungkur yang dekat dengan Kampung Kemasan, rumah ini juga salah satu warisan budaya dari keturunan H. Oemar Bin Achmad. Anda dapat membeli kain batik tradisional, khususnya batik Gajah Mungkur. Kain batik tradisional ikonik asal Gresik ini tersedia di House of Gajah Mungkur.\n\nHarga: Sekitar Rp 150.000 — 300.000"
+        },
+        {
+          "title": "Tempat Nongkrong & Cafe",
+          "short": "Tempat nongkrong dengan nuansa tempo dulu yang kental dan estetis.",
+          "full": "Tempat nongkrong yang wajib dikunjungi saat berwisata ke Kampung Kemasan, Gresik. Mengusung nuansa tempo dulu yang kental, tempat ini menghadirkan suasana yang seolah membawa pengunjung kembali ke masa lampau. Setiap sudutnya memiliki sentuhan estetis yang menarik, menjadikannya lokasi yang sempurna untuk bersantai sekaligus mengabadikan momen melalui foto-foto yang Instagramable.\n\n• Sualoka Hub (IDR 10.000 – 35.000)\n• Kammari (IDR 8.000 – 45.000)\n• Gresiknesia (IDR 10.000 – 35.000)"
+        }
+      ]
     },
     "accommodation": {
-      "heading": "Tempat Menginap",
+      "heading": "Akomodasi di Sekitar",
       "description": "Bagi Anda yang merencanakan singgah lebih lama untuk eksplorasi, terdapat pilihan penginapan praktis yang sarat nilai sejarah.",
       "recommendation": "Rekomendasi",
       "per_night": "/ malam",
-      "desc1": "Dikenal sebagai salah satu hotel tertua di area ini, The Bahagia Hotel menjadi akomodasi terdekat dari Kampung Kemasan.",
-      "desc2": "Hotel ini sangat populer di kalangan solo traveler dan backpacker. Dengan suasana sederhana, ramah di kantong, dan nyaman, penginapan ini adalah pilihan ideal bagi wisatawan yang mengutamakan efisiensi istirahat setelah seharian berjalan-jalan di kawasan heritage Gresik."
+      "hotels": [
+        {
+          "name": "The Bahagia Hotel",
+          "price": "IDR 90.000 - 100.000",
+          "desc1": "Salah satu pilihan akomodasi terdekat dari Kampung Kemasan adalah The Bahagia Hotel, yang dikenal sebagai salah satu hotel tertua di area ini.",
+          "desc2": "Hotel ini cukup populer di kalangan solo traveler dan backpacker, baik untuk singgah sebentar maupun menginap selama satu hingga dua hari. Suasananya sederhana namun nyaman, cocok bagi Anda yang mencari tempat istirahat praktis setelah menjelajahi kawasan heritage.",
+          "desc3": "Dengan harga yang ramah di kantong, The Bahagia Hotel menjadi pilihan ideal bagi wisatawan yang mengutamakan efisiensi tanpa mengorbankan kenyamanan dasar. Cocok untuk Anda yang ingin menikmati perjalanan hemat namun tetap berkesan di Gresik."
+        },
+        {
+          "name": "Hotel Batik",
+          "price": "IDR 70.000 - 150.000",
+          "desc1": "Berlokasi dekat dengan Bandar Grissee, hotel ini dibangun pada tahun 2010 dengan konsep bernuansa klasik dan jadul yang memberikan kesan hangat serta nyaman bagi para pengunjung.",
+          "desc2": "Selain menawarkan harga yang cukup terjangkau, hotel ini juga menjadi pilihan ideal bagi para traveler yang ingin menginap dalam waktu singkat. Letaknya yang strategis memudahkan wisatawan untuk menjelajahi kawasan Gresik Kota Lama, terutama destinasi heritage seperti Kampung Kemasan.",
+          "desc3": "Dengan akses yang dekat ke berbagai tempat wisata sejarah, hotel ini sangat cocok dijadikan tempat singgah sebelum melanjutkan perjalanan wisata di Kota Gresik."
+        }
+      ]
     }
   },
   "collection": {
@@ -332,6 +365,72 @@
       "quote_2": "yang dekat dengan masyarakat.\"",
       "cta": "Kolaborasi Event"
     }
+  },
+  "testimonials": {
+    "heading": "Aspirasi Pengunjung",
+    "view_detail": "Lihat Detail",
+    "items": [
+      {
+        "id": 1,
+        "name": "Prabu",
+        "role": "Pengunjung",
+        "quote": "Sebuah kampung yang telah ditetapkan sebagai situs warisan. Banyak bangunan kuno yang terawat dengan baik, sementara yang lain kurang terawat, namun masih cukup menarik untuk difoto berkat tanaman liar yang tumbuh di sekitarnya. Namun, sebagian besar lantai dua digunakan sebagai sarang burung walet. Beberapa ada yang dijual, mungkin ada yang ingin merasakan suasana tinggal di kawasan warisan budaya. Waktu terbaik untuk berkunjung adalah sore atau malam hari, karena banyak pedagang makanan dan minuman.",
+        "link": "https://maps.app.goo.gl/oCxFYPSwLa4ewPaj8"
+      },
+      {
+        "id": 2,
+        "name": "Ebith Junaidi",
+        "role": "Pengunjung",
+        "quote": "Hanya sebuah kampung yang tidak sebesar kota lama Semarang, sangat sedikit orang yang berkunjung ke sini, tapi sekadar tahu saja, Anda bisa melihat suasana kampung kemasan yang letaknya tidak jauh dari Bandar Grissee.",
+        "link": "https://maps.app.goo.gl/ZhbsNsvvbTMyaHDV8"
+      },
+      {
+        "id": 3,
+        "name": "Anni Lim",
+        "role": "Pengunjung",
+        "quote": "Rumah kunonya masih terawat dengan baik dan indah. Sayangnya tidak memungkinkan untuk menjelajahinya saat libur Idul Adha. Semoga ada kesempatan lain waktu.",
+        "link": "https://maps.app.goo.gl/u1b3nLBixR6j2wb99"
+      }
+    ]
+  },
+  "spotlight": {
+    "title": "Sorotan",
+    "subtitle": "Temukan pengalaman seru, keindahan budaya, dan momen tak terlupakan melalui lensa para pengunjung.",
+    "watch_on": "Tonton di TikTok",
+    "videos": [
+      {
+        "category": "Explore",
+        "title": "Keindahan Kampung Kemasan"
+      },
+      {
+        "category": "Explore",
+        "title": "Menyusuri Jalan Heritage"
+      },
+      {
+        "category": "Explore",
+        "title": "Vlog Seru di Kemasan"
+      },
+      {
+        "category": "Bus Tumpuk",
+        "title": "Keliling Naik Bus Wisata"
+      },
+      {
+        "category": "Bus Tumpuk",
+        "title": "Keseruan Bus Bandar Grissee"
+      },
+      {
+        "category": "Walking Tour",
+        "title": "Jelajah Sejarah Jalan Kaki"
+      },
+      {
+        "category": "Walking Tour",
+        "title": "Cerita di Balik Bangunan"
+      },
+      {
+        "category": "Art Space Event",
+        "title": "Pameran & Ruang Seni"
+      }
+    ]
   },
   "footer": {
     "description": "Didedikasikan untuk pelestarian arsip budaya dan kemegahan arsitektur Nusantara. Merawat ingatan, membangun masa depan.",
