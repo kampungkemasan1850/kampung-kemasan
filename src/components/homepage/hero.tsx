@@ -72,7 +72,9 @@ export default function Hero({ image, t }: HeroProps) {
             transition={{ delay: 1.2, duration: 1 }}
             className={`w-full text-start ${textColor} text-base md:text-xl font-sans tracking-wide drop-shadow-lg pointer-events-auto`}
           >
+            <span suppressHydrationWarning>
             &quot;{t("hero.tagline")} &quot;
+            </span>
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -84,7 +86,9 @@ export default function Hero({ image, t }: HeroProps) {
               className={`${textColor} bg-[#8B2615] mt-4 2xl:mt-6 uppercase font-bold px-8 py-3 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all flex items-center gap-3`}
               onClick={() => window.open("/about")}
             >
-              <span>{t("hero.cta")}</span>
+              <span suppressHydrationWarning>
+                {t("hero.cta")}
+              </span>
             </button>
           </motion.div>
         </div>

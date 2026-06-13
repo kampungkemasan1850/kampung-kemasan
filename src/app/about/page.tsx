@@ -22,13 +22,12 @@ export default function AboutPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Auto-scroll logic for the carousel
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>
         prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1,
       );
-    }, 5000); // Change image every 5 seconds
+    }, 5000);
 
     return () => clearInterval(timer);
   }, []);
@@ -117,13 +116,13 @@ export default function AboutPage() {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="mb-8 overflow-hidden rounded-xl relative w-full h-[60vh] shadow-sm bg-zinc-100 group"
         >
-          <AnimatePresence mode="wait">
+          <AnimatePresence>
             <motion.div
               key={currentImageIndex}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1 }}
+              initial={{ opacity: 0, x: "100%" }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: "-100%" }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
               className="absolute inset-0"
             >
               <Image

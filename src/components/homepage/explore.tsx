@@ -25,14 +25,14 @@ import TrainImg from "../../../public/assets/images/train.webp";
 import BusImg from "../../../public/assets/images/tj2.webp";
 import PlaneImg from "../../../public/assets/images/plane.webp";
 import Becak from "../../../public/assets/images/becak.webp";
-import OmahDhaharImg from "../../../public/assets/images/omah-damar.webp";
+import BatikImg from "../../../public/assets/images/batik.webp";
 import DepotKrawuImg from "../../../public/assets/images/depot-krawu.webp";
 import CafeKemasanImg from "../../../public/assets/images/cafe.webp";
 import HotelBahagiaImg from "../../../public/assets/images/hotel-bahagia.webp";
 import HotelBatikImg from "../../../public/assets/images/hotel-batik.webp";
 import ArtEventImg from "../../../public/assets/images/art-event.webp";
 import JalanJajanImg from "../../../public/assets/images/tiktok7.webp";
-import DocomentasiImg from "../../../public/assets/images/visi.webp";
+import DocomentasiImg from "../../../public/assets/images/dokumentasi.webp";
 
 const exploreTabs = [
   { id: "transportation", icon: FaMapMarkedAlt },
@@ -46,23 +46,10 @@ const images = {
   train: TrainImg,
   plane: PlaneImg,
   local: Becak,
-  activities: [
-    ArtEventImg,
-    JalanJajanImg,
-    DocomentasiImg,
-  ],
-  culinary: [
-    DepotKrawuImg,
-    OmahDhaharImg,
-    CafeKemasanImg,
-  ],
-  hotel: [
-
-    HotelBahagiaImg,
-    HotelBatikImg
-  ]
+  activities: [ArtEventImg, JalanJajanImg, DocomentasiImg],
+  culinary: [DepotKrawuImg, BatikImg, CafeKemasanImg],
+  hotel: [HotelBahagiaImg, HotelBatikImg],
 };
-
 
 export default function Explore() {
   const { t } = useTranslation();
@@ -136,7 +123,6 @@ export default function Explore() {
             <div className="flex-1 overflow-y-auto bg-zinc-50 p-4 rounded-2xl border border-zinc-100 custom-scrollbar">
               {activeTransport === "car" && (
                 <div className="animate-in fade-in flex flex-col md:flex-row gap-4 h-full">
-                  
                   <div className="flex-1">
                     <h4 className="font-bold text-base text-zinc-800 mb-3 flex items-center gap-2">
                       <div className="bg-[#8B2615] p-1.5 rounded-md text-white">
@@ -168,13 +154,15 @@ export default function Explore() {
 
               {activeTransport === "bus" && (
                 <div className="animate-in fade-in flex flex-col md:flex-row gap-4 h-full">
-                  <Image
-                    src={images.bus}
-                    alt={t("explore.transportation.by_bus.title")}
-                    className="h-40 md:h-full md:w-2/5 shrink-0 rounded-xl object-cover"
-                    width={400}
-                    height={300}
-                  />
+                  <div className="relative h-48 md:h-full md:w-2/5 shrink-0 rounded-xl overflow-hidden bg-zinc-100">
+                    <Image
+                      src={images.bus}
+                      alt={t("explore.transportation.by_bus.title")}
+                      className="object-contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                    />
+                  </div>
                   <div className="flex-1">
                     <h4 className="font-bold text-base text-zinc-800 mb-3 flex items-center gap-2">
                       <div className="bg-[#8B2615] p-1.5 rounded-md text-white">
@@ -202,13 +190,15 @@ export default function Explore() {
 
               {activeTransport === "train" && (
                 <div className="animate-in fade-in flex flex-col md:flex-row gap-4 h-full">
-                  <Image
-                    src={images.train}
-                    alt={t("explore.transportation.by_train.title")}
-                    className="h-40 md:h-full md:w-2/5 shrink-0 rounded-xl object-cover"
-                    width={400}
-                    height={300}
-                  />
+                  <div className="relative h-48 md:h-full md:w-2/5 shrink-0 rounded-xl overflow-hidden bg-zinc-100">
+                    <Image
+                      src={images.train}
+                      alt={t("explore.transportation.by_train.title")}
+                      className="object-contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                    />
+                  </div>
                   <div className="flex-1">
                     <h4 className="font-bold text-base text-zinc-800 mb-3 flex items-center gap-2">
                       <div className="bg-[#8B2615] p-1.5 rounded-md text-white">
@@ -232,13 +222,15 @@ export default function Explore() {
 
               {activeTransport === "plane" && (
                 <div className="animate-in fade-in flex flex-col md:flex-row gap-4 h-full">
-                  <Image
-                    src={images.plane}
-                    alt={t("explore.transportation.by_plane.title")}
-                    className="h-40 md:h-full md:w-2/5 shrink-0 rounded-xl object-cover"
-                    width={400}
-                    height={300}
-                  />
+                  <div className="relative h-48 md:h-full md:w-2/5 shrink-0 rounded-xl overflow-hidden bg-zinc-100">
+                    <Image
+                      src={images.plane}
+                      alt={t("explore.transportation.by_plane.title")}
+                      className="object-contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                    />
+                  </div>
                   <div className="flex-1">
                     <h4 className="font-bold text-base text-zinc-800 mb-3 flex items-center gap-2">
                       <div className="bg-[#8B2615] p-1.5 rounded-md text-white">
@@ -262,13 +254,15 @@ export default function Explore() {
 
               {activeTransport === "local" && (
                 <div className="animate-in fade-in flex flex-col md:flex-row gap-4 h-full">
-                  <Image
-                    src={images.local}
-                    alt={t("explore.transportation.local_transport.title")}
-                    className="h-40 md:h-full md:w-2/5 shrink-0 rounded-xl object-cover"
-                    width={400}
-                    height={300}
-                  />
+                  <div className="relative h-48 md:h-full md:w-2/5 shrink-0 rounded-xl overflow-hidden bg-zinc-100">
+                    <Image
+                      src={images.local}
+                      alt={t("explore.transportation.local_transport.title")}
+                      className="object-contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                    />
+                  </div>
                   <div className="flex-1 flex flex-col">
                     <h4 className="font-bold text-base text-zinc-800 mb-3 flex items-center gap-2">
                       <div className="bg-[#8B2615] p-1.5 rounded-md text-white">
@@ -315,7 +309,7 @@ export default function Explore() {
         const actIcons = [FaStore, FaMapMarkedAlt, FaCamera];
 
         return (
-          <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-500 h-full flex flex-col">
+          <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-500 h-full flex flex-col min-h-0">
             <div className="shrink-0">
               <h3 className="text-xl font-bold text-[#8B2615] mb-1">
                 {t("explore.activities.heading")}
@@ -326,20 +320,24 @@ export default function Explore() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1 overflow-y-auto custom-scrollbar pb-2">
-              {activitiesList.map((act, index) => {
+              {activitiesList.map((act: any, index: number) => {
                 const Icon = actIcons[index % actIcons.length];
                 return (
                   <div
                     key={index}
-                    className="bg-white p-4 rounded-2xl border border-zinc-100 shadow-sm flex flex-col h-full min-h-60"
+                    className="bg-white p-4 rounded-2xl border border-zinc-100 shadow-sm flex flex-col h-full"
                   >
-                    <Image
-                      src={images.activities[index % images.activities.length]}
-                      alt={act.title}
-                      className="h-28 mb-3 shrink-0 rounded-xl object-cover"
-                      width={400}
-                      height={300}
-                    />
+                    <div className="relative w-full h-40 md:h-48 mb-3 shrink-0 rounded-xl overflow-hidden bg-zinc-100">
+                      <Image
+                        src={
+                          images.activities[index % images.activities.length]
+                        }
+                        alt={act.title}
+                        className="object-cover"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                    </div>
 
                     <div className="flex items-center gap-2 mb-2">
                       <div className="w-8 h-8 bg-orange-100 text-[#8B2615] rounded-lg flex items-center justify-center shrink-0">
@@ -356,7 +354,7 @@ export default function Explore() {
                       onClick={() =>
                         setModalContent({ title: act.title, content: act.full })
                       }
-                      className="text-xs font-bold text-[#8B2615] hover:text-black uppercase tracking-wider text-left transition-colors flex items-center gap-1 mt-auto"
+                      className="text-xs font-bold text-[#8B2615] hover:text-black uppercase tracking-wider text-left transition-colors flex items-center gap-1 mt-auto shrink-0"
                     >
                       {t("explore.activities.read_more")}{" "}
                       <FaArrowRight size={10} />
@@ -377,36 +375,36 @@ export default function Explore() {
           : [];
 
         return (
-          <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500 h-full flex flex-col">
+          <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-500 h-full flex flex-col min-h-0">
             <div className="shrink-0">
-              <h3 className="text-2xl font-bold text-zinc-900 mb-2">
+              <h3 className="text-xl font-bold text-[#8B2615] mb-1">
                 {t("explore.culinary.heading")}
               </h3>
-              <p className="text-sm text-zinc-500 leading-relaxed max-w-2xl">
+              <p className="text-sm text-zinc-600 leading-relaxed max-w-2xl">
                 {t("explore.culinary.description")}
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 flex-1 overflow-y-auto custom-scrollbar pb-2">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1 overflow-y-auto custom-scrollbar pb-2">
               {/* Card Index 0 */}
               {culinaryCards[0] && (
-                <div className="bg-white p-5 rounded-2xl border border-zinc-100 shadow-sm md:col-span-3 xl:col-span-1 h-full flex flex-col min-h-75">
-                  <div className="h-40 mb-4 rounded-xl overflow-hidden shrink-0">
+                <div className="bg-white p-4 rounded-2xl border border-zinc-100 shadow-sm md:col-span-3 xl:col-span-1 h-full flex flex-col">
+                  <div className="relative w-full h-40 mb-4 rounded-xl overflow-hidden shrink-0 bg-zinc-100">
                     <Image
                       src={images.culinary[0]}
-                      alt="Food"
-                      className="w-full h-full object-cover"
-                      width={400}
-                      height={300}
+                      alt={culinaryCards[0].title}
+                      className="object-cover"
+                      fill
+                      sizes="(max-width: 1280px) 100vw, 33vw"
                     />
                   </div>
-                  <div className="flex items-center gap-3 mb-4 text-zinc-900 shrink-0">
+                  <div className="flex items-center gap-3 mb-4 text-[#8B2615] shrink-0">
                     <FaUtensils size={18} />
-                    <h4 className="font-bold text-lg">
+                    <h4 className="font-bold text-lg text-zinc-800">
                       {culinaryCards[0].title}
                     </h4>
                   </div>
-                  <ul className="text-sm text-zinc-600 space-y-4 overflow-y-auto pr-2 custom-scrollbar flex-1 mb-4">
+                  <ul className="text-sm text-zinc-600 space-y-4 flex-1">
                     {culinaryCards[0].items?.map(
                       (item: { name: string; desc: string }, idx: number) => (
                         <li
@@ -416,7 +414,6 @@ export default function Explore() {
                           <strong className="text-sm text-zinc-900 block mb-1">
                             {item.name}
                           </strong>
-                          {/* <span className="text-xs">{item.desc}</span> */}
                         </li>
                       ),
                     )}
@@ -428,19 +425,22 @@ export default function Explore() {
                         content:
                           culinaryCards[0].full ||
                           culinaryCards[0].items
-                            ?.map((i: { name: string; desc: string }) => `${i.name}:\n${i.desc}`)
+                            ?.map(
+                              (i: { name: string; desc: string }) =>
+                                `${i.name}:\n${i.desc}`,
+                            )
                             .join("\n\n"),
                       })
                     }
-                    className="text-xs font-bold text-zinc-900 hover:text-zinc-600 uppercase tracking-widest text-left transition-colors flex items-center gap-2 mt-auto shrink-0"
+                    className="text-xs font-bold text-[#8B2615] hover:text-black uppercase tracking-wider text-left transition-colors flex items-center gap-1 mt-4 shrink-0"
                   >
-                    {t("explore.culinary.read_more")} <FaArrowRight size={12} />
+                    {t("explore.culinary.read_more")} <FaArrowRight size={10} />
                   </button>
                 </div>
               )}
 
               {/* Cards Index 1 & 2 */}
-              <div className="md:col-span-3 xl:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div className="md:col-span-3 xl:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[1, 2].map((idx) => {
                   const card = culinaryCards[idx];
                   if (!card) return null;
@@ -448,24 +448,26 @@ export default function Explore() {
                   return (
                     <div
                       key={idx}
-                      className="bg-white p-5 rounded-2xl border border-zinc-100 shadow-sm flex flex-col h-full min-h-75"
+                      className="bg-white p-4 rounded-2xl border border-zinc-100 shadow-sm flex flex-col h-full"
                     >
-                      <div className="h-36 mb-4 rounded-xl overflow-hidden shrink-0">
+                      <div className="relative w-full h-40 mb-4 rounded-xl overflow-hidden shrink-0 bg-zinc-100 group">
                         <Image
                           src={images.culinary[idx]}
                           alt={card.title}
-                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                          width={400}
-                          height={300}
+                          className="object-cover group-hover:scale-105 transition-transform duration-700"
+                          fill
+                          sizes="(max-width: 768px) 100vw, 33vw"
                         />
                       </div>
-                      <div className="flex items-center gap-3 mb-3 text-zinc-900 shrink-0">
-                        <div className="bg-zinc-100 p-2 rounded-lg">
-                          <Icon size={16} />
+                      <div className="flex items-center gap-3 mb-3 text-[#8B2615] shrink-0">
+                        <div className="bg-orange-100 p-2 rounded-lg">
+                          <Icon size={14} />
                         </div>
-                        <h4 className="font-bold text-base">{card.title}</h4>
+                        <h4 className="font-bold text-base text-zinc-800">
+                          {card.title}
+                        </h4>
                       </div>
-                      <p className="text-sm text-zinc-500 mb-4 flex-1 line-clamp-3">
+                      <p className="text-xs text-zinc-600 mb-4 flex-1 line-clamp-3">
                         {card.short}
                       </p>
                       <button
@@ -475,10 +477,10 @@ export default function Explore() {
                             content: card.full,
                           })
                         }
-                        className="text-xs font-bold text-zinc-900 hover:text-zinc-600 uppercase tracking-widest text-left transition-colors flex items-center gap-2 mt-auto shrink-0"
+                        className="text-xs font-bold text-[#8B2615] hover:text-black uppercase tracking-wider text-left transition-colors flex items-center gap-1 mt-auto shrink-0"
                       >
                         {t("explore.culinary.read_more")}{" "}
-                        <FaArrowRight size={12} />
+                        <FaArrowRight size={10} />
                       </button>
                     </div>
                   );
@@ -495,7 +497,7 @@ export default function Explore() {
         const hotelsList = Array.isArray(fetchedHotels) ? fetchedHotels : [];
 
         return (
-          <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-500 h-full flex flex-col">
+          <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-500 h-full flex flex-col min-h-0">
             <div className="shrink-0">
               <h3 className="text-xl font-bold text-[#8B2615] mb-1">
                 {t("explore.accommodation.heading")}
@@ -506,25 +508,27 @@ export default function Explore() {
             </div>
 
             <div className="grid grid-cols-1 gap-4 flex-1 overflow-y-auto custom-scrollbar pb-2">
-              {hotelsList.map((hotel, index) => (
+              {hotelsList.map((hotel: any, index: number) => (
                 <div
                   key={index}
                   className="bg-zinc-50 rounded-2xl p-4 border border-zinc-100 flex flex-col md:flex-row gap-4 items-start"
                 >
-                  <Image
-                    src={images.hotel[index % images.hotel.length]}
-                    alt={hotel.name}
-                    className="w-full md:w-48 h-32 md:h-24 rounded-xl object-cover shrink-0"
-                    width={400}
-                    height={300}
-                  />
-                  <div className="flex-1 space-y-2">
+                  <div className="relative w-full md:w-48 h-48 md:h-32 rounded-xl overflow-hidden bg-zinc-100 shrink-0">
+                    <Image
+                      src={images.hotel[index % images.hotel.length]}
+                      alt={hotel.name}
+                      className="object-cover"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 200px"
+                    />
+                  </div>
+                  <div className="flex-1 flex flex-col justify-center h-full space-y-1">
                     {index === 0 && (
-                      <div className="inline-block bg-green-100 text-green-700 font-bold px-2 py-0.5 rounded-full text-[10px] tracking-wider uppercase mb-1">
+                      <div className="inline-block bg-green-100 text-green-700 font-bold px-2 py-0.5 rounded-full text-[10px] tracking-wider uppercase mb-1 w-max">
                         {t("explore.accommodation.recommendation")}
                       </div>
                     )}
-                    <div className="flex justify-between items-start flex-wrap gap-2">
+                    <div className="flex justify-between items-start flex-wrap gap-2 mb-1">
                       <h4 className="text-lg font-extrabold text-zinc-800 leading-tight">
                         {hotel.name}
                       </h4>
@@ -550,7 +554,7 @@ export default function Explore() {
   };
 
   return (
-    <section className="max-h-screen py-6 md:py-12 px-4 md:px-8 bg-zinc-50 relative overflow-hidden flex flex-col">
+    <section className="h-screen max-h-screen py-6 md:py-12 px-4 md:px-8 bg-zinc-50 relative flex flex-col justify-center overflow-hidden">
       {modalContent && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
           <div className="bg-white rounded-2xl shadow-2xl w-full max-w-xl max-h-[85vh] flex flex-col relative animate-in zoom-in-95 duration-200">
@@ -575,7 +579,6 @@ export default function Explore() {
       )}
 
       <div className="max-w-7xl mx-auto w-full h-full flex flex-col lg:flex-row gap-4 md:gap-6 min-h-0">
-        {/* Sidebar */}
         <div className="w-full lg:w-[25%] xl:w-[20%] flex flex-col gap-4 shrink-0 overflow-y-auto lg:overflow-visible custom-scrollbar pb-2">
           <div className="text-center lg:text-left shrink-0">
             <h2 className="text-2xl font-black tracking-tighter uppercase leading-none text-[#8B2615]">
@@ -632,11 +635,31 @@ export default function Explore() {
           </div>
         </div>
 
-        {/* Dynamic Content Area */}
         <div className="flex-1 min-w-0 bg-white rounded-3xl border border-zinc-200 p-4 md:p-6 shadow-xl shadow-zinc-200/40 flex flex-col h-full overflow-hidden">
           {renderContent()}
         </div>
       </div>
+
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+        .custom-scrollbar::-webkit-scrollbar {
+          width: 4px;
+          height: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: #e4e4e7;
+          border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: #d4d4d8;
+        }
+      `,
+        }}
+      />
     </section>
   );
 }
