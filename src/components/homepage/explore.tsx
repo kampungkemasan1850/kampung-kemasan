@@ -21,18 +21,18 @@ import {
 } from "react-icons/fa";
 import Image from "next/image";
 
-const TrainImg = `${process.env.NEXT_PUBLIC_ASSETS_URL}/gallery/train.webp`;
-const BusImg = `${process.env.NEXT_PUBLIC_ASSETS_URL}/gallery/tj2.webp`;
-const PlaneImg = `${process.env.NEXT_PUBLIC_ASSETS_URL}/gallery/plane.webp`;
-const Becak = `${process.env.NEXT_PUBLIC_ASSETS_URL}/gallery/becak.webp`;
-const BatikImg = `${process.env.NEXT_PUBLIC_ASSETS_URL}/gallery/batik.webp`;
-const DepotKrawuImg = `${process.env.NEXT_PUBLIC_ASSETS_URL}/gallery/depot-krawu.webp`;
-const CafeKemasanImg = `${process.env.NEXT_PUBLIC_ASSETS_URL}/gallery/cafe.webp`;
-const HotelBahagiaImg = `${process.env.NEXT_PUBLIC_ASSETS_URL}/gallery/hotel-bahagia.webp`;
-const HotelBatikImg = `${process.env.NEXT_PUBLIC_ASSETS_URL}/gallery/hotel-batik.webp`;
-const ArtEventImg = `${process.env.NEXT_PUBLIC_ASSETS_URL}/gallery/art-event.webp`;
-const JalanJajanImg = `${process.env.NEXT_PUBLIC_ASSETS_URL}/gallery/walking-event.webp`;
-const DocomentasiImg = `${process.env.NEXT_PUBLIC_ASSETS_URL}/gallery/dokumentasi.webp`;
+const TrainImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/train.webp`;
+const BusImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/tj2.webp`;
+const PlaneImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/plane.webp`;
+const Becak = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/becak.webp`;
+const BatikImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/batik.webp`;
+const DepotKrawuImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/depot-krawu.webp`;
+const CafeKemasanImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/cafe.webp`;
+const HotelBahagiaImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/hotel-bahagia.webp`;
+const HotelBatikImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/hotel-batik.webp`;
+const ArtEventImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/art-event.webp`;
+const JalanJajanImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/walking-event.webp`;
+const DocomentasiImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/dokumentasi.webp`;
 
 const exploreTabs = [
   { id: "transportation", icon: FaMapMarkedAlt },
