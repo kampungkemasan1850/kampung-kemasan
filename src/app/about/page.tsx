@@ -7,6 +7,9 @@ import AboutImg from "../../../public/assets/images/about.webp";
 import AboutImg2 from "../../../public/assets/images/about2.webp";
 import AboutImg3 from "../../../public/assets/images/about3.webp";
 import VisionImg from "../../../public/assets/images/visi.webp";
+import AboutSubImg1 from "../../../public/assets/images/about-sub1.webp";
+import AboutSubImg2 from "../../../public/assets/images/about-sub2.webp";
+import AboutSubImg3 from "../../../public/assets/images/about-sub3.webp";
 import { FaChevronRight, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
@@ -174,6 +177,29 @@ export default function AboutPage() {
               >
                 {t("about.read_more")} <FaChevronRight className="w-3 h-3" />
               </button>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 mt-4 border-t border-gray-100">
+                <div className="relative h-48 md:h-40 w-full rounded-2xl overflow-hidden shadow-sm">
+                  <Image
+                    src={AboutSubImg1}
+                    alt="About Sub Image 1"
+                    className="object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="relative h-48 md:h-40 w-full rounded-2xl overflow-hidden shadow-sm">
+                  <Image
+                    src={AboutSubImg2}
+                    alt="About Sub Image 2"
+                    className="object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="relative h-48 md:h-40 w-full rounded-2xl overflow-hidden shadow-sm">
+                  <Image
+                    src={AboutSubImg3}
+                    alt="About Sub Image 3"
+                    className="object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              </div>
             </motion.div>
             <motion.div
               variants={fadeInUp}

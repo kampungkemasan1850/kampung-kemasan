@@ -31,7 +31,7 @@ import CafeKemasanImg from "../../../public/assets/images/cafe.webp";
 import HotelBahagiaImg from "../../../public/assets/images/hotel-bahagia.webp";
 import HotelBatikImg from "../../../public/assets/images/hotel-batik.webp";
 import ArtEventImg from "../../../public/assets/images/art-event.webp";
-import JalanJajanImg from "../../../public/assets/images/tiktok7.webp";
+import JalanJajanImg from "../../../public/assets/images/walking-event.webp";
 import DocomentasiImg from "../../../public/assets/images/dokumentasi.webp";
 
 const exploreTabs = [

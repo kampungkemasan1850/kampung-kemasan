@@ -129,6 +129,7 @@ const Koleksi = () => {
               <Image
                 src={Rumah3}
                 alt="House Type 3"
+                loading="eager"
                 fill
                 sizes="h-full w-full"
                 className="object-cover"
