@@ -5,14 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import Tiktok1 from "../../../public/assets/images/tiktok1.webp";
-import Tiktok2 from "../../../public/assets/images/tiktok2.webp";
-import Tiktok3 from "../../../public/assets/images/tiktok3.webp";
-import Tiktok4 from "../../../public/assets/images/tiktok4.webp";
-import Tiktok5 from "../../../public/assets/images/tiktok5.webp";
-import Tiktok6 from "../../../public/assets/images/tiktok6.webp";
-import Tiktok7 from "../../../public/assets/images/tiktok7.webp";
-import Tiktok8 from "../../../public/assets/images/tiktok8.webp";
+const Tiktok1 = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/tiktok1.webp`;
+const Tiktok2 = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/tiktok2.webp`;
+const Tiktok3 = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/tiktok3.webp`;
+const Tiktok4 = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/tiktok4.webp`;
+const Tiktok5 = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/tiktok5.webp`;
+const Tiktok6 = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/tiktok6.webp`;
+const Tiktok7 = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/tiktok7.webp`;
+const Tiktok8 = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/tiktok8.webp` ;
 
 const tiktokMedia = [
   { id: 1, url: "https://vt.tiktok.com/ZSxDLxWt7/", image: Tiktok1 },

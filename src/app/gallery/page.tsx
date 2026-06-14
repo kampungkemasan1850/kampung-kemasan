@@ -3,17 +3,18 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
-import Rumah1 from "../../../public/assets/images/history.webp";
-import Rumah2 from "../../../public/assets/images/rumah2.webp";
-import Rumah3 from "../../../public/assets/images/rumah3.webp";
-import Jendela from "../../../public/assets/images/jendela.webp";
-import GaleryImg1 from "../../../public/assets/images/gallery1.webp";
-import GaleryImg2 from "../../../public/assets/images/gallery2.webp";
-import GaleryImg3 from "../../../public/assets/images/gallery3.webp";
-import GaleryImg4 from "../../../public/assets/images/gallery4.webp";
-import GajahMungkur from "../../../public/assets/images/history2.png";
-import LangitLangit from "../../../public/assets/images/langit-langit.webp";
-import Trailing from "../../../public/assets/images/trailing.webp";
+
+const Rumah1 = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/history.webp`;
+const Rumah2 = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/rumah2.webp`;
+const Rumah3 = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/rumah3.webp`;
+const Jendela = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/jendela.webp`;
+const GaleryImg1 = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/gallery1.webp`;
+const GaleryImg2 = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/gallery2.webp`;
+const GaleryImg3 = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/gallery3.webp`;
+const GaleryImg4 = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/gallery4.webp`;
+const GajahMungkur = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/history2.png`;
+const LangitLangit = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/langit-langit.webp`;
+const Trailing = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/trailing.webp`;
 
 import { FaArrowCircleRight, FaTimes } from "react-icons/fa";
 

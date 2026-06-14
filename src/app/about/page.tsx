@@ -3,17 +3,17 @@
 import { useState, useEffect } from "react";
 import { motion, easeOut, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import AboutImg from "../../../public/assets/images/about.webp";
-import AboutImg2 from "../../../public/assets/images/about2.webp";
-import AboutImg3 from "../../../public/assets/images/about3.webp";
-import VisionImg from "../../../public/assets/images/visi.webp";
-import AboutSubImg1 from "../../../public/assets/images/about-sub1.webp";
-import AboutSubImg2 from "../../../public/assets/images/about-sub2.webp";
-import AboutSubImg3 from "../../../public/assets/images/about-sub3.webp";
 import { FaChevronRight, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
+const AboutImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/about.webp`;
+const AboutImg2 = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/about2.webp`;
+const AboutImg3 = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/about3.webp`;
+const VisionImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/visi.webp`;
+const AboutSubImg1 = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/about-sub1.webp`;
+const AboutSubImg2 = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/about-sub2.webp`;
+const AboutSubImg3 = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/about-sub3.webp`;
 const carouselImages = [
   { src: AboutImg, alt: "Kampung Kemasan Heritage 1" },
   { src: AboutImg2, alt: "Kampung Kemasan Heritage 2" },
@@ -182,6 +182,8 @@ export default function AboutPage() {
                   <Image
                     src={AboutSubImg1}
                     alt="About Sub Image 1"
+                    width={400}
+                    height={300}
                     className="object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -189,6 +191,8 @@ export default function AboutPage() {
                   <Image
                     src={AboutSubImg2}
                     alt="About Sub Image 2"
+                    width={400}
+                    height={300}
                     className="object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -196,6 +200,8 @@ export default function AboutPage() {
                   <Image
                     src={AboutSubImg3}
                     alt="About Sub Image 3"
+                    width={400}
+                    height={300}
                     className="object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -329,6 +335,8 @@ export default function AboutPage() {
                 <Image
                   src={VisionImg}
                   alt="Vision"
+                  width={600}
+                  height={400}
                   className="w-full h-64 object-cover opacity-80 hover:opacity-100 transition-opacity"
                 />
               </div>
