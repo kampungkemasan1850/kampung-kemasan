@@ -24,6 +24,7 @@ export default function AboutPage() {
   const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -54,7 +55,6 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen w-[90vw] mx-auto flex flex-col items-center justify-between relative">
-      {/* Modal Popup */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
           <div className="bg-white rounded-3xl shadow-2xl w-full max-w-3xl max-h-[85vh] flex flex-col relative animate-in zoom-in-95 duration-200">
@@ -93,6 +93,41 @@ export default function AboutPage() {
         </div>
       )}
 
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-60 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md"
+            onClick={() => setSelectedImage(null)} 
+          >
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-6 right-6 md:top-8 md:right-8 text-white hover:text-zinc-300 transition-colors bg-black/50 hover:bg-black/80 rounded-full p-3 focus:outline-none z-70"
+            >
+              <FaTimes size={24} />
+            </button>
+            <motion.div
+              initial={{ scale: 0.95 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.95 }}
+              className="relative w-full max-w-6xl h-[85vh] flex items-center justify-center"
+              onClick={(e) => e.stopPropagation()} 
+            >
+              <Image
+                src={selectedImage}
+                alt="Full View"
+                fill
+                className="object-contain"
+                sizes="100vw"
+                quality={100}
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div className="mx-auto px-4 pt-8 pb-12 w-full">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -112,7 +147,6 @@ export default function AboutPage() {
           <p className="text-zinc-500 mt-2 text-sm">{t("about.location")}</p>
         </motion.div>
 
-        {/* Updated Image Carousel Section */}
         <motion.section
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -139,7 +173,6 @@ export default function AboutPage() {
             </motion.div>
           </AnimatePresence>
 
-          {/* Carousel Indicators (Dots) */}
           <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-3 z-10">
             {carouselImages.map((_, index) => (
               <button
@@ -177,8 +210,12 @@ export default function AboutPage() {
               >
                 {t("about.read_more")} <FaChevronRight className="w-3 h-3" />
               </button>
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 mt-4 border-t border-gray-100">
-                <div className="relative h-48 md:h-40 w-full rounded-2xl overflow-hidden shadow-sm">
+                <div
+                  className="relative h-48 md:h-40 w-full rounded-2xl overflow-hidden shadow-sm cursor-pointer"
+                  onClick={() => setSelectedImage(AboutSubImg1)}
+                >
                   <Image
                     src={AboutSubImg1}
                     alt="About Sub Image 1"
@@ -187,7 +224,10 @@ export default function AboutPage() {
                     className="object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="relative h-48 md:h-40 w-full rounded-2xl overflow-hidden shadow-sm">
+                <div
+                  className="relative h-48 md:h-40 w-full rounded-2xl overflow-hidden shadow-sm cursor-pointer"
+                  onClick={() => setSelectedImage(AboutSubImg2)}
+                >
                   <Image
                     src={AboutSubImg2}
                     alt="About Sub Image 2"
@@ -196,7 +236,10 @@ export default function AboutPage() {
                     className="object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="relative h-48 md:h-40 w-full rounded-2xl overflow-hidden shadow-sm">
+                <div
+                  className="relative h-48 md:h-40 w-full rounded-2xl overflow-hidden shadow-sm cursor-pointer"
+                  onClick={() => setSelectedImage(AboutSubImg3)}
+                >
                   <Image
                     src={AboutSubImg3}
                     alt="About Sub Image 3"

@@ -30,7 +30,7 @@ const DepotKrawuImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/depot-kraw
 const CafeKemasanImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/cafe.webp`;
 const HotelBahagiaImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/hotel-bahagia.webp`;
 const HotelBatikImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/hotel-batik.webp`;
-const ArtEventImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/art-event.webp`;
+const ArtEventImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/workshop.webp`;
 const JalanJajanImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/walking-event.webp`;
 const DocomentasiImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/dokumentasi.webp`;
 

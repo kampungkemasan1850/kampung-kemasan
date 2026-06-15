@@ -55,7 +55,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="flex items-center justify-between px-4 sm:px-8 py-1 md:py-5 sticky top-0 z-9999 bg-[#8B2615] border-b border-white/10">
+    <nav className="flex items-center justify-between px-4 sm:px-8 py-1 md:py-5 sticky top-0 z-50 bg-[#8B2615] border-b border-white/10">
       <motion.div
         initial="hidden"
         animate="visible"
@@ -133,7 +133,7 @@ export default function Navbar() {
 
       <button
         onClick={() => setMenuOpen(!menuOpen)}
-        className="lg:hidden text-white z-10000 p-2"
+        className="lg:hidden text-white z-50 p-2"
       >
         <div className="space-y-1.5">
           <motion.span
@@ -167,7 +167,7 @@ export default function Navbar() {
               initial="closed"
               animate="open"
               exit="closed"
-              className="fixed top-0 right-0 lg:hidden bg-[#8B2615] w-[70vw] h-screen p-10 flex flex-col gap-8 shadow-2xl z-9999"
+              className="fixed top-0 right-0 lg:hidden bg-[#8B2615] w-[70vw] h-screen p-10 flex flex-col gap-8 shadow-2xl z-50"
             >
               <div className="mt-10 flex flex-col gap-6">
                 {[...navLinks, ...secondaryLinks].map((item, i) => (
