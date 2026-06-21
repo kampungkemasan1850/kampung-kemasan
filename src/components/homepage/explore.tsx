@@ -522,7 +522,7 @@ export default function Explore() {
                       sizes="(max-width: 768px) 100vw, 200px"
                     />
                   </div>
-                  <div className="flex-1 flex flex-col justify-center h-full space-y-1">
+                  <div className="flex-1 flex flex-col h-full space-y-1">
                     {index === 0 && (
                       <div className="inline-block bg-green-100 text-green-700 font-bold px-2 py-0.5 rounded-full text-[10px] tracking-wider uppercase mb-1 w-max">
                         {t("explore.accommodation.recommendation")}
@@ -539,7 +539,7 @@ export default function Explore() {
                         </span>
                       </p>
                     </div>
-                    <p className="text-xs text-zinc-600 leading-relaxed line-clamp-3">
+                    <p className="text-xs text-zinc-600 leading-relaxed line-clamp">
                       {hotel.desc1} {hotel.desc2} {hotel.desc3}
                     </p>
                   </div>
