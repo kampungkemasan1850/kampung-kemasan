@@ -27,7 +27,7 @@ export default function EventHighlight({ t }: EventHighlightProps) {
         >
           <div className="border-l-4 border-[#8B2615] pl-6">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase leading-none">
-              {t("events.title")} highlight.
+              {t("events.title")}.
             </h2>
             <p className="text-zinc-500 mt-4 text-xs font-light tracking-[0.4em] uppercase">
               {t("events.subtitle")}
