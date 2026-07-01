@@ -18,22 +18,6 @@ const Trailing = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/trailing.webp`;
 
 import { FaArrowCircleRight, FaTimes } from "react-icons/fa";
 
-const CircleArrow = ({ bgClass = "bg-white", arrowClass = "text-black" }) => (
-  <div
-    className={`${bgClass} rounded-full p-2 flex items-center justify-center shrink-0 shadow-md w-10 h-10`}
-  >
-    <svg
-      className={`w-6 h-6 ${arrowClass}`}
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      strokeWidth={3}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-    </svg>
-  </div>
-);
-
 const GalleryImage = [
   { src: GaleryImg1, alt: "Gallery Image 1" },
   { src: GaleryImg2, alt: "Gallery Image 2" },
@@ -104,9 +88,7 @@ const Koleksi = () => {
                 className="object-cover"
               />
             </div>
-            <div className="bg-[#FDF2CB] h-36 md:h-40 flex pb-6 items-end justify-center">
-              <CircleArrow bgClass="bg-[#A13312]" arrowClass="text-[#FDF2CB]" />
-            </div>
+            <div className="bg-[#FDF2CB] h-36 md:h-40 flex pb-6 items-end justify-center"></div>
           </div>
 
           <div className="flex flex-col rounded-b-4xl overflow-hidden shadow-xl">
@@ -120,9 +102,7 @@ const Koleksi = () => {
               />
             </div>
 
-            <div className="bg-[#A13312] h-28 md:h-32 flex pb-6 items-end justify-center">
-              <CircleArrow bgClass="bg-white" arrowClass="text-[#A13312]" />
-            </div>
+            <div className="bg-[#A13312] h-28 md:h-32 flex pb-6 items-end justify-center"></div>
           </div>
 
           <div className="relative flex flex-col rounded-b-4xl overflow-visible shadow-xl">
@@ -136,9 +116,7 @@ const Koleksi = () => {
                 className="object-cover"
               />
             </div>
-            <div className="bg-[#F0BB51] h-20 md:h-20 flex pb-6 items-end justify-center rounded-b-4xl">
-              <CircleArrow bgClass="bg-white" arrowClass="text-[#F0BB51]" />
-            </div>
+            <div className="bg-[#F0BB51] h-20 md:h-20 flex pb-6 items-end justify-center rounded-b-4xl"></div>
 
             <div className="absolute -bottom-6 -right-4 md:-right-24 z-20 transform rotate-[-5deg]">
               {renderBadge()}

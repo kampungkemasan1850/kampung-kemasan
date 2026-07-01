@@ -23,6 +23,7 @@ import Image from "next/image";
 
 const TrainImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/train.webp`;
 const BusImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/tj2.webp`;
+const CarImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/car.webp`;
 const PlaneImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/plane.webp`;
 const Becak = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/becak.webp`;
 const BatikImg = `${process.env.NEXT_PUBLIC_STORAGE_URL}/gallery/batik.webp`;
@@ -42,6 +43,7 @@ const exploreTabs = [
 ];
 
 const images = {
+  car: CarImg,
   bus: BusImg,
   train: TrainImg,
   plane: PlaneImg,
@@ -123,6 +125,15 @@ export default function Explore() {
             <div className="flex-1 overflow-y-auto bg-zinc-50 p-4 rounded-2xl border border-zinc-100 custom-scrollbar">
               {activeTransport === "car" && (
                 <div className="animate-in fade-in flex flex-col md:flex-row gap-4 h-full">
+                  <div className="relative h-52 md:w-2/5 shrink-0 rounded-xl overflow-hidden bg-zinc-100">
+                    <Image
+                      src={images.car}
+                      alt={t("explore.transportation.by_car.title")}
+                      className="object-cover"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
                   <div className="flex-1">
                     <h4 className="font-bold text-base text-zinc-800 mb-3 flex items-center gap-2">
                       <div className="bg-[#8B2615] p-1.5 rounded-md text-white">
@@ -154,11 +165,11 @@ export default function Explore() {
 
               {activeTransport === "bus" && (
                 <div className="animate-in fade-in flex flex-col md:flex-row gap-4 h-full">
-                  <div className="relative h-48 md:h-full md:w-2/5 shrink-0 rounded-xl overflow-hidden bg-zinc-100">
+                  <div className="relative h-52 md:w-2/5 shrink-0 rounded-xl overflow-hidden bg-zinc-100">
                     <Image
                       src={images.bus}
                       alt={t("explore.transportation.by_bus.title")}
-                      className="object-contain"
+                      className="object-cover"
                       fill
                       sizes="(max-width: 768px) 100vw, 40vw"
                     />
@@ -190,11 +201,11 @@ export default function Explore() {
 
               {activeTransport === "train" && (
                 <div className="animate-in fade-in flex flex-col md:flex-row gap-4 h-full">
-                  <div className="relative h-48 md:h-full md:w-2/5 shrink-0 rounded-xl overflow-hidden bg-zinc-100">
+                  <div className="relative h-52 md:w-2/5 shrink-0 rounded-xl overflow-hidden bg-zinc-100">
                     <Image
                       src={images.train}
                       alt={t("explore.transportation.by_train.title")}
-                      className="object-contain"
+                      className="object-cover"
                       fill
                       sizes="(max-width: 768px) 100vw, 40vw"
                     />
@@ -222,11 +233,11 @@ export default function Explore() {
 
               {activeTransport === "plane" && (
                 <div className="animate-in fade-in flex flex-col md:flex-row gap-4 h-full">
-                  <div className="relative h-48 md:h-full md:w-2/5 shrink-0 rounded-xl overflow-hidden bg-zinc-100">
+                  <div className="relative h-52 md:w-2/5 shrink-0 rounded-xl overflow-hidden bg-zinc-100">
                     <Image
                       src={images.plane}
                       alt={t("explore.transportation.by_plane.title")}
-                      className="object-contain"
+                      className="object-cover"
                       fill
                       sizes="(max-width: 768px) 100vw, 40vw"
                     />
@@ -254,11 +265,11 @@ export default function Explore() {
 
               {activeTransport === "local" && (
                 <div className="animate-in fade-in flex flex-col md:flex-row gap-4 h-full">
-                  <div className="relative h-48 md:h-full md:w-2/5 shrink-0 rounded-xl overflow-hidden bg-zinc-100">
+                  <div className="relative h-52 md:w-2/5 shrink-0 rounded-xl overflow-hidden bg-zinc-100">
                     <Image
                       src={images.local}
                       alt={t("explore.transportation.local_transport.title")}
-                      className="object-contain"
+                      className="object-cover"
                       fill
                       sizes="(max-width: 768px) 100vw, 40vw"
                     />
@@ -320,48 +331,56 @@ export default function Explore() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1 overflow-y-auto custom-scrollbar pb-2">
-              {activitiesList.map((act: { title: string; short: string; full: string }, index: number) => {
-                const Icon = actIcons[index % actIcons.length];
-                return (
-                  <div
-                    key={index}
-                    className="bg-white p-4 rounded-2xl border border-zinc-100 shadow-sm flex flex-col h-full"
-                  >
-                    <div className="relative w-full h-40 md:h-48 mb-3 shrink-0 rounded-xl overflow-hidden bg-zinc-100">
-                      <Image
-                        src={
-                          images.activities[index % images.activities.length]
-                        }
-                        alt={act.title}
-                        className="object-cover"
-                        fill
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                      />
-                    </div>
-
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-8 h-8 bg-orange-100 text-[#8B2615] rounded-lg flex items-center justify-center shrink-0">
-                        <Icon size={14} />
-                      </div>
-                      <h4 className="font-bold text-sm text-zinc-800 leading-snug line-clamp-1">
-                        {act.title}
-                      </h4>
-                    </div>
-                    <p className="text-xs text-zinc-600 mb-3 flex-1 line-clamp-3">
-                      {act.short}
-                    </p>
-                    <button
-                      onClick={() =>
-                        setModalContent({ title: act.title, content: act.full })
-                      }
-                      className="text-xs font-bold text-[#8B2615] hover:text-black uppercase tracking-wider text-left transition-colors flex items-center gap-1 mt-auto shrink-0"
+              {activitiesList.map(
+                (
+                  act: { title: string; short: string; full: string },
+                  index: number,
+                ) => {
+                  const Icon = actIcons[index % actIcons.length];
+                  return (
+                    <div
+                      key={index}
+                      className="bg-white p-4 rounded-2xl border border-zinc-100 shadow-sm flex flex-col h-full"
                     >
-                      {t("explore.activities.read_more")}{" "}
-                      <FaArrowRight size={10} />
-                    </button>
-                  </div>
-                );
-              })}
+                      <div className="relative w-full h-40 md:h-52 mb-3 shrink-0 rounded-xl overflow-hidden bg-zinc-100">
+                        <Image
+                          src={
+                            images.activities[index % images.activities.length]
+                          }
+                          alt={act.title}
+                          className="object-cover"
+                          fill
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                        />
+                      </div>
+
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-8 h-8 bg-orange-100 text-[#8B2615] rounded-lg flex items-center justify-center shrink-0">
+                          <Icon size={14} />
+                        </div>
+                        <h4 className="font-bold text-sm text-zinc-800 leading-snug line-clamp-1">
+                          {act.title}
+                        </h4>
+                      </div>
+                      <p className="text-xs text-zinc-600 mb-3 flex-1 line-clamp-3">
+                        {act.short}
+                      </p>
+                      <button
+                        onClick={() =>
+                          setModalContent({
+                            title: act.title,
+                            content: act.full,
+                          })
+                        }
+                        className="text-xs font-bold text-[#8B2615] hover:text-black uppercase tracking-wider text-left transition-colors flex items-center gap-1 mt-auto shrink-0"
+                      >
+                        {t("explore.activities.read_more")}{" "}
+                        <FaArrowRight size={10} />
+                      </button>
+                    </div>
+                  );
+                },
+              )}
             </div>
           </div>
         );
@@ -386,7 +405,6 @@ export default function Explore() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1 overflow-y-auto custom-scrollbar pb-2">
-              {/* Card Index 0 */}
               {culinaryCards[0] && (
                 <div className="bg-white p-4 rounded-2xl border border-zinc-100 shadow-sm md:col-span-3 xl:col-span-1 h-full flex flex-col">
                   <div className="relative w-full h-40 mb-4 rounded-xl overflow-hidden shrink-0 bg-zinc-100">
@@ -439,7 +457,6 @@ export default function Explore() {
                 </div>
               )}
 
-              {/* Cards Index 1 & 2 */}
               <div className="md:col-span-3 xl:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[1, 2].map((idx) => {
                   const card = culinaryCards[idx];
@@ -508,43 +525,54 @@ export default function Explore() {
             </div>
 
             <div className="grid grid-cols-1 gap-4 flex-1 overflow-y-auto custom-scrollbar pb-2">
-              {hotelsList.map((hotel: { name: string; price: string; desc1: string; desc2: string; desc3: string }, index: number) => (
-                <div
-                  key={index}
-                  className="bg-zinc-50 rounded-2xl p-4 border border-zinc-100 flex flex-col md:flex-row gap-4 items-start"
-                >
-                  <div className="relative w-full md:w-48 h-48 md:h-32 rounded-xl overflow-hidden bg-zinc-100 shrink-0">
-                    <Image
-                      src={images.hotel[index % images.hotel.length]}
-                      alt={hotel.name}
-                      className="object-cover"
-                      fill
-                      sizes="(max-width: 768px) 100vw, 200px"
-                    />
-                  </div>
-                  <div className="flex-1 flex flex-col h-full space-y-1">
-                    {index === 0 && (
-                      <div className="inline-block bg-green-100 text-green-700 font-bold px-2 py-0.5 rounded-full text-[10px] tracking-wider uppercase mb-1 w-max">
-                        {t("explore.accommodation.recommendation")}
+              {hotelsList.map(
+                (
+                  hotel: {
+                    name: string;
+                    price: string;
+                    desc1: string;
+                    desc2: string;
+                    desc3: string;
+                  },
+                  index: number,
+                ) => (
+                  <div
+                    key={index}
+                    className="bg-zinc-50 rounded-2xl p-4 border border-zinc-100 flex flex-col md:flex-row gap-4 items-start"
+                  >
+                    <div className="relative w-full md:w-48 h-52 md:h-32 rounded-xl overflow-hidden bg-zinc-100 shrink-0">
+                      <Image
+                        src={images.hotel[index % images.hotel.length]}
+                        alt={hotel.name}
+                        className="object-cover"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 200px"
+                      />
+                    </div>
+                    <div className="flex-1 flex flex-col h-full space-y-1">
+                      {index === 0 && (
+                        <div className="inline-block bg-green-100 text-green-700 font-bold px-2 py-0.5 rounded-full text-[10px] tracking-wider uppercase mb-1 w-max">
+                          {t("explore.accommodation.recommendation")}
+                        </div>
+                      )}
+                      <div className="flex justify-between items-start flex-wrap gap-2 mb-1">
+                        <h4 className="text-lg font-extrabold text-zinc-800 leading-tight">
+                          {hotel.name}
+                        </h4>
+                        <p className="text-base font-semibold text-[#8B2615] whitespace-nowrap">
+                          {hotel.price}{" "}
+                          <span className="text-xs text-zinc-400 font-normal">
+                            {t("explore.accommodation.per_night")}
+                          </span>
+                        </p>
                       </div>
-                    )}
-                    <div className="flex justify-between items-start flex-wrap gap-2 mb-1">
-                      <h4 className="text-lg font-extrabold text-zinc-800 leading-tight">
-                        {hotel.name}
-                      </h4>
-                      <p className="text-base font-semibold text-[#8B2615] whitespace-nowrap">
-                        {hotel.price}{" "}
-                        <span className="text-xs text-zinc-400 font-normal">
-                          {t("explore.accommodation.per_night")}
-                        </span>
+                      <p className="text-xs text-zinc-600 leading-relaxed line-clamp">
+                        {hotel.desc1} {hotel.desc2} {hotel.desc3}
                       </p>
                     </div>
-                    <p className="text-xs text-zinc-600 leading-relaxed line-clamp">
-                      {hotel.desc1} {hotel.desc2} {hotel.desc3}
-                    </p>
                   </div>
-                </div>
-              ))}
+                ),
+              )}
             </div>
           </div>
         );
@@ -554,7 +582,7 @@ export default function Explore() {
   };
 
   return (
-    <section className="h-screen max-h-screen py-6 md:py-12 px-4 md:px-8 bg-zinc-50 relative flex flex-col justify-center overflow-hidden">
+    <section className="max-h-screen py-6 md:py-12 px-4 md:px-8 bg-zinc-50 relative flex flex-col justify-center overflow-hidden">
       {modalContent && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
           <div className="bg-white rounded-2xl shadow-2xl w-full max-w-xl max-h-[85vh] flex flex-col relative animate-in zoom-in-95 duration-200">

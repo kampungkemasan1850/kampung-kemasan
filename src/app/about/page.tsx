@@ -100,7 +100,7 @@ export default function AboutPage() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-60 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md"
-            onClick={() => setSelectedImage(null)} 
+            onClick={() => setSelectedImage(null)}
           >
             <button
               onClick={() => setSelectedImage(null)}
@@ -113,7 +113,7 @@ export default function AboutPage() {
               animate={{ scale: 1 }}
               exit={{ scale: 0.95 }}
               className="relative w-full max-w-6xl h-[85vh] flex items-center justify-center"
-              onClick={(e) => e.stopPropagation()} 
+              onClick={(e) => e.stopPropagation()}
             >
               <Image
                 src={selectedImage}
@@ -202,8 +202,11 @@ export default function AboutPage() {
               className="md:col-span-3 flex flex-col items-start"
             >
               <h2 className="text-3xl md:text-4xl font-medium leading-tight text-zinc-900">
-                {t("about.intro.heading")}
+                {t("about.intro.more_title")}
               </h2>
+              <p className="text-gray-600 leading-relaxed text-lg">
+                {t("about.intro.more_p1")} {t("about.intro.more_p2")}
+              </p>
               <button
                 onClick={() => setIsModalOpen(true)}
                 className="mt-6 flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-[#8B2615] hover:text-black transition-colors"
@@ -299,6 +302,14 @@ export default function AboutPage() {
                 {t("about.history.title")}
               </h3>
               <div className="space-y-6 text-zinc-700">
+                <div>
+                  <h4 className="font-bold">
+                    {t("about.history.item_title")}
+                  </h4>
+                  <p className="text-sm mt-2">
+                    {t("about.history.item_desc")}
+                  </p>
+                </div>
                 <div>
                   <h4 className="font-bold">
                     {t("about.history.item1_title")}

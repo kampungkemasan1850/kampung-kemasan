@@ -33,7 +33,7 @@
   "maps": {
     "title": "Jelajahi Kampung Kemasan",
     "description": "Temukan kekayaan sejarah dan budaya Kampung Kemasan melalui peta interaktif kami. Dari tengara ikonik hingga permata tersembunyi, telusuri jantung desa warisan Gresik dan ungkap kisah-kisahnya.",
-    "cta": "Panduan Peta"
+    "cta": "Peta Panduan"
   },
   "gallery": {
     "title": "Galeri",
@@ -90,8 +90,8 @@
       "more_p4": "Pada akhir abad ke-19, para pedagang kaya seperti H. Oemar Bin Achmad membangun rumah-rumah mewah di kawasan ini sebagai cerminan kekayaan dan status sosial mereka. Bangunan-bangunan bersejarah tersebut menampilkan perpaduan arsitektur yang unik—struktur kolonial Belanda, ornamen Tionghoa Peranakan, serta sentuhan kerajinan tradisional Jawa—yang menciptakan harmoni budaya yang masih dapat dinikmati hingga kini.",
       "more_p5": "Berbeda dengan banyak kawasan bersejarah lain yang hilang akibat modernisasi, Kampung Kemasan berhasil bertahan berkat kesadaran dan upaya pelestarian masyarakat setempat.",
       "more_p6": "Hingga saat ini, Kampung Kemasan berdiri sebagai kawasan cagar budaya yang dilindungi di Gresik, menghadirkan kembali sekilas kejayaan masa lalu kota ini.",
-      "p1": "Tempat ini menyoroti keberadaan perdagangan kuno, kekayaan tradisi, dan keanggunan arsitektur pada masanya – Kampung Kemasan Gresik, desa warisan budaya khas Gresik.",
-      "p2": "Berlokasi di Kabupaten Gresik, Jawa Timur Kampung Kemasan Gresik merupakan salah satu destinasi wisata yang paling ikonik di daerah tersebut. Kampung ini dikenal dengan gaya arsitekturnya yang unik dan cukup berbeda dari beberapa bangunan era kolonial pada umumnya. Bagian arsitektur yang ada di Kampung Kemasan terpengaruh dari budaya Tionghoa atau Cina, Belanda, dan Jawa.<br/><br/>Dengan menelusuri Kampung Kemasan, anda dapat menikmati nuansa era kolonialisme di desa ini. Dan beberapa bangunannya masih terawat dan selain itu anda juga bisa menikmati kuliner lokal dan berswafoto disana."
+      "p1": "Tempat ini menyoroti keberadaan perdagangan kuno, kekayaan tradisi, dan keanggunan arsitektur pada masanya - Kampung Kemasan Gresik, desa warisan budaya khas Gresik.",
+      "p2": "Inspirasi nama Kampung Kemasan sangat erat kaitannya dengan sejarah awalnya sebagai pusat kerajinan emas pada tahun 1853; tempat tinggal di sana adalah sebuah rumah yang dibangun oleh seorang keturunan Tionghoa bernama Bak Liong. Ia terkenal karena keahliannya dalam membuat dan memperbaiki perhiasan emas. Berkat keahliannya tersebut, banyak penduduk setempat yang mendatangi dirinya untuk membuat atau memperbaiki perhiasan mereka. Seiring berjalannya waktu, kegiatan ini menjadi identik dengan kawasan tersebut, dan kemudian kawasan itu dikenal sebagai Kampung Kemasan, yang berarti “desa para pengrajin emas”."
     },
     "stats": {
       "year_label": "Tahun Berdiri",
@@ -100,6 +100,8 @@
     },
     "history": {
       "title": "Perjalanan Sejarah",
+      "item_title": "Tahun 1850 — Masuknya pengrajin asal Tionghoa (Bak Liong)",
+      "item_desc": "Menjadi salah satu pelopor sejarah  asal Kampung Kemasan",
       "item1_title": "Tahun 1855 — Asal-Usul Nama \"Kemasan\"",
       "item1_desc": "Nama \"Kemasan\" diyakini berasal dari kata emas, merujuk pada para pedagang emas yang dahulu menetap dan berkembang di kawasan ini.",
       "item2_title": "Tahun 1896 — Industri Penyamakan Kulit H. Oemar Bin Achmad",
@@ -149,7 +151,7 @@
       }
     },
     "transportation": {
-      "heading": "Transportasi dan Map",
+      "heading": "Transportasi",
       "description": "Kampung Kemasan terletak strategis di pusat Kota Gresik, sehingga mudah dijangkau dari berbagai kota di sekitarnya. Lokasinya hanya sekitar 20 kilometer dari Surabaya dan sekitar 145 kilometer dari Malang.<br/><br/><strong>Cara Berkunjung</strong><br/>Jika Anda merencanakan perjalanan ke Gresik untuk mengunjungi Kampung Kemasan, tersedia berbagai pilihan transportasi yang dapat Anda gunakan dengan mudah dan nyaman. Baik perjalanan santai bersama keluarga maupun eksplorasi budaya, akses menuju Kampung Kemasan dirancang untuk memberikan pengalaman yang praktis sekaligus menyenangkan sejak awal perjalanan Anda.",
       "by_car": {
         "title": "Dengan Mobil (Dari Surabaya)",

@@ -89,9 +89,9 @@
       "more_p3": "He started his business with the help of Chinese craftsmen living in Kampung Kemasan, and it was later developed by his five children.",
       "more_p4": "In late 19s century, the rich carpenters like H. Oemar Bin Achmad build a big houses around the Kampung Kemasan village that resemble the wealth and their social status at that time. These historic buildings showcase a unique blend of architectural styles—Dutch colonial structures, Peranakan Chinese ornamentation, and elements of traditional Javanese craftsmanship—that create a cultural harmony that can still be appreciated today.",
       "more_p5": "Unlike many other historic districts that have been lost to modernization, Kampung Kemasan has managed to survive thanks to the awareness and preservation efforts of the local community.",
-      "more_p6": "To this day, Kampung Kemasan stands as a protected cultural heritage site in Gresik, offering a glimpse into the city’s past glory.",
+      "more_p6": "To this day, Kampung Kemasan stands as a protected cultural heritage site in Gresik, offering a glimpse into the city's past glory.",
       "p1": "This place highlights the existence of ancient trade, rich traditions, and the architectural elegance of its time - Kampung Kemasan Gresik, a distinctive cultural heritage village.",
-      "p2": "Located in Gresik Regency, East Java, Kampung Kemasan Gresik is one of the most iconic tourist destinations in the region. The village is known for its unique architectural style, which differs significantly from most colonial-era buildings. The architecture of Kampung Kemasan was influenced by Chinese, Dutch, and Javanese cultures.<br/><br/>By exploring Kampung Kemasan, you can experience the colonial-era atmosphere of this village. Many of the buildings are still well-maintained, and you can also enjoy local cuisine and take selfies there."
+      "p2": "The inspiration of Kampung Kemasan is closely related to its early history as a center of gold craftsmanship in 1853, the residence there was a house built by a Chinese descendant named Bak Liong. He was well known for his skill in making and repairing gold jewelry. Because of his expertise, many local residents came to him to have their jewelry made or fixed. Over time, this activity became closely associated with the area, and it later became known as Kampung Kemasan, which means “the village of goldsmiths”"
     },
     "stats": {
       "year_label": "Year Established",
@@ -100,6 +100,8 @@
     },
     "history": {
       "title": "Historical Journey",
+      "item_title": "1850 — The influx of Chinese immigrant (Bak Liong)",
+      "item_desc": "One of the historical pioneers of Kampung Kemasan",
       "item1_title": "1855 — The Origin of the Name \"Kemasan\"",
       "item1_desc": "The name \"Kemasan\" is believed to originate from the word 'emas' (gold), referring to the gold merchants who once settled and thrived in this area.",
       "item2_title": "1896 — H. Oemar Bin Achmad's Leather Tanning Industry",
@@ -149,7 +151,7 @@
       }
     },
     "transportation": {
-      "heading": "Transportation and Map",
+      "heading": "Transportation",
       "description": "Kampung Kemasan is strategically located in the Center of Gresik City, making it easily accessible from various surrounding cities. It is only about 20 kilometers from Surabaya and approximately 145 kilometers from Malang.<br/><br/><strong>How to Visit</strong><br/>If you’re planning a trip to Gresik to visit Kampung Kemasan, there are various transportation options available that you can use easily and comfortably. Whether it’s a leisurely family trip or a cultural exploration, access to Kampung Kemasan is designed to provide a practical yet enjoyable experience from the very start of your journey.",
       "by_car": {
         "title": "By Car (From Surabaya)",

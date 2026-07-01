@@ -70,7 +70,7 @@ export default function Hero({ image, t }: HeroProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 1 }}
-            className={`w-full text-start max-w-2xl ${textColor} text-base md:text-xl font-sans tracking-wide drop-shadow-lg pointer-events-auto`}
+            className={`w-full text-start max-w-2xl ${textColor} text-sm sm:text-base mt-4 md:text-xl font-sans tracking-wide drop-shadow-lg pointer-events-auto`}
           >
             <span suppressHydrationWarning>
             &quot;{t("hero.tagline")} &quot;
