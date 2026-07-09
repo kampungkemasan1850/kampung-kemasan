@@ -72,7 +72,7 @@ export default function Explore() {
                 {t("explore.transportation.heading")}
               </h3>
               <p
-                className="text-sm text-zinc-600 leading-relaxed line-clamp-2"
+                className="text-sm text-zinc-600 leading-relaxed"
                 dangerouslySetInnerHTML={{
                   __html: t("explore.transportation.description"),
                 }}
@@ -358,11 +358,11 @@ export default function Explore() {
                         <div className="w-8 h-8 bg-orange-100 text-[#8B2615] rounded-lg flex items-center justify-center shrink-0">
                           <Icon size={14} />
                         </div>
-                        <h4 className="font-bold text-sm text-zinc-800 leading-snug line-clamp-1">
+                        <h4 className="font-bold text-sm text-zinc-800 leading-snug">
                           {act.title}
                         </h4>
                       </div>
-                      <p className="text-xs text-zinc-600 mb-3 flex-1 line-clamp-3">
+                      <p className="text-xs text-zinc-600 mb-3 flex-1">
                         {act.short}
                       </p>
                       <button
@@ -484,7 +484,7 @@ export default function Explore() {
                           {card.title}
                         </h4>
                       </div>
-                      <p className="text-xs text-zinc-600 mb-4 flex-1 line-clamp-3">
+                      <p className="text-xs text-zinc-600 mb-4 flex-1">
                         {card.short}
                       </p>
                       <button
@@ -566,7 +566,7 @@ export default function Explore() {
                           </span>
                         </p>
                       </div>
-                      <p className="text-xs text-zinc-600 leading-relaxed line-clamp">
+                      <p className="text-xs text-zinc-600 leading-relaxed">
                         {hotel.desc1} {hotel.desc2} {hotel.desc3}
                       </p>
                     </div>
@@ -650,7 +650,7 @@ export default function Explore() {
                       {t(`explore.tabs.${tab.id}.title`)}
                     </span>
                     <p
-                      className={`mt-0.5 text-[10px] line-clamp-1 transition-colors ${
+                      className={`mt-0.5 text-[10px] transition-colors ${
                         isActive ? "text-white/80" : "text-zinc-500"
                       }`}
                     >

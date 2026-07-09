@@ -50,7 +50,7 @@ export default function Hero({ image, t }: HeroProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 1 }}
-            className="font-extrabold text-[#ffe88b] max-w-[60vw] text-6xl md:text-8xl"
+            className="font-extrabold text-[#ffe88b] max-w-[60vw] text-5xl sm:text-6xl md:text-8xl"
           >
             <span suppressHydrationWarning>
               {t("hero.title")}
