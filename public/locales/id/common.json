@@ -72,6 +72,7 @@
     "form_name": "Nama Lengkap",
     "form_email": "Alamat Email",
     "form_message": "Pesan Anda",
+    "form_message_placeholder": "Apa yang bisa kami bantu?",
     "form_submit": "Kirim Pesan",
     "success_title": "Pesan Terkirim",
     "success_desc": "Terima kasih. Kami akan membalas pesan Anda dalam waktu 24 jam."

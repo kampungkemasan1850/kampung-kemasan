@@ -158,7 +158,7 @@ export default function ContactPage() {
                       name="message"
                       required
                       rows={4}
-                      placeholder="How can we help you?"
+                      placeholder={t("contact.form_message_placeholder")}
                       className="w-full bg-transparent border-b border-zinc-200 py-3 outline-none focus:border-black transition-colors text-zinc-900 placeholder:text-zinc-200 resize-none"
                     />
                     <ValidationError

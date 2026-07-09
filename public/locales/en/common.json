@@ -72,6 +72,7 @@
     "form_name": "Full Name",
     "form_email": "Email Address",
     "form_message": "Your Message",
+    "form_message_placeholder": "How can we help you?",
     "form_submit": "Send Inquiry",
     "success_title": "Message Sent",
     "success_desc": "Thank you. We will respond to your inquiry within 24 hours."
