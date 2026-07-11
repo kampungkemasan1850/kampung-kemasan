@@ -66,13 +66,13 @@ export default function Explore() {
     switch (activeExplore) {
       case "transportation":
         return (
-          <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-500 flex flex-col h-full min-h-0">
+          <div className="space-y-2 animate-in fade-in slide-in-from-bottom-4 duration-500 flex flex-col">
             <div className="shrink-0">
               <h3 className="text-xl font-bold text-[#8B2615] mb-1">
                 {t("explore.transportation.heading")}
               </h3>
               <p
-                className="text-sm text-zinc-600 leading-relaxed"
+                className="text-xs text-zinc-600 leading-relaxed"
                 dangerouslySetInnerHTML={{
                   __html: t("explore.transportation.description"),
                 }}
@@ -291,9 +291,7 @@ export default function Explore() {
                       <span className="px-2.5 py-1 bg-white border border-zinc-200 rounded-full text-[10px] font-bold text-zinc-700 shadow-sm">
                         {t("explore.transportation.local_transport.opt3")}
                       </span>
-                      <span className="px-2.5 py-1 bg-white border border-zinc-200 rounded-full text-[10px] font-bold text-zinc-700 shadow-sm">
-                        {t("explore.transportation.local_transport.opt4")}
-                      </span>
+                    
                     </div>
                     <p
                       className="text-xs text-zinc-600 leading-relaxed bg-white border border-zinc-100 p-3 rounded-xl flex-1"
