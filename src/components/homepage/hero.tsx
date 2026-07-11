@@ -32,7 +32,7 @@ export default function Hero({ image, t }: HeroProps) {
       </motion.div>
 
       <div className="absolute inset-0 z-10 w-full h-full pointer-events-none">
-        <div className="absolute top-[12%] md:top-[15%] left-[5%] md:left-[10%] flex flex-col items-start pointer-events-auto">
+        <div className="absolute top-[8%] left-[5%] md:left-[10%] flex flex-col items-start pointer-events-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ export default function Hero({ image, t }: HeroProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 1 }}
-            className="font-extrabold text-[#ffe88b] max-w-[60vw] text-5xl sm:text-6xl md:text-8xl"
+            className="font-extrabold text-[#ffe88b] max-w-[75vw] text-5xl sm:text-6xl md:text-8xl"
           >
             <span suppressHydrationWarning>
               {t("hero.title")}
@@ -60,7 +60,7 @@ export default function Hero({ image, t }: HeroProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 1 }}
-            className={`font-luxurious-script ${textColor} text-6xl md:text-[7rem] tracking-wide leading-[0.8] drop-shadow-2xl text-left`}
+            className={`font-luxurious-script ${textColor} text-6xl md:text-[5rem] tracking-wide leading-[0.8] drop-shadow-2xl text-left`}
           >
             <span suppressHydrationWarning>
               {t("hero.subtitle")}
@@ -70,7 +70,7 @@ export default function Hero({ image, t }: HeroProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 1 }}
-            className={`w-full text-start max-w-2xl ${textColor} text-sm sm:text-base mt-4 md:text-xl font-sans tracking-wide drop-shadow-lg pointer-events-auto`}
+            className={`w-full text-start max-w-4xl ${textColor} text-sm sm:text-base mt-4 md:text-xl font-sans tracking-wide drop-shadow-lg pointer-events-auto`}
           >
             <span suppressHydrationWarning>
             &quot;{t("hero.tagline")} &quot;

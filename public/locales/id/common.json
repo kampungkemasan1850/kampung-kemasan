@@ -22,7 +22,9 @@
     },
     "events": {
       "title": "Sorotan Acara Tahunan",
-      "subtitle": "Merayakan Warisan, Perdagangan, dan Seni",
+      "subtitle": "Merayakan Warisan Sejarah, Perdagangan, dan Seni",
+      "tag_archive": "Arsip",
+      "tag_year": "Tahunan",
       "pasar_bandeng": "Festival Pasar Bandeng",
       "badoghan": "Festival Badoghan",
       "mtn_lab": "MTN Lab: Ruang Bakat",
@@ -82,6 +84,8 @@
     "description": "Di mana sejarah hidup di setiap sudutnya",
     "location": "Jawa Timur, Indonesia",
     "read_more": "Baca Selengkapnya",
+    "vision_title": "Visi",
+    "mission_title": "Misi",
     "intro": {
       "heading": "Terletak di kawasan bersejarah kota Gresik, disana berdirinya kekayaan budaya yang dilestarikan dengan indah.",
       "more_title": "Perjalanan Menelusuri Warisan Kampung Kemasan, Gresik",
@@ -345,7 +349,7 @@
     ],
     "exhibition": {
       "date_badge": "1-14 Sept '25",
-      "role_badge": "MTN Lab Residency",
+      "role_badge": "MTN Lab Residensi",
       "title1": "Pameran Seni & Budaya",
       "title2": "(Art & Culture Exhibition)",
       "p1": "Kota Gresik dikenal sebagai kota dagang, kota santri, sekaligus kota industri. Namun di balik dinamika tersebut, terdapat ruang-ruang bersejarah yang menyimpan kekayaan budaya yang luar biasa—salah satunya adalah Kampung Kemasan, kawasan lama yang dahulu menjadi titik pertemuan para saudagar, pengrajin, dan pendatang dari berbagai latar etnis.",

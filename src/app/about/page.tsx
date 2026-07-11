@@ -377,9 +377,9 @@ export default function AboutPage() {
           <div className="md:w-1/2 bg-[#8B2615] p-8 md:p-16 text-white relative">
             <div className="relative z-10">
               <h2 className="text-4xl md:text-5xl font-serif italic mb-6">
-                Our{" "}
+                {/* Our{" "} */}
                 <span className="font-sans not-italic font-bold uppercase">
-                  Vision
+                  {t("about.vision_title")}
                 </span>
               </h2>
               <p className="text-xl md:text-2xl leading-relaxed font-light mb-12">
@@ -410,9 +410,9 @@ export default function AboutPage() {
 
           <div className="md:w-1/2 bg-[#F5F8DF] p-8 md:p-16 text-zinc-900 flex flex-col justify-center">
             <h2 className="text-4xl md:text-5xl font-serif italic mb-12">
-              Our{" "}
+              {/* Our{" "} */}
               <span className="font-sans not-italic font-bold uppercase">
-                Mission
+                {t("about.mission_title")}
               </span>
             </h2>
 

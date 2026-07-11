@@ -60,10 +60,10 @@ export default function EventHighlight({ t }: EventHighlightProps) {
                 <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
                   <div className="min-w-30">
                     <p className="text-[#8B2615] text-xs font-bold tracking-widest mb-1 uppercase">
-                      ARCHIVE
+                      {t("events.tag_archive")}
                     </p>
                     <p className="text-zinc-400 text-sm font-medium uppercase">
-                      ANNUAL
+                      {t("events.tag_year")}
                     </p>
                   </div>
                   <div>

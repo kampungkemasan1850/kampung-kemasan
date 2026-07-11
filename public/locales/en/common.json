@@ -23,6 +23,8 @@
     "events": {
       "title": "Annual Events Highlight",
       "subtitle": "Celebrating Heritage, Trade, and Art",
+      "tag_archive": "Archive",
+      "tag_year": "Annual",
       "pasar_bandeng": "Pasar Bandeng Festive",
       "badoghan": "Festival Badoghan",
       "mtn_lab": "MTN Lab: Talent Space",
@@ -82,6 +84,8 @@
     "description": "Where history lives in every corner",
     "location": "East Java, Indonesia",
     "read_more": "Read More",
+    "vision_title": "Vision",
+    "mission_title": "Mission",
     "intro": {
       "heading": "Located in the historic district of Gresik, there stands a beautifully preserved cultural wealth.",
       "more_title": "A Journey Through the Heritage of Kampung Kemasan, Gresik",
