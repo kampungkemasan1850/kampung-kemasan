@@ -1,6 +1,6 @@
 "use client";
 
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import "../../i18n";
@@ -93,9 +93,18 @@ export default function Footer() {
           <div className="lg:col-span-3 flex flex-col justify-between items-start lg:items-end text-start lg:text-end">
             <div className="flex gap-6 lg:justify-end w-full">
               {[
-                { icon: <FaInstagram />, href: "#" },
-                { icon: <FaTwitter />, href: "#" },
-                { icon: <FaYoutube />, href: "#" },
+                {
+                  icon: <FaInstagram />,
+                  href: "https://www.instagram.com/kampungkemasanheritage/",
+                },
+                {
+                  icon: <FaFacebook />,
+                  href: "https://www.facebook.com/profile.php?id=61590609142929&ref=ig_profile_ac&target=61590609142929&funlid=R7tf7HGT3q67DzDQ",
+                },
+                {
+                  icon: <FaEnvelope />,
+                  href: "mailto:kampungkemasan1850@gmail.com",
+                },
               ].map((social, i) => (
                 <a
                   key={i}
